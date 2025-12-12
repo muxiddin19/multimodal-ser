@@ -1,0 +1,51 @@
+Novelty and Contribution
+The paper claims a multilayered framework for integrating emotion recognition and personalized subtitle generation using multimodal features (Wav2Vec2, BERT, cross-attention fusion).
+
+The conceptual combination of emotion-aware, culturally contextual subtitle customization is interesting, but the technical contribution is incremental relative to recent works in multimodal fusion and personalization.
+
+The method uses existing architectures (Wav2Vec2, BERT, Transformer-based fusion, FiLM modulation), but does not propose fundamentally new models or learning strategies.
+
+References show prior work on emotion visualization and personalization, many in very recent ICASSP/AAAI/CHI/MM proceedings; fusion of these directions in a single framework is not substantially transformative.
+
+Technical Rigor
+Datasets: Main evaluation uses IEMOCAP, a standard benchmark, but lacks diversity in datasets or cross-lingual validation.
+
+Experiments: Model improvement on IEMOCAP (WA 76.03, WF1 76.01) is modest compared to recent state-of-the-art; gains over previous methods are incremental.
+
+User Study: Subjective evaluation is limited in scale and detail; it only presents Likert-scale scores across general dimensions without deeper analysis of personalization effects.
+
+Ablation Study: The ablation results show basic modality contributions but lack rigorous statistical testing or broader generalization.
+
+No significant theoretical analysis or formal proofs differentiating the personalization strategy or fusion mechanism.
+
+Related Work and Positioning
+Literature review is up-to-date and covers major methods in personalized emotion recognition and subtitle visualization, but does not deeply critique or distinguish prior methods.
+
+Connections to color theory, cultural adaptation, and gendered preferences are referenced, yet treated superficially for a machine learning conference context where more technical detail would be required.
+
+The paper's claims of novelty are undermined by substantial overlap in methods and evaluation protocols with previous work.
+
+Writing and Presentation
+The manuscript is concise and clearly written, but top conferences require not only clarity but deep insight, experimental thoroughness, and strong novelty.
+
+Figure and table descriptions are functional but lack complex analysis, robustness checks, or error analysis found in leading publications.
+
+References are numerous and recent, yet do not demonstrate a leap over current trends.
+
+Weaknesses Summarized
+Incremental improvement over published works—no clear "game-changing" idea.
+
+User study and ablation lack depth; results are not statistically compelling.
+
+Methodology is derivative; core technical aspects are adaptations of standard architectures.
+
+Evaluation scope (datasets, languages, contexts) is narrow.
+
+Lack of error analysis, scalability discussion, or deployment feasibility.
+
+Strengths
+Up-to-date literature review and technical awareness.
+
+Addresses personalization challenges relevant to multimedia accessibility and user experience.
+
+Overall, the paper would likely be rejected from top conferences such as ICASSP, CVPR, AAAI, ACL, or CHI due to its limited novelty, incremental technical advances, and shallow evaluation, in spite of competent writing and awareness of current trends.
