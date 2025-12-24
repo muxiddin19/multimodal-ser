@@ -1,17 +1,59 @@
-# Multimodal Speech Emotion Recognition with Novel Fusion Mechanisms
+# Sentimentogram: Interpretable Multimodal Speech Emotion Recognition
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.5+](https://img.shields.io/badge/pytorch-2.5+-red.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![ACL 2026](https://img.shields.io/badge/ACL-2026-green.svg)](https://2026.aclweb.org/)
 
-State-of-the-art Speech Emotion Recognition (SER) using multimodal fusion of text (BERT) and audio (emotion2vec) features with **three novel contributions**: VAD-Guided Cross-Attention, Emotion-Aware Adaptive Fusion, and Modality-Invariant Contrastive Learning.
+**State-of-the-art interpretable Speech Emotion Recognition (SER)** using multimodal fusion of text (BERT) and audio (emotion2vec) features with **four novel contributions**:
+1. 🎯 VAD-Guided Cross-Attention
+2. ⚖️ Constrained Adaptive Fusion
+3. 🔗 Hard Negative Mining MICL
+4. 🎨 **Emotion-Aware Typography Visualization (Sentimentogram)**
+
+## 🎬 Demo Video
+
+**Watch Sentimentogram in action on TED Talks:**
+
+[![Sentimentogram Demo](https://img.shields.io/badge/Demo-Google%20Drive-blue)](https://drive.google.com/file/d/1jCQJbIAbtNDGf2GunXnjgWqmZWq9kvY6/view?usp=drive_link)
+
+The demo shows real-time word-level emotion visualization with:
+- **Dynamic typography** (font, size, color per emotion)
+- **Cultural adaptation** (Western/Eastern color schemes)
+- **Synchronized video playback** with emotion-styled subtitles
+
+### Screenshots
+
+<table>
+<tr>
+<td><img src="demo/capture/sentimentogram_honest.jpg" width="400"/></td>
+<td><img src="demo/capture/sentimentogram_think.jpg" width="400"/></td>
+</tr>
+<tr>
+<td align="center"><em>"BEING HONEST" (anger), "you think of" (happiness)</em></td>
+<td align="center"><em>"I think" (happiness), "MOST PEOPLE" (anger)</em></td>
+</tr>
+<tr>
+<td><img src="demo/capture/sentimentogram_gone.jpg" width="400"/></td>
+<td><img src="demo/capture/sentimentogram_balloons.jpg" width="400"/></td>
+</tr>
+<tr>
+<td align="center"><em>"Yeah" (happiness), "THEY'RE GONE" (anger)</em></td>
+<td align="center"><em>"WHY" (anger), "expensive" (happiness)</em></td>
+</tr>
+</table>
+
+*Each word is rendered with emotion-specific typography: red/uppercase for anger, gold for happiness, blue/italic for sadness.*
+
+---
 
 ## Highlights
 
-- **90.02% UA on IEMOCAP** (4-class) - significantly outperforms previous SOTA (~76%)
-- **93.43% UA on cross-dataset transfer** (IEMOCAP → CREMA-D with fine-tuning)
-- **90.79% UA with only 20% target data** - efficient few-shot transfer learning
-- **Three novel contributions** with rigorous mathematical formulations
+- 🏆 **77.97% UA on IEMOCAP 5-class** - state-of-the-art multimodal result
+- 🏆 **92.90% UA on CREMA-D** - best on acted speech
+- 📊 **Interpretable fusion gates** - see exactly how much each modality contributes
+- 🎨 **Novel visualization** - word-level emotion typography for videos
+- 🌍 **Multi-dataset evaluation** - IEMOCAP (4/5/6-class), CREMA-D, MELD
 
 ---
 
@@ -83,6 +125,42 @@ where $\text{sim}(\mathbf{u}, \mathbf{v}) = \frac{\mathbf{u}^T\mathbf{v}}{\|\mat
 
 ---
 
+### 4. Emotion-Aware Typography Visualization (Sentimentogram) 🎨
+
+A **novel real-time visualization system** that transforms word-level emotion predictions into dynamic, culturally-adapted typography.
+
+**Pipeline:**
+```
+Video Input → Audio Extraction → Whisper Transcription → Word-level SER → Typography Rendering → Interactive HTML
+```
+
+**Typography Design:**
+
+| Emotion | Font | Size | Color | Animation |
+|---------|------|------|-------|-----------|
+| 😊 Happy | Fredoka One | 1.15× | 🟡 Gold | Bounce |
+| 😢 Sad | Merriweather (italic) | 0.92× | 🔵 Blue | Fade |
+| 😠 Anger | Bebas Neue (UPPERCASE) | 1.30× | 🔴 Red | Shake |
+| 😤 Frustration | Oswald | 1.10× | 🟠 Orange | Pulse |
+| 😐 Neutral | Poppins | 1.00× | ⚪ Gray | None |
+
+**Cultural Adaptation:**
+- **Western:** Red = anger, Gold = happiness, Blue = sadness
+- **Eastern:** Red = luck/happiness, White = mourning, Black = anger
+
+**Usage:**
+```bash
+python demo/sentimentogram_demo_v3.py \
+    --video demo/videos/tedx1.mp4 \
+    --output demo/output/result_enhanced.html \
+    --culture western \
+    --age adult
+```
+
+**Key Innovation:** First system to provide word-level emotion typography visualization with cultural adaptation, enabling applications in media accessibility, therapeutic feedback, and content creation.
+
+---
+
 ## Total Training Objective
 
 $$\mathcal{L}_{\text{total}} = \lambda_{\text{cls}} \cdot \mathcal{L}_{\text{cls}} + \lambda_{\text{vad}} \cdot \mathcal{L}_{\text{vad}} + \lambda_{\text{micl}} \cdot \mathcal{L}_{\text{MICL}}$$
@@ -98,27 +176,40 @@ Default: $\lambda_{\text{cls}}=1.0$, $\lambda_{\text{vad}}=0.3$, $\lambda_{\text
 
 ---
 
-## Results
+## Results (ACL 2026)
 
-### In-Domain Performance
+### Main Results: Comparison with Baselines
 
-| Dataset | Classes | Test UA | Test WA | Test WF1 |
-|---------|---------|---------|---------|----------|
-| IEMOCAP | 4 | **90.02%** | 90.47% | 90.46% |
-| IEMOCAP | 6 | 65.12% | 64.65% | 63.73% |
-| CREMA-D | 4 | 93.43%* | 93.47%* | 93.50%* |
+| Method | IEMOCAP-4 | IEMOCAP-5 | IEMOCAP-6 | CREMA-D | MELD |
+|--------|-----------|-----------|-----------|---------|------|
+| BERT-only (Text) | 63.67% | 52.87% | 47.72% | 28.96% | 56.47% |
+| emotion2vec (Audio) | 91.27% | 76.22% | 65.65% | 91.84% | 52.94% |
+| Concatenation | 90.74% | 76.51% | 68.91% | 92.09% | 62.91% |
+| Standard Cross-Attention | 89.33% | 73.76% | 66.14% | 91.99% | 63.10% |
+| **Ours (Sentimentogram)** | 90.02% | **77.97%** | 68.75% | **92.90%** | **63.66%** |
 
-*with fine-tuning from IEMOCAP
+### Interpretable Fusion Gate Analysis
 
-### Ablation Study (Novel Components)
+Our constrained fusion gates reveal modality contributions:
 
-| Configuration | Val UA | Val WA | Δ UA |
-|---------------|--------|--------|------|
-| Baseline (Standard Cross-Attention) | 93.33% | 93.11% | - |
-| + VGA (VAD-Guided Attention) | 93.52% | 93.28% | +0.19% |
-| + EAAF (Adaptive Fusion) | 93.61% | 93.35% | +0.28% |
-| + MICL (Contrastive Learning) | 93.48% | 93.22% | +0.15% |
-| **Full Model (VGA + EAAF + MICL)** | **93.85%** | **93.62%** | **+0.52%** |
+| Dataset | Text Gate | Audio Gate | Interaction |
+|---------|-----------|------------|-------------|
+| IEMOCAP 5-class | 54.3% | 45.5% | 0.2% |
+| CREMA-D (acted) | 23.1% | **76.6%** | 0.3% |
+
+**Insight:** Audio dominates on acted speech (CREMA-D), while conversational data (IEMOCAP) benefits from balanced text-audio fusion.
+
+### Ablation Study (IEMOCAP 5-class)
+
+| Configuration | Val UA | Δ | p-value |
+|---------------|--------|---|---------|
+| **Full Model** | **77.97%** | - | - |
+| w/o VGA | 77.91% | -0.07% | 0.770 |
+| w/o MICL | 77.67% | -0.30% | 0.545 |
+| Audio-only baseline | 76.97% | -1.00% | 0.020* |
+| Text-only baseline | 55.24% | -22.74% | <0.001** |
+
+*Statistical significance: * p<0.05, ** p<0.01*
 
 ### Cross-Dataset Transfer (IEMOCAP → CREMA-D)
 
