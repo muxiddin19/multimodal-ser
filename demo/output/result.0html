@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentimentogram Demo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a2e;
+            color: #fff;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #eee;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            display: block;
+        }
+        .subtitle-overlay {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 5px;
+            max-width: 90%;
+            transition: all 0.3s ease;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .control-group {
+            background: #16213e;
+            padding: 15px 20px;
+            border-radius: 8px;
+        }
+        .control-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #888;
+            font-size: 0.9em;
+        }
+        select {
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: none;
+            background: #0f3460;
+            color: #fff;
+            cursor: pointer;
+        }
+        .emotion-legend {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 12px;
+            background: #16213e;
+            border-radius: 20px;
+        }
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+        .transcript {
+            background: #16213e;
+            border-radius: 10px;
+            padding: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .transcript-entry {
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .transcript-entry:hover {
+            transform: translateX(5px);
+        }
+        .transcript-entry.active {
+            box-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+        .time-stamp {
+            font-size: 0.8em;
+            color: #888;
+            margin-right: 10px;
+        }
+        .emotion-tag {
+            font-size: 0.75em;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 10px;
+            background: rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sentimentogram Demo</h1>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>Culture Setting</label>
+                <select id="cultureSelect" onchange="updateStyles()">
+                    <option value="western">Western</option>
+                    <option value="eastern">Eastern (Asian)</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>Age Group</label>
+                <select id="ageSelect" onchange="updateStyles()">
+                    <option value="adult">Adult</option>
+                    <option value="child">Child</option>
+                    <option value="teen">Teen</option>
+                    <option value="senior">Senior</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="emotion-legend" id="legend"></div>
+
+        <div class="video-container">
+            <video id="video" controls>
+                <source src="tedx1.mp4" type="video/mp4">
+            </video>
+            <div class="subtitle-overlay" id="subtitle"></div>
+        </div>
+
+        <h2 style="margin-bottom: 15px;">Transcript</h2>
+        <div class="transcript" id="transcript"></div>
+    </div>
+
+    <script>
+        const subtitles = [
+  {
+    "start": 0.0,
+    "end": 2.5,
+    "text": "Wow, what an audience.",
+    "emotion": "neutral",
+    "confidence": 0.5951633453369141,
+    "color": "hsl(180, 75%, 50%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 3.2,
+    "end": 5.68,
+    "text": "But if I'm being honest, I don't care what you think of my talk.",
+    "emotion": "neutral",
+    "confidence": 0.5185545086860657,
+    "color": "hsl(180, 75%, 49%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 6.8,
+    "end": 7.28,
+    "text": "I don't.",
+    "emotion": "happy_excited",
+    "confidence": 0.5984026193618774,
+    "color": "hsl(180, 75%, 50%)",
+    "fontSize": "1.2em",
+    "fontWeight": "bold",
+    "background": "rgba(255,215,0,0.1)"
+  },
+  {
+    "start": 7.64,
+    "end": 9.14,
+    "text": "I care what the internet thinks of my talk.",
+    "emotion": "neutral",
+    "confidence": 0.611992597579956,
+    "color": "hsl(180, 75%, 50%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 10.28,
+    "end": 12.62,
+    "text": "Because they're the ones who get it seen and get it shared.",
+    "emotion": "neutral",
+    "confidence": 0.423817902803421,
+    "color": "hsl(180, 74%, 50%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 13.2,
+    "end": 14.78,
+    "text": "And I think that's where most people get it wrong.",
+    "emotion": "neutral",
+    "confidence": 0.6232708692550659,
+    "color": "hsl(180, 75%, 49%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 15.16,
+    "end": 16.68,
+    "text": "They're talking to you here.",
+    "emotion": "neutral",
+    "confidence": 0.44619110226631165,
+    "color": "hsl(30, 75%, 49%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 17.36,
+    "end": 21.72,
+    "text": "Instead of talking to you, random person scrolling Facebook.",
+    "emotion": "neutral",
+    "confidence": 0.6315436363220215,
+    "color": "hsl(180, 74%, 49%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 22.9,
+    "end": 23.7,
+    "text": "Thanks for the click.",
+    "emotion": "happy_excited",
+    "confidence": 0.5111408829689026,
+    "color": "hsl(180, 74%, 50%)",
+    "fontSize": "1.2em",
+    "fontWeight": "bold",
+    "background": "rgba(255,215,0,0.1)"
+  },
+  {
+    "start": 24.64,
+    "end": 28.22,
+    "text": "You see, back in 2009, we all had these weird little things",
+    "emotion": "neutral",
+    "confidence": 0.7869591116905212,
+    "color": "hsl(30, 74%, 50%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 28.22,
+    "end": 29.92,
+    "text": "called attention spans.",
+    "emotion": "neutral",
+    "confidence": 0.7918940186500549,
+    "color": "hsl(30, 74%, 50%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 30.8,
+    "end": 31.84,
+    "text": "Yeah, they're gone.",
+    "emotion": "neutral",
+    "confidence": 0.6371585726737976,
+    "color": "hsl(180, 74%, 50%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 32.04,
+    "end": 32.26,
+    "text": "They're gone.",
+    "emotion": "anger",
+    "confidence": 0.6920392513275146,
+    "color": "hsl(180, 74%, 49%)",
+    "fontSize": "1.3em",
+    "fontWeight": "bold",
+    "background": "rgba(255,68,68,0.1)"
+  },
+  {
+    "start": 32.38,
+    "end": 32.82,
+    "text": "We killed them.",
+    "emotion": "frustration",
+    "confidence": 0.39012712240219116,
+    "color": "hsl(30, 75%, 49%)",
+    "fontSize": "1.1em",
+    "fontWeight": "bold",
+    "background": "rgba(220,20,60,0.1)"
+  },
+  {
+    "start": 33.24,
+    "end": 33.88,
+    "text": "They're dead.",
+    "emotion": "happy_excited",
+    "confidence": 0.5215343832969666,
+    "color": "hsl(180, 74%, 50%)",
+    "fontSize": "1.2em",
+    "fontWeight": "bold",
+    "background": "rgba(255,215,0,0.1)"
+  },
+  {
+    "start": 34.9,
+    "end": 37.84,
+    "text": "I'm trying to think of the last time I watched an 18-minute",
+    "emotion": "neutral",
+    "confidence": 0.624111533164978,
+    "color": "hsl(180, 75%, 50%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 37.84,
+    "end": 38.36,
+    "text": "TED talk.",
+    "emotion": "neutral",
+    "confidence": 0.5994908213615417,
+    "color": "hsl(30, 74%, 49%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 38.86,
+    "end": 40.78,
+    "text": "It's been years, literally years.",
+    "emotion": "happy_excited",
+    "confidence": 0.5594886541366577,
+    "color": "hsl(180, 75%, 50%)",
+    "fontSize": "1.2em",
+    "fontWeight": "bold",
+    "background": "rgba(255,215,0,0.1)"
+  },
+  {
+    "start": 41.52,
+    "end": 44.04,
+    "text": "So if you're given a TED talk, keep it quick.",
+    "emotion": "neutral",
+    "confidence": 0.7071951031684875,
+    "color": "hsl(180, 74%, 49%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 44.38,
+    "end": 45.7,
+    "text": "I'm doing mine in under a minute.",
+    "emotion": "frustration",
+    "confidence": 0.4260087311267853,
+    "color": "hsl(180, 75%, 49%)",
+    "fontSize": "1.1em",
+    "fontWeight": "bold",
+    "background": "rgba(220,20,60,0.1)"
+  },
+  {
+    "start": 46.32,
+    "end": 47.82,
+    "text": "I'm at 44 seconds right now.",
+    "emotion": "neutral",
+    "confidence": 0.527219295501709,
+    "color": "hsl(180, 75%, 49%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 47.88,
+    "end": 49.54,
+    "text": "That means we've got time for one final joke.",
+    "emotion": "neutral",
+    "confidence": 0.6019307374954224,
+    "color": "hsl(30, 75%, 49%)",
+    "fontSize": "1.0em",
+    "fontWeight": "normal",
+    "background": "transparent"
+  },
+  {
+    "start": 50.14,
+    "end": 52.58,
+    "text": "Why are balloons so expensive?",
+    "emotion": "anger",
+    "confidence": 0.9143785834312439,
+    "color": "hsl(30, 74%, 50%)",
+    "fontSize": "1.3em",
+    "fontWeight": "bold",
+    "background": "rgba(255,68,68,0.1)"
+  },
+  {
+    "start": 54.54,
+    "end": 55.02,
+    "text": "Inflation.",
+    "emotion": "frustration",
+    "confidence": 0.4165742099285126,
+    "color": "hsl(30, 74%, 49%)",
+    "fontSize": "1.1em",
+    "fontWeight": "bold",
+    "background": "rgba(220,20,60,0.1)"
+  }
+];
+
+        const cultureStyles = {"western": {"joy": {"color": "#FFD700", "fontSize": "1.2em", "fontWeight": "bold", "background": "rgba(255,215,0,0.1)"}, "happy_excited": {"color": "#FFD700", "fontSize": "1.2em", "fontWeight": "bold", "background": "rgba(255,215,0,0.1)"}, "anger": {"color": "#FF4444", "fontSize": "1.3em", "fontWeight": "bold", "background": "rgba(255,68,68,0.1)"}, "sadness": {"color": "#4169E1", "fontSize": "0.95em", "fontWeight": "normal", "background": "rgba(65,105,225,0.1)"}, "fear": {"color": "#800080", "fontSize": "1.1em", "fontWeight": "normal", "background": "rgba(128,0,128,0.1)"}, "surprise": {"color": "#FFA500", "fontSize": "1.15em", "fontWeight": "bold", "background": "rgba(255,165,0,0.1)"}, "disgust": {"color": "#228B22", "fontSize": "1.0em", "fontWeight": "normal", "background": "rgba(34,139,34,0.1)"}, "neutral": {"color": "#FFFFFF", "fontSize": "1.0em", "fontWeight": "normal", "background": "transparent"}, "frustration": {"color": "#DC143C", "fontSize": "1.1em", "fontWeight": "bold", "background": "rgba(220,20,60,0.1)"}}, "eastern": {"joy": {"color": "#FF0000", "fontSize": "1.2em", "fontWeight": "bold", "background": "rgba(255,0,0,0.1)"}, "happy_excited": {"color": "#FF0000", "fontSize": "1.2em", "fontWeight": "bold", "background": "rgba(255,0,0,0.1)"}, "anger": {"color": "#000000", "fontSize": "1.3em", "fontWeight": "bold", "background": "rgba(0,0,0,0.2)"}, "sadness": {"color": "#FFFFFF", "fontSize": "0.95em", "fontWeight": "normal", "background": "rgba(200,200,200,0.3)"}, "fear": {"color": "#800080", "fontSize": "1.1em", "fontWeight": "normal", "background": "rgba(128,0,128,0.1)"}, "surprise": {"color": "#FFA500", "fontSize": "1.15em", "fontWeight": "bold", "background": "rgba(255,165,0,0.1)"}, "disgust": {"color": "#228B22", "fontSize": "1.0em", "fontWeight": "normal", "background": "rgba(34,139,34,0.1)"}, "neutral": {"color": "#CCCCCC", "fontSize": "1.0em", "fontWeight": "normal", "background": "transparent"}, "frustration": {"color": "#8B0000", "fontSize": "1.1em", "fontWeight": "bold", "background": "rgba(139,0,0,0.1)"}}};
+
+        const ageScales = {"child": 1.3, "teen": 1.1, "adult": 1.0, "senior": 1.25};
+
+        const video = document.getElementById('video');
+        const subtitleEl = document.getElementById('subtitle');
+        const transcriptEl = document.getElementById('transcript');
+        const legendEl = document.getElementById('legend');
+
+        // Build transcript
+        subtitles.forEach((sub, idx) => {
+            const entry = document.createElement('div');
+            entry.className = 'transcript-entry';
+            entry.style.background = sub.background;
+            entry.style.color = sub.color;
+            entry.innerHTML = `
+                <span class="time-stamp">${formatTime(sub.start)}</span>
+                ${sub.text}
+                <span class="emotion-tag">${sub.emotion} (${(sub.confidence * 100).toFixed(0)}%)</span>
+            `;
+            entry.onclick = () => video.currentTime = sub.start;
+            entry.id = `entry-${idx}`;
+            transcriptEl.appendChild(entry);
+        });
+
+        // Build legend
+        const emotions = [...new Set(subtitles.map(s => s.emotion))];
+        emotions.forEach(emotion => {
+            const sub = subtitles.find(s => s.emotion === emotion);
+            const item = document.createElement('div');
+            item.className = 'legend-item';
+            item.innerHTML = `
+                <div class="legend-color" style="background: ${sub.color}"></div>
+                <span>${emotion}</span>
+            `;
+            legendEl.appendChild(item);
+        });
+
+        // Update subtitles on video time update
+        video.addEventListener('timeupdate', () => {
+            const time = video.currentTime;
+            const currentSub = subtitles.find(s => time >= s.start && time <= s.end);
+
+            if (currentSub) {
+                subtitleEl.textContent = currentSub.text;
+                subtitleEl.style.color = currentSub.color;
+                subtitleEl.style.fontSize = currentSub.fontSize;
+                subtitleEl.style.fontWeight = currentSub.fontWeight;
+                subtitleEl.style.background = currentSub.background;
+                subtitleEl.style.display = 'block';
+
+                // Highlight transcript
+                document.querySelectorAll('.transcript-entry').forEach(e => e.classList.remove('active'));
+                const idx = subtitles.indexOf(currentSub);
+                document.getElementById(`entry-${idx}`).classList.add('active');
+            } else {
+                subtitleEl.style.display = 'none';
+            }
+        });
+
+        function formatTime(seconds) {
+            const m = Math.floor(seconds / 60);
+            const s = Math.floor(seconds % 60);
+            return `${m}:${s.toString().padStart(2, '0')}`;
+        }
+
+        function updateStyles() {
+            const culture = document.getElementById('cultureSelect').value;
+            const age = document.getElementById('ageSelect').value;
+            const scale = ageScales[age];
+            const styles = cultureStyles[culture];
+
+            subtitles.forEach((sub, idx) => {
+                const style = styles[sub.emotion] || styles['neutral'];
+                const baseSize = parseFloat(style.fontSize);
+                sub.color = style.color;
+                sub.fontSize = (baseSize * scale) + 'em';
+                sub.fontWeight = style.fontWeight;
+                sub.background = style.background;
+
+                const entry = document.getElementById(`entry-${idx}`);
+                entry.style.color = sub.color;
+                entry.style.background = sub.background;
+            });
+        }
+    </script>
+</body>
+</html>

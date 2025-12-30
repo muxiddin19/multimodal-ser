@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentimentogram Demo V2 - Word-Level Emotion</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #eee;
+            font-size: 2em;
+        }
+        .subtitle-info {
+            text-align: center;
+            color: #888;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        video {
+            width: 100%;
+            display: block;
+        }
+        .subtitle-overlay {
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            padding: 12px 24px;
+            border-radius: 8px;
+            max-width: 85%;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px);
+            transition: all 0.2s ease;
+            font-size: 1.4em;
+            line-height: 1.5;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .control-group {
+            background: rgba(22, 33, 62, 0.8);
+            padding: 15px 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .control-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #888;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        select {
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: 1px solid #333;
+            background: #0f3460;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .emotion-legend {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(22, 33, 62, 0.8);
+            border-radius: 25px;
+            font-size: 0.9em;
+        }
+        .legend-color {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px currentColor;
+        }
+        .transcript {
+            background: rgba(22, 33, 62, 0.8);
+            border-radius: 12px;
+            padding: 20px;
+            max-height: 450px;
+            overflow-y: auto;
+            backdrop-filter: blur(10px);
+        }
+        .transcript h2 {
+            margin-bottom: 15px;
+            color: #aaa;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .transcript-entry {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .transcript-entry:hover {
+            background: rgba(255,255,255,0.05);
+        }
+        .transcript-entry.active {
+            background: rgba(255,255,255,0.1);
+            border-left: 3px solid #FFD700;
+        }
+        .transcript-entry .time {
+            color: #666;
+            font-size: 0.85em;
+            min-width: 45px;
+            font-family: monospace;
+        }
+        .transcript-entry .text {
+            flex: 1;
+            line-height: 1.6;
+        }
+        .transcript-entry .emotion-tag {
+            font-size: 0.7em;
+            padding: 4px 10px;
+            border-radius: 12px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #444;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sentimentogram Demo V2</h1>
+        <p class="subtitle-info">Word-Level Emotion Visualization with Distinct Colors</p>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>Culture Setting</label>
+                <select id="cultureSelect" onchange="updateStyles()">
+                    <option value="western" selected>Western</option>
+                    <option value="eastern" >Eastern</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>Age Group</label>
+                <select id="ageSelect" onchange="updateStyles()">
+                    <option value="child">Child (1.3x)</option>
+                    <option value="teen">Teen (1.1x)</option>
+                    <option value="adult" selected>Adult (1.0x)</option>
+                    <option value="senior">Senior (1.25x)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="emotion-legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background:#FFD700;color:#FFD700"></div>
+                <span>Happy/Excited</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#4A90D9;color:#4A90D9"></div>
+                <span>Sadness</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#B8B8B8;color:#B8B8B8"></div>
+                <span>Neutral</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#FF4444;color:#FF4444"></div>
+                <span>Anger</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#FF8C00;color:#FF8C00"></div>
+                <span>Frustration</span>
+            </div>
+        </div>
+
+        <div class="video-container">
+            <video id="video" controls>
+                <source src="tedx1.mp4" type="video/mp4">
+            </video>
+            <div class="subtitle-overlay" id="subtitle"></div>
+        </div>
+
+        <div class="transcript">
+            <h2>Transcript with Word-Level Emotions</h2>
+            
+            <div class="transcript-entry" id="entry-0" data-start="0.0" data-end="2.5">
+                <span class="time">0:00</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">Wow, what an audience.</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (60%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-1" data-start="3.2" data-end="5.68">
+                <span class="time">0:03</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">But if I'm being honest, I don't care what you think of my talk.</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (52%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-2" data-start="6.8" data-end="7.28">
+                <span class="time">0:06</span>
+                <span class="text"><span style="color:#FFD700;font-size:1.25em;font-weight:bold">I don't.</span></span>
+                <span class="emotion-tag" style="background:#FFD700">happy_excited (60%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-3" data-start="7.64" data-end="9.14">
+                <span class="time">0:07</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">I care what the internet thinks of my talk.</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (61%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-4" data-start="10.28" data-end="12.62">
+                <span class="time">0:10</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">Because they're the ones who get it seen and get it shared.</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (42%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-5" data-start="13.2" data-end="14.78">
+                <span class="time">0:13</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">And I think that's where most people get it wrong.</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (62%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-6" data-start="15.16" data-end="16.68">
+                <span class="time">0:15</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">They're talking to you here.</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (45%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-7" data-start="17.36" data-end="21.72">
+                <span class="time">0:17</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">Instead of talking to you, random person scrolling Facebook.</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (63%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-8" data-start="22.9" data-end="23.7">
+                <span class="time">0:22</span>
+                <span class="text"><span style="color:#FFD700;font-size:1.25em;font-weight:bold">Thanks for the click.</span></span>
+                <span class="emotion-tag" style="background:#FFD700">happy_excited (51%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-9" data-start="24.64" data-end="28.22">
+                <span class="time">0:24</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">You see, back in 2009, we all had these weird little things</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (79%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-10" data-start="28.22" data-end="29.92">
+                <span class="time">0:28</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">called attention spans.</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (79%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-11" data-start="30.8" data-end="31.84">
+                <span class="time">0:30</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">Yeah, they're gone.</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (64%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-12" data-start="32.04" data-end="32.26">
+                <span class="time">0:32</span>
+                <span class="text"><span style="color:#FF4444;font-size:1.35em;font-weight:bold">They're gone.</span></span>
+                <span class="emotion-tag" style="background:#FF4444">anger (69%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-13" data-start="32.38" data-end="32.82">
+                <span class="time">0:32</span>
+                <span class="text"><span style="color:#FF8C00;font-size:1.15em;font-weight:bold">We killed them.</span></span>
+                <span class="emotion-tag" style="background:#FF8C00">frustration (39%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-14" data-start="33.24" data-end="33.88">
+                <span class="time">0:33</span>
+                <span class="text"><span style="color:#FFD700;font-size:1.25em;font-weight:bold">They're dead.</span></span>
+                <span class="emotion-tag" style="background:#FFD700">happy_excited (52%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-15" data-start="34.9" data-end="37.84">
+                <span class="time">0:34</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">I'm trying to think of the last time I watched an 18-minute</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (62%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-16" data-start="37.84" data-end="38.36">
+                <span class="time">0:37</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">TED talk.</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (60%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-17" data-start="38.86" data-end="40.78">
+                <span class="time">0:38</span>
+                <span class="text"><span style="color:#FFD700;font-size:1.25em;font-weight:bold">It's been years, literally years.</span></span>
+                <span class="emotion-tag" style="background:#FFD700">happy_excited (56%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-18" data-start="41.52" data-end="44.04">
+                <span class="time">0:41</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">So if you're given a TED talk, keep it quick.</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (71%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-19" data-start="44.38" data-end="45.7">
+                <span class="time">0:44</span>
+                <span class="text"><span style="color:#FF8C00;font-size:1.15em;font-weight:bold">I'm doing mine in under a minute.</span></span>
+                <span class="emotion-tag" style="background:#FF8C00">frustration (43%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-20" data-start="46.32" data-end="47.82">
+                <span class="time">0:46</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">I'm at 44 seconds right now.</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (53%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-21" data-start="47.88" data-end="49.54">
+                <span class="time">0:47</span>
+                <span class="text"><span style="color:#B8B8B8;font-size:1.0em;font-weight:normal">That means we've got time for one final joke.</span></span>
+                <span class="emotion-tag" style="background:#B8B8B8">neutral (60%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-22" data-start="50.14" data-end="52.58">
+                <span class="time">0:50</span>
+                <span class="text"><span style="color:#FF4444;font-size:1.35em;font-weight:bold">Why are balloons so expensive?</span></span>
+                <span class="emotion-tag" style="background:#FF4444">anger (91%)</span>
+            </div>
+        
+
+            <div class="transcript-entry" id="entry-23" data-start="54.54" data-end="55.02">
+                <span class="time">0:54</span>
+                <span class="text"><span style="color:#FF8C00;font-size:1.15em;font-weight:bold">Inflation.</span></span>
+                <span class="emotion-tag" style="background:#FF8C00">frustration (42%)</span>
+            </div>
+        
+        </div>
+    </div>
+
+    <script>
+        const subtitles = [{"start": 0.0, "end": 2.5, "text": "Wow, what an audience.", "words": [], "dominant_emotion": "neutral"}, {"start": 3.2, "end": 5.68, "text": "But if I'm being honest, I don't care what you think of my talk.", "words": [], "dominant_emotion": "neutral"}, {"start": 6.8, "end": 7.28, "text": "I don't.", "words": [], "dominant_emotion": "happy_excited"}, {"start": 7.64, "end": 9.14, "text": "I care what the internet thinks of my talk.", "words": [], "dominant_emotion": "neutral"}, {"start": 10.28, "end": 12.62, "text": "Because they're the ones who get it seen and get it shared.", "words": [], "dominant_emotion": "neutral"}, {"start": 13.2, "end": 14.78, "text": "And I think that's where most people get it wrong.", "words": [], "dominant_emotion": "neutral"}, {"start": 15.16, "end": 16.68, "text": "They're talking to you here.", "words": [], "dominant_emotion": "neutral"}, {"start": 17.36, "end": 21.72, "text": "Instead of talking to you, random person scrolling Facebook.", "words": [], "dominant_emotion": "neutral"}, {"start": 22.9, "end": 23.7, "text": "Thanks for the click.", "words": [], "dominant_emotion": "happy_excited"}, {"start": 24.64, "end": 28.22, "text": "You see, back in 2009, we all had these weird little things", "words": [], "dominant_emotion": "neutral"}, {"start": 28.22, "end": 29.92, "text": "called attention spans.", "words": [], "dominant_emotion": "neutral"}, {"start": 30.8, "end": 31.84, "text": "Yeah, they're gone.", "words": [], "dominant_emotion": "neutral"}, {"start": 32.04, "end": 32.26, "text": "They're gone.", "words": [], "dominant_emotion": "anger"}, {"start": 32.38, "end": 32.82, "text": "We killed them.", "words": [], "dominant_emotion": "frustration"}, {"start": 33.24, "end": 33.88, "text": "They're dead.", "words": [], "dominant_emotion": "happy_excited"}, {"start": 34.9, "end": 37.84, "text": "I'm trying to think of the last time I watched an 18-minute", "words": [], "dominant_emotion": "neutral"}, {"start": 37.84, "end": 38.36, "text": "TED talk.", "words": [], "dominant_emotion": "neutral"}, {"start": 38.86, "end": 40.78, "text": "It's been years, literally years.", "words": [], "dominant_emotion": "happy_excited"}, {"start": 41.52, "end": 44.04, "text": "So if you're given a TED talk, keep it quick.", "words": [], "dominant_emotion": "neutral"}, {"start": 44.38, "end": 45.7, "text": "I'm doing mine in under a minute.", "words": [], "dominant_emotion": "frustration"}, {"start": 46.32, "end": 47.82, "text": "I'm at 44 seconds right now.", "words": [], "dominant_emotion": "neutral"}, {"start": 47.88, "end": 49.54, "text": "That means we've got time for one final joke.", "words": [], "dominant_emotion": "neutral"}, {"start": 50.14, "end": 52.58, "text": "Why are balloons so expensive?", "words": [], "dominant_emotion": "anger"}, {"start": 54.54, "end": 55.02, "text": "Inflation.", "words": [], "dominant_emotion": "frustration"}];
+        const cultureStyles = {"western": {"happy_excited": {"color": "#FFD700", "fontSize": 1.25, "fontWeight": "bold", "background": "rgba(255,215,0,0.15)", "textShadow": "0 0 10px rgba(255,215,0,0.5)"}, "sadness": {"color": "#4A90D9", "fontSize": 0.9, "fontWeight": "normal", "background": "rgba(74,144,217,0.1)", "textShadow": "none"}, "neutral": {"color": "#B8B8B8", "fontSize": 1.0, "fontWeight": "normal", "background": "transparent", "textShadow": "none"}, "anger": {"color": "#FF4444", "fontSize": 1.35, "fontWeight": "bold", "background": "rgba(255,68,68,0.15)", "textShadow": "0 0 12px rgba(255,68,68,0.6)"}, "frustration": {"color": "#FF8C00", "fontSize": 1.15, "fontWeight": "bold", "background": "rgba(255,140,0,0.12)", "textShadow": "0 0 8px rgba(255,140,0,0.4)"}}, "eastern": {"happy_excited": {"color": "#FF3333", "fontSize": 1.25, "fontWeight": "bold", "background": "rgba(255,51,51,0.15)", "textShadow": "0 0 10px rgba(255,51,51,0.5)"}, "sadness": {"color": "#E8E8E8", "fontSize": 0.9, "fontWeight": "normal", "background": "rgba(200,200,200,0.2)", "textShadow": "none"}, "neutral": {"color": "#A0A0A0", "fontSize": 1.0, "fontWeight": "normal", "background": "transparent", "textShadow": "none"}, "anger": {"color": "#1A1A1A", "fontSize": 1.35, "fontWeight": "bold", "background": "rgba(0,0,0,0.3)", "textShadow": "0 0 5px rgba(255,255,255,0.3)"}, "frustration": {"color": "#8B4513", "fontSize": 1.15, "fontWeight": "bold", "background": "rgba(139,69,19,0.15)", "textShadow": "none"}}};
+        const ageScales = {"child": 1.3, "teen": 1.1, "adult": 1.0, "senior": 1.25};
+        const legendColors = {"happy_excited": "#FFD700", "sadness": "#4A90D9", "neutral": "#B8B8B8", "anger": "#FF4444", "frustration": "#FF8C00"};
+
+        const video = document.getElementById('video');
+        const subtitleEl = document.getElementById('subtitle');
+
+        video.addEventListener('timeupdate', function() {
+            const currentTime = video.currentTime;
+            let activeSubtitle = null;
+
+            subtitles.forEach((sub, idx) => {
+                const entry = document.getElementById(`entry-${idx}`);
+                if (currentTime >= sub.start && currentTime <= sub.end) {
+                    activeSubtitle = sub;
+                    entry.classList.add('active');
+                    entry.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else {
+                    entry.classList.remove('active');
+                }
+            });
+
+            if (activeSubtitle) {
+                const culture = document.getElementById('cultureSelect').value;
+                const age = document.getElementById('ageSelect').value;
+                const scale = ageScales[age];
+                const styles = cultureStyles[culture];
+
+                if (activeSubtitle.words && activeSubtitle.words.length > 0) {
+                    // Word-level styling
+                    let html = '';
+                    activeSubtitle.words.forEach(w => {
+                        const style = styles[w.emotion] || styles['neutral'];
+                        const size = style.fontSize * scale;
+                        html += `<span style="color:${style.color};font-size:${size}em;font-weight:${style.fontWeight};text-shadow:${style.textShadow}">${w.word}</span>`;
+                    });
+                    subtitleEl.innerHTML = html;
+                } else {
+                    // Sentence-level fallback
+                    const style = styles[activeSubtitle.dominant_emotion] || styles['neutral'];
+                    const size = style.fontSize * scale;
+                    subtitleEl.innerHTML = `<span style="color:${style.color};font-size:${size}em;font-weight:${style.fontWeight}">${activeSubtitle.text}</span>`;
+                }
+                subtitleEl.style.display = 'block';
+            } else {
+                subtitleEl.style.display = 'none';
+            }
+        });
+
+        // Click on transcript entry to seek
+        document.querySelectorAll('.transcript-entry').forEach(entry => {
+            entry.addEventListener('click', () => {
+                const start = parseFloat(entry.dataset.start);
+                video.currentTime = start;
+                video.play();
+            });
+        });
+
+        function updateStyles() {
+            const culture = document.getElementById('cultureSelect').value;
+            const age = document.getElementById('ageSelect').value;
+            const scale = ageScales[age];
+            const styles = cultureStyles[culture];
+
+            // Update transcript entries
+            subtitles.forEach((sub, idx) => {
+                const entry = document.getElementById(`entry-${idx}`);
+                const textSpan = entry.querySelector('.text');
+
+                if (sub.words && sub.words.length > 0) {
+                    let html = '';
+                    sub.words.forEach(w => {
+                        const style = styles[w.emotion] || styles['neutral'];
+                        const size = style.fontSize * scale;
+                        html += `<span style="color:${style.color};font-size:${size}em;font-weight:${style.fontWeight};text-shadow:${style.textShadow}">${w.word}</span>`;
+                    });
+                    textSpan.innerHTML = html;
+                } else {
+                    const style = styles[sub.dominant_emotion] || styles['neutral'];
+                    const size = style.fontSize * scale;
+                    textSpan.innerHTML = `<span style="color:${style.color};font-size:${size}em;font-weight:${style.fontWeight}">${sub.text}</span>`;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

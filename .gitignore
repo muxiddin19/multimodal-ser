@@ -116,3 +116,23 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Large media files
+*.mp4
+*.wav
+*.mp3
+*.avi
+*.mov
+
+# Large PDF files
+Preparation_of_Papers_for_IEEE_ACCESS.pdf
+SER.pdf
+SER1.pdf
+
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex.gz
+texput.log

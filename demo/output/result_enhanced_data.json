@@ -1,0 +1,4322 @@
+[
+  {
+    "text": "Wow, what an audience.",
+    "start": 0.0,
+    "end": 2.5,
+    "words": [
+      {
+        "word": " Wow,",
+        "start": 0.0,
+        "end": 0.76,
+        "probability": 0.7272652983665466
+      },
+      {
+        "word": " what",
+        "start": 1.18,
+        "end": 1.96,
+        "probability": 0.9870266318321228
+      },
+      {
+        "word": " an",
+        "start": 1.96,
+        "end": 2.08,
+        "probability": 0.9955739974975586
+      },
+      {
+        "word": " audience.",
+        "start": 2.08,
+        "end": 2.5,
+        "probability": 0.9964032173156738
+      }
+    ],
+    "emotion": "happy_excited",
+    "confidence": 0.3737070858478546,
+    "all_probs": {
+      "happy_excited": 0.3737070858478546,
+      "sadness": 0.05850794166326523,
+      "neutral": 0.30427640676498413,
+      "anger": 0.08387881517410278,
+      "frustration": 0.17962966859340668
+    },
+    "vad": [
+      0.15275844931602478,
+      0.09792663902044296,
+      0.04115365445613861
+    ],
+    "fusion_gates": {
+      "text": 1.4997165635577403e-05,
+      "audio": 0.9998879432678223,
+      "interaction": 9.699437214294448e-05
+    },
+    "word_emotions": [
+      {
+        "word": " Wow,",
+        "start": 0.0,
+        "end": 0.76,
+        "emotion": "neutral",
+        "confidence": 0.386077880859375,
+        "all_probs": {
+          "happy_excited": 0.23879332840442657,
+          "sadness": 0.06086520850658417,
+          "neutral": 0.386077880859375,
+          "anger": 0.08455755561590195,
+          "frustration": 0.22970600426197052
+        },
+        "fusion_gates": {
+          "text": 1.479072125221137e-05,
+          "audio": 0.99993896484375
+        }
+      },
+      {
+        "word": " what",
+        "start": 1.18,
+        "end": 1.96,
+        "emotion": "neutral",
+        "confidence": 0.4790973365306854,
+        "all_probs": {
+          "happy_excited": 0.09119660407304764,
+          "sadness": 0.06846100091934204,
+          "neutral": 0.4790973365306854,
+          "anger": 0.09813480079174042,
+          "frustration": 0.26311028003692627
+        },
+        "fusion_gates": {
+          "text": 9.108708582061809e-06,
+          "audio": 0.9999711513519287
+        }
+      },
+      {
+        "word": " an",
+        "start": 1.96,
+        "end": 2.08,
+        "emotion": "happy_excited",
+        "confidence": 0.34520769119262695,
+        "all_probs": {
+          "happy_excited": 0.34520769119262695,
+          "sadness": 0.08569223433732986,
+          "neutral": 0.34237101674079895,
+          "anger": 0.057251498103141785,
+          "frustration": 0.16947762668132782
+        },
+        "fusion_gates": {
+          "text": 0.00014583543816115707,
+          "audio": 0.9996852874755859
+        }
+      },
+      {
+        "word": " audience.",
+        "start": 2.08,
+        "end": 2.5,
+        "emotion": "happy_excited",
+        "confidence": 0.34520769119262695,
+        "all_probs": {
+          "happy_excited": 0.34520769119262695,
+          "sadness": 0.08569223433732986,
+          "neutral": 0.34237101674079895,
+          "anger": 0.057251498103141785,
+          "frustration": 0.16947762668132782
+        },
+        "fusion_gates": {
+          "text": 0.00014583543816115707,
+          "audio": 0.9996852874755859
+        }
+      }
+    ]
+  },
+  {
+    "text": "But if I'm being honest, I don't care what you think of my talk.",
+    "start": 3.2,
+    "end": 5.68,
+    "words": [
+      {
+        "word": " But",
+        "start": 3.2,
+        "end": 3.36,
+        "probability": 0.9780662059783936
+      },
+      {
+        "word": " if",
+        "start": 3.36,
+        "end": 3.46,
+        "probability": 0.970902144908905
+      },
+      {
+        "word": " I'm",
+        "start": 3.46,
+        "end": 3.52,
+        "probability": 0.9872789978981018
+      },
+      {
+        "word": " being",
+        "start": 3.52,
+        "end": 3.68,
+        "probability": 0.9888420104980469
+      },
+      {
+        "word": " honest,",
+        "start": 3.68,
+        "end": 3.98,
+        "probability": 0.9995620846748352
+      },
+      {
+        "word": " I",
+        "start": 4.36,
+        "end": 4.68,
+        "probability": 0.9974272847175598
+      },
+      {
+        "word": " don't",
+        "start": 4.68,
+        "end": 4.76,
+        "probability": 0.9990425705909729
+      },
+      {
+        "word": " care",
+        "start": 4.76,
+        "end": 4.94,
+        "probability": 0.9987742304801941
+      },
+      {
+        "word": " what",
+        "start": 4.94,
+        "end": 5.06,
+        "probability": 0.9946610331535339
+      },
+      {
+        "word": " you",
+        "start": 5.06,
+        "end": 5.14,
+        "probability": 0.9980688691139221
+      },
+      {
+        "word": " think",
+        "start": 5.14,
+        "end": 5.28,
+        "probability": 0.9968067407608032
+      },
+      {
+        "word": " of",
+        "start": 5.28,
+        "end": 5.36,
+        "probability": 0.9888429641723633
+      },
+      {
+        "word": " my",
+        "start": 5.36,
+        "end": 5.46,
+        "probability": 0.996532678604126
+      },
+      {
+        "word": " talk.",
+        "start": 5.46,
+        "end": 5.68,
+        "probability": 0.9957477450370789
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.4473611116409302,
+    "all_probs": {
+      "happy_excited": 0.15573741495609283,
+      "sadness": 0.06339921057224274,
+      "neutral": 0.4473611116409302,
+      "anger": 0.08775670826435089,
+      "frustration": 0.24574555456638336
+    },
+    "vad": [
+      -0.11086146533489227,
+      -0.23482868075370789,
+      -0.15301156044006348
+    ],
+    "fusion_gates": {
+      "text": 1.349332342215348e-05,
+      "audio": 0.9999451637268066,
+      "interaction": 4.132940011913888e-05
+    },
+    "word_emotions": [
+      {
+        "word": " But",
+        "start": 3.2,
+        "end": 3.36,
+        "emotion": "happy_excited",
+        "confidence": 0.4951244294643402,
+        "all_probs": {
+          "happy_excited": 0.4951244294643402,
+          "sadness": 0.05737365782260895,
+          "neutral": 0.16999533772468567,
+          "anger": 0.10483486950397491,
+          "frustration": 0.17267173528671265
+        },
+        "fusion_gates": {
+          "text": 1.3024462532484904e-05,
+          "audio": 0.99986732006073
+        }
+      },
+      {
+        "word": " if",
+        "start": 3.36,
+        "end": 3.46,
+        "emotion": "happy_excited",
+        "confidence": 0.4951244294643402,
+        "all_probs": {
+          "happy_excited": 0.4951244294643402,
+          "sadness": 0.05737365782260895,
+          "neutral": 0.16999533772468567,
+          "anger": 0.10483486950397491,
+          "frustration": 0.17267173528671265
+        },
+        "fusion_gates": {
+          "text": 1.3024462532484904e-05,
+          "audio": 0.99986732006073
+        }
+      },
+      {
+        "word": " I'm",
+        "start": 3.46,
+        "end": 3.52,
+        "emotion": "happy_excited",
+        "confidence": 0.4951244294643402,
+        "all_probs": {
+          "happy_excited": 0.4951244294643402,
+          "sadness": 0.05737365782260895,
+          "neutral": 0.16999533772468567,
+          "anger": 0.10483486950397491,
+          "frustration": 0.17267173528671265
+        },
+        "fusion_gates": {
+          "text": 1.3024462532484904e-05,
+          "audio": 0.99986732006073
+        }
+      },
+      {
+        "word": " being",
+        "start": 3.52,
+        "end": 3.68,
+        "emotion": "anger",
+        "confidence": 0.4361546039581299,
+        "all_probs": {
+          "happy_excited": 0.07931821793317795,
+          "sadness": 0.04161018505692482,
+          "neutral": 0.09349551796913147,
+          "anger": 0.4361546039581299,
+          "frustration": 0.3494214713573456
+        },
+        "fusion_gates": {
+          "text": 8.244585387728876e-07,
+          "audio": 0.9999849796295166
+        }
+      },
+      {
+        "word": " honest,",
+        "start": 3.68,
+        "end": 3.98,
+        "emotion": "anger",
+        "confidence": 0.4361546039581299,
+        "all_probs": {
+          "happy_excited": 0.07931821793317795,
+          "sadness": 0.04161018505692482,
+          "neutral": 0.09349551796913147,
+          "anger": 0.4361546039581299,
+          "frustration": 0.3494214713573456
+        },
+        "fusion_gates": {
+          "text": 8.244585387728876e-07,
+          "audio": 0.9999849796295166
+        }
+      },
+      {
+        "word": " I",
+        "start": 4.36,
+        "end": 4.68,
+        "emotion": "neutral",
+        "confidence": 0.459624320268631,
+        "all_probs": {
+          "happy_excited": 0.12979534268379211,
+          "sadness": 0.06810182332992554,
+          "neutral": 0.459624320268631,
+          "anger": 0.08442330360412598,
+          "frustration": 0.258055180311203
+        },
+        "fusion_gates": {
+          "text": 1.283565416088095e-05,
+          "audio": 0.9999675750732422
+        }
+      },
+      {
+        "word": " don't",
+        "start": 4.68,
+        "end": 4.76,
+        "emotion": "neutral",
+        "confidence": 0.3959863483905792,
+        "all_probs": {
+          "happy_excited": 0.27290216088294983,
+          "sadness": 0.07554227858781815,
+          "neutral": 0.3959863483905792,
+          "anger": 0.06149116903543472,
+          "frustration": 0.19407805800437927
+        },
+        "fusion_gates": {
+          "text": 8.817131310934201e-05,
+          "audio": 0.9997963309288025
+        }
+      },
+      {
+        "word": " care",
+        "start": 4.76,
+        "end": 4.94,
+        "emotion": "neutral",
+        "confidence": 0.3959863483905792,
+        "all_probs": {
+          "happy_excited": 0.27290216088294983,
+          "sadness": 0.07554227858781815,
+          "neutral": 0.3959863483905792,
+          "anger": 0.06149116903543472,
+          "frustration": 0.19407805800437927
+        },
+        "fusion_gates": {
+          "text": 8.817131310934201e-05,
+          "audio": 0.9997963309288025
+        }
+      },
+      {
+        "word": " what",
+        "start": 4.94,
+        "end": 5.06,
+        "emotion": "neutral",
+        "confidence": 0.3959863483905792,
+        "all_probs": {
+          "happy_excited": 0.27290216088294983,
+          "sadness": 0.07554227858781815,
+          "neutral": 0.3959863483905792,
+          "anger": 0.06149116903543472,
+          "frustration": 0.19407805800437927
+        },
+        "fusion_gates": {
+          "text": 8.817131310934201e-05,
+          "audio": 0.9997963309288025
+        }
+      },
+      {
+        "word": " you",
+        "start": 5.06,
+        "end": 5.14,
+        "emotion": "happy_excited",
+        "confidence": 0.518132209777832,
+        "all_probs": {
+          "happy_excited": 0.518132209777832,
+          "sadness": 0.071842260658741,
+          "neutral": 0.19413578510284424,
+          "anger": 0.07181194424629211,
+          "frustration": 0.14407780766487122
+        },
+        "fusion_gates": {
+          "text": 7.014607399469241e-05,
+          "audio": 0.9996864795684814
+        }
+      },
+      {
+        "word": " think",
+        "start": 5.14,
+        "end": 5.28,
+        "emotion": "happy_excited",
+        "confidence": 0.518132209777832,
+        "all_probs": {
+          "happy_excited": 0.518132209777832,
+          "sadness": 0.071842260658741,
+          "neutral": 0.19413578510284424,
+          "anger": 0.07181194424629211,
+          "frustration": 0.14407780766487122
+        },
+        "fusion_gates": {
+          "text": 7.014607399469241e-05,
+          "audio": 0.9996864795684814
+        }
+      },
+      {
+        "word": " of",
+        "start": 5.28,
+        "end": 5.36,
+        "emotion": "happy_excited",
+        "confidence": 0.518132209777832,
+        "all_probs": {
+          "happy_excited": 0.518132209777832,
+          "sadness": 0.071842260658741,
+          "neutral": 0.19413578510284424,
+          "anger": 0.07181194424629211,
+          "frustration": 0.14407780766487122
+        },
+        "fusion_gates": {
+          "text": 7.014607399469241e-05,
+          "audio": 0.9996864795684814
+        }
+      },
+      {
+        "word": " my",
+        "start": 5.36,
+        "end": 5.46,
+        "emotion": "neutral",
+        "confidence": 0.5207222700119019,
+        "all_probs": {
+          "happy_excited": 0.11714101582765579,
+          "sadness": 0.10311542451381683,
+          "neutral": 0.5207222700119019,
+          "anger": 0.06837815046310425,
+          "frustration": 0.1906430721282959
+        },
+        "fusion_gates": {
+          "text": 2.5472640118096024e-05,
+          "audio": 0.9999256134033203
+        }
+      },
+      {
+        "word": " talk.",
+        "start": 5.46,
+        "end": 5.68,
+        "emotion": "neutral",
+        "confidence": 0.5207222700119019,
+        "all_probs": {
+          "happy_excited": 0.11714101582765579,
+          "sadness": 0.10311542451381683,
+          "neutral": 0.5207222700119019,
+          "anger": 0.06837815046310425,
+          "frustration": 0.1906430721282959
+        },
+        "fusion_gates": {
+          "text": 2.5472640118096024e-05,
+          "audio": 0.9999256134033203
+        }
+      }
+    ]
+  },
+  {
+    "text": "I don't.",
+    "start": 6.8,
+    "end": 7.28,
+    "words": [
+      {
+        "word": " I",
+        "start": 6.8,
+        "end": 7.0,
+        "probability": 0.9783409237861633
+      },
+      {
+        "word": " don't.",
+        "start": 7.0,
+        "end": 7.28,
+        "probability": 0.9586291611194611
+      }
+    ],
+    "emotion": "happy_excited",
+    "confidence": 0.477349191904068,
+    "all_probs": {
+      "happy_excited": 0.477349191904068,
+      "sadness": 0.05852409452199936,
+      "neutral": 0.18756103515625,
+      "anger": 0.0923922136425972,
+      "frustration": 0.18417344987392426
+    },
+    "vad": [
+      0.37262505292892456,
+      0.39010104537010193,
+      0.17307312786579132
+    ],
+    "fusion_gates": {
+      "text": 4.385515785543248e-05,
+      "audio": 0.999700665473938,
+      "interaction": 0.000255495571764186
+    },
+    "word_emotions": [
+      {
+        "word": " I",
+        "start": 6.8,
+        "end": 7.0,
+        "emotion": "happy_excited",
+        "confidence": 0.477349191904068,
+        "all_probs": {
+          "happy_excited": 0.477349191904068,
+          "sadness": 0.05852409452199936,
+          "neutral": 0.18756103515625,
+          "anger": 0.0923922136425972,
+          "frustration": 0.18417344987392426
+        },
+        "fusion_gates": {
+          "text": 4.385515785543248e-05,
+          "audio": 0.999700665473938
+        }
+      },
+      {
+        "word": " don't.",
+        "start": 7.0,
+        "end": 7.28,
+        "emotion": "happy_excited",
+        "confidence": 0.477349191904068,
+        "all_probs": {
+          "happy_excited": 0.477349191904068,
+          "sadness": 0.05852409452199936,
+          "neutral": 0.18756103515625,
+          "anger": 0.0923922136425972,
+          "frustration": 0.18417344987392426
+        },
+        "fusion_gates": {
+          "text": 4.385515785543248e-05,
+          "audio": 0.999700665473938
+        }
+      }
+    ]
+  },
+  {
+    "text": "I care what the internet thinks of my talk.",
+    "start": 7.64,
+    "end": 9.14,
+    "words": [
+      {
+        "word": " I",
+        "start": 7.64,
+        "end": 7.86,
+        "probability": 0.9950891137123108
+      },
+      {
+        "word": " care",
+        "start": 7.86,
+        "end": 7.98,
+        "probability": 0.9552236795425415
+      },
+      {
+        "word": " what",
+        "start": 7.98,
+        "end": 8.08,
+        "probability": 0.9582569599151611
+      },
+      {
+        "word": " the",
+        "start": 8.08,
+        "end": 8.18,
+        "probability": 0.9964118599891663
+      },
+      {
+        "word": " internet",
+        "start": 8.18,
+        "end": 8.34,
+        "probability": 0.7875331044197083
+      },
+      {
+        "word": " thinks",
+        "start": 8.34,
+        "end": 8.64,
+        "probability": 0.9963816404342651
+      },
+      {
+        "word": " of",
+        "start": 8.64,
+        "end": 8.78,
+        "probability": 0.9879520535469055
+      },
+      {
+        "word": " my",
+        "start": 8.78,
+        "end": 8.88,
+        "probability": 0.9986829161643982
+      },
+      {
+        "word": " talk.",
+        "start": 8.88,
+        "end": 9.14,
+        "probability": 0.9968575239181519
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.40011629462242126,
+    "all_probs": {
+      "happy_excited": 0.23868726193904877,
+      "sadness": 0.06679855287075043,
+      "neutral": 0.40011629462242126,
+      "anger": 0.06585151702165604,
+      "frustration": 0.2285463958978653
+    },
+    "vad": [
+      -0.07795453071594238,
+      -0.10945858061313629,
+      -0.11263997852802277
+    ],
+    "fusion_gates": {
+      "text": 0.00010099329665536061,
+      "audio": 0.9997674822807312,
+      "interaction": 0.00013151008170098066
+    },
+    "word_emotions": [
+      {
+        "word": " I",
+        "start": 7.64,
+        "end": 7.86,
+        "emotion": "neutral",
+        "confidence": 0.3818374276161194,
+        "all_probs": {
+          "happy_excited": 0.29297325015068054,
+          "sadness": 0.0945763811469078,
+          "neutral": 0.3818374276161194,
+          "anger": 0.05520576983690262,
+          "frustration": 0.17540720105171204
+        },
+        "fusion_gates": {
+          "text": 0.0001298461720580235,
+          "audio": 0.9997363686561584
+        }
+      },
+      {
+        "word": " care",
+        "start": 7.86,
+        "end": 7.98,
+        "emotion": "neutral",
+        "confidence": 0.3818374276161194,
+        "all_probs": {
+          "happy_excited": 0.29297325015068054,
+          "sadness": 0.0945763811469078,
+          "neutral": 0.3818374276161194,
+          "anger": 0.05520576983690262,
+          "frustration": 0.17540720105171204
+        },
+        "fusion_gates": {
+          "text": 0.0001298461720580235,
+          "audio": 0.9997363686561584
+        }
+      },
+      {
+        "word": " what",
+        "start": 7.98,
+        "end": 8.08,
+        "emotion": "anger",
+        "confidence": 0.38252392411231995,
+        "all_probs": {
+          "happy_excited": 0.0707114115357399,
+          "sadness": 0.03919672966003418,
+          "neutral": 0.1283060610294342,
+          "anger": 0.38252392411231995,
+          "frustration": 0.3792618215084076
+        },
+        "fusion_gates": {
+          "text": 1.1436576414780575e-06,
+          "audio": 0.9999840259552002
+        }
+      },
+      {
+        "word": " the",
+        "start": 8.08,
+        "end": 8.18,
+        "emotion": "anger",
+        "confidence": 0.38252392411231995,
+        "all_probs": {
+          "happy_excited": 0.0707114115357399,
+          "sadness": 0.03919672966003418,
+          "neutral": 0.1283060610294342,
+          "anger": 0.38252392411231995,
+          "frustration": 0.3792618215084076
+        },
+        "fusion_gates": {
+          "text": 1.1436576414780575e-06,
+          "audio": 0.9999840259552002
+        }
+      },
+      {
+        "word": " internet",
+        "start": 8.18,
+        "end": 8.34,
+        "emotion": "anger",
+        "confidence": 0.38252392411231995,
+        "all_probs": {
+          "happy_excited": 0.0707114115357399,
+          "sadness": 0.03919672966003418,
+          "neutral": 0.1283060610294342,
+          "anger": 0.38252392411231995,
+          "frustration": 0.3792618215084076
+        },
+        "fusion_gates": {
+          "text": 1.1436576414780575e-06,
+          "audio": 0.9999840259552002
+        }
+      },
+      {
+        "word": " thinks",
+        "start": 8.34,
+        "end": 8.64,
+        "emotion": "neutral",
+        "confidence": 0.42974546551704407,
+        "all_probs": {
+          "happy_excited": 0.1933925896883011,
+          "sadness": 0.06782922893762589,
+          "neutral": 0.42974546551704407,
+          "anger": 0.07346989214420319,
+          "frustration": 0.2355627715587616
+        },
+        "fusion_gates": {
+          "text": 2.848759322660044e-05,
+          "audio": 0.9999290704727173
+        }
+      },
+      {
+        "word": " of",
+        "start": 8.64,
+        "end": 8.78,
+        "emotion": "neutral",
+        "confidence": 0.3950642943382263,
+        "all_probs": {
+          "happy_excited": 0.2699897885322571,
+          "sadness": 0.11249519884586334,
+          "neutral": 0.3950642943382263,
+          "anger": 0.0529799722135067,
+          "frustration": 0.16947072744369507
+        },
+        "fusion_gates": {
+          "text": 9.44994026212953e-05,
+          "audio": 0.999805748462677
+        }
+      },
+      {
+        "word": " my",
+        "start": 8.78,
+        "end": 8.88,
+        "emotion": "neutral",
+        "confidence": 0.3950642943382263,
+        "all_probs": {
+          "happy_excited": 0.2699897885322571,
+          "sadness": 0.11249519884586334,
+          "neutral": 0.3950642943382263,
+          "anger": 0.0529799722135067,
+          "frustration": 0.16947072744369507
+        },
+        "fusion_gates": {
+          "text": 9.44994026212953e-05,
+          "audio": 0.999805748462677
+        }
+      },
+      {
+        "word": " talk.",
+        "start": 8.88,
+        "end": 9.14,
+        "emotion": "neutral",
+        "confidence": 0.3950642943382263,
+        "all_probs": {
+          "happy_excited": 0.2699897885322571,
+          "sadness": 0.11249519884586334,
+          "neutral": 0.3950642943382263,
+          "anger": 0.0529799722135067,
+          "frustration": 0.16947072744369507
+        },
+        "fusion_gates": {
+          "text": 9.44994026212953e-05,
+          "audio": 0.999805748462677
+        }
+      }
+    ]
+  },
+  {
+    "text": "Because they're the ones who get it seen and get it shared.",
+    "start": 10.28,
+    "end": 12.62,
+    "words": [
+      {
+        "word": " Because",
+        "start": 10.28,
+        "end": 10.68,
+        "probability": 0.376453161239624
+      },
+      {
+        "word": " they're",
+        "start": 10.68,
+        "end": 10.82,
+        "probability": 0.9167429804801941
+      },
+      {
+        "word": " the",
+        "start": 10.82,
+        "end": 10.94,
+        "probability": 0.9934913516044617
+      },
+      {
+        "word": " ones",
+        "start": 10.94,
+        "end": 11.12,
+        "probability": 0.9970477223396301
+      },
+      {
+        "word": " who",
+        "start": 11.12,
+        "end": 11.3,
+        "probability": 0.8248884081840515
+      },
+      {
+        "word": " get",
+        "start": 11.3,
+        "end": 11.4,
+        "probability": 0.9363470673561096
+      },
+      {
+        "word": " it",
+        "start": 11.4,
+        "end": 11.48,
+        "probability": 0.9515745043754578
+      },
+      {
+        "word": " seen",
+        "start": 11.48,
+        "end": 11.7,
+        "probability": 0.9112650156021118
+      },
+      {
+        "word": " and",
+        "start": 11.7,
+        "end": 12.16,
+        "probability": 0.8598722219467163
+      },
+      {
+        "word": " get",
+        "start": 12.16,
+        "end": 12.28,
+        "probability": 0.9895986318588257
+      },
+      {
+        "word": " it",
+        "start": 12.28,
+        "end": 12.38,
+        "probability": 0.9965716600418091
+      },
+      {
+        "word": " shared.",
+        "start": 12.38,
+        "end": 12.62,
+        "probability": 0.9959861636161804
+      }
+    ],
+    "emotion": "happy_excited",
+    "confidence": 0.3499384820461273,
+    "all_probs": {
+      "happy_excited": 0.3499384820461273,
+      "sadness": 0.1276666820049286,
+      "neutral": 0.3157772123813629,
+      "anger": 0.051287975162267685,
+      "frustration": 0.15532958507537842
+    },
+    "vad": [
+      0.11268546432256699,
+      0.04962088540196419,
+      -0.004413316026329994
+    ],
+    "fusion_gates": {
+      "text": 0.0001403358910465613,
+      "audio": 0.9997020363807678,
+      "interaction": 0.00015764054842293262
+    },
+    "word_emotions": [
+      {
+        "word": " Because",
+        "start": 10.28,
+        "end": 10.68,
+        "emotion": "neutral",
+        "confidence": 0.3876734673976898,
+        "all_probs": {
+          "happy_excited": 0.2757910192012787,
+          "sadness": 0.07088260352611542,
+          "neutral": 0.3876734673976898,
+          "anger": 0.06439556926488876,
+          "frustration": 0.20125731825828552
+        },
+        "fusion_gates": {
+          "text": 7.24981800885871e-05,
+          "audio": 0.9998291730880737
+        }
+      },
+      {
+        "word": " they're",
+        "start": 10.68,
+        "end": 10.82,
+        "emotion": "happy_excited",
+        "confidence": 0.3377056121826172,
+        "all_probs": {
+          "happy_excited": 0.3377056121826172,
+          "sadness": 0.0681508406996727,
+          "neutral": 0.33726468682289124,
+          "anger": 0.06690952181816101,
+          "frustration": 0.18996930122375488
+        },
+        "fusion_gates": {
+          "text": 6.040622611180879e-05,
+          "audio": 0.9998283386230469
+        }
+      },
+      {
+        "word": " the",
+        "start": 10.82,
+        "end": 10.94,
+        "emotion": "happy_excited",
+        "confidence": 0.3377056121826172,
+        "all_probs": {
+          "happy_excited": 0.3377056121826172,
+          "sadness": 0.0681508406996727,
+          "neutral": 0.33726468682289124,
+          "anger": 0.06690952181816101,
+          "frustration": 0.18996930122375488
+        },
+        "fusion_gates": {
+          "text": 6.040622611180879e-05,
+          "audio": 0.9998283386230469
+        }
+      },
+      {
+        "word": " ones",
+        "start": 10.94,
+        "end": 11.12,
+        "emotion": "happy_excited",
+        "confidence": 0.3377056121826172,
+        "all_probs": {
+          "happy_excited": 0.3377056121826172,
+          "sadness": 0.0681508406996727,
+          "neutral": 0.33726468682289124,
+          "anger": 0.06690952181816101,
+          "frustration": 0.18996930122375488
+        },
+        "fusion_gates": {
+          "text": 6.040622611180879e-05,
+          "audio": 0.9998283386230469
+        }
+      },
+      {
+        "word": " who",
+        "start": 11.12,
+        "end": 11.3,
+        "emotion": "neutral",
+        "confidence": 0.49431321024894714,
+        "all_probs": {
+          "happy_excited": 0.12740148603916168,
+          "sadness": 0.08480296283960342,
+          "neutral": 0.49431321024894714,
+          "anger": 0.0732201561331749,
+          "frustration": 0.22026212513446808
+        },
+        "fusion_gates": {
+          "text": 2.2705293304170482e-05,
+          "audio": 0.999942421913147
+        }
+      },
+      {
+        "word": " get",
+        "start": 11.3,
+        "end": 11.4,
+        "emotion": "neutral",
+        "confidence": 0.49431321024894714,
+        "all_probs": {
+          "happy_excited": 0.12740148603916168,
+          "sadness": 0.08480296283960342,
+          "neutral": 0.49431321024894714,
+          "anger": 0.0732201561331749,
+          "frustration": 0.22026212513446808
+        },
+        "fusion_gates": {
+          "text": 2.2705293304170482e-05,
+          "audio": 0.999942421913147
+        }
+      },
+      {
+        "word": " it",
+        "start": 11.4,
+        "end": 11.48,
+        "emotion": "neutral",
+        "confidence": 0.49431321024894714,
+        "all_probs": {
+          "happy_excited": 0.12740148603916168,
+          "sadness": 0.08480296283960342,
+          "neutral": 0.49431321024894714,
+          "anger": 0.0732201561331749,
+          "frustration": 0.22026212513446808
+        },
+        "fusion_gates": {
+          "text": 2.2705293304170482e-05,
+          "audio": 0.999942421913147
+        }
+      },
+      {
+        "word": " seen",
+        "start": 11.48,
+        "end": 11.7,
+        "emotion": "neutral",
+        "confidence": 0.4930754601955414,
+        "all_probs": {
+          "happy_excited": 0.150894895195961,
+          "sadness": 0.1048353761434555,
+          "neutral": 0.4930754601955414,
+          "anger": 0.06246158853173256,
+          "frustration": 0.18873262405395508
+        },
+        "fusion_gates": {
+          "text": 3.391114660189487e-05,
+          "audio": 0.9999154806137085
+        }
+      },
+      {
+        "word": " and",
+        "start": 11.7,
+        "end": 12.16,
+        "emotion": "neutral",
+        "confidence": 0.4930754601955414,
+        "all_probs": {
+          "happy_excited": 0.150894895195961,
+          "sadness": 0.1048353761434555,
+          "neutral": 0.4930754601955414,
+          "anger": 0.06246158853173256,
+          "frustration": 0.18873262405395508
+        },
+        "fusion_gates": {
+          "text": 3.391114660189487e-05,
+          "audio": 0.9999154806137085
+        }
+      },
+      {
+        "word": " get",
+        "start": 12.16,
+        "end": 12.28,
+        "emotion": "happy_excited",
+        "confidence": 0.3977173864841461,
+        "all_probs": {
+          "happy_excited": 0.3977173864841461,
+          "sadness": 0.10018427670001984,
+          "neutral": 0.28321442008018494,
+          "anger": 0.05698786675930023,
+          "frustration": 0.16189607977867126
+        },
+        "fusion_gates": {
+          "text": 0.0001865020312834531,
+          "audio": 0.9996176958084106
+        }
+      },
+      {
+        "word": " it",
+        "start": 12.28,
+        "end": 12.38,
+        "emotion": "happy_excited",
+        "confidence": 0.3977173864841461,
+        "all_probs": {
+          "happy_excited": 0.3977173864841461,
+          "sadness": 0.10018427670001984,
+          "neutral": 0.28321442008018494,
+          "anger": 0.05698786675930023,
+          "frustration": 0.16189607977867126
+        },
+        "fusion_gates": {
+          "text": 0.0001865020312834531,
+          "audio": 0.9996176958084106
+        }
+      },
+      {
+        "word": " shared.",
+        "start": 12.38,
+        "end": 12.62,
+        "emotion": "happy_excited",
+        "confidence": 0.3977173864841461,
+        "all_probs": {
+          "happy_excited": 0.3977173864841461,
+          "sadness": 0.10018427670001984,
+          "neutral": 0.28321442008018494,
+          "anger": 0.05698786675930023,
+          "frustration": 0.16189607977867126
+        },
+        "fusion_gates": {
+          "text": 0.0001865020312834531,
+          "audio": 0.9996176958084106
+        }
+      }
+    ]
+  },
+  {
+    "text": "And I think that's where most people get it wrong.",
+    "start": 13.2,
+    "end": 14.78,
+    "words": [
+      {
+        "word": " And",
+        "start": 13.2,
+        "end": 13.28,
+        "probability": 0.9580352902412415
+      },
+      {
+        "word": " I",
+        "start": 13.28,
+        "end": 13.38,
+        "probability": 0.9925317168235779
+      },
+      {
+        "word": " think",
+        "start": 13.38,
+        "end": 13.52,
+        "probability": 0.999160885810852
+      },
+      {
+        "word": " that's",
+        "start": 13.52,
+        "end": 13.76,
+        "probability": 0.9603121876716614
+      },
+      {
+        "word": " where",
+        "start": 13.76,
+        "end": 13.84,
+        "probability": 0.9769019484519958
+      },
+      {
+        "word": " most",
+        "start": 13.84,
+        "end": 14.06,
+        "probability": 0.996712327003479
+      },
+      {
+        "word": " people",
+        "start": 14.06,
+        "end": 14.28,
+        "probability": 0.999433696269989
+      },
+      {
+        "word": " get",
+        "start": 14.28,
+        "end": 14.44,
+        "probability": 0.9965381622314453
+      },
+      {
+        "word": " it",
+        "start": 14.44,
+        "end": 14.54,
+        "probability": 0.9886273741722107
+      },
+      {
+        "word": " wrong.",
+        "start": 14.54,
+        "end": 14.78,
+        "probability": 0.9993078708648682
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.4476310610771179,
+    "all_probs": {
+      "happy_excited": 0.21203501522541046,
+      "sadness": 0.07643710821866989,
+      "neutral": 0.4476310610771179,
+      "anger": 0.06570620089769363,
+      "frustration": 0.1981905847787857
+    },
+    "vad": [
+      -0.07400202006101608,
+      -0.22956006228923798,
+      -0.12801991403102875
+    ],
+    "fusion_gates": {
+      "text": 3.792395000346005e-05,
+      "audio": 0.9998894929885864,
+      "interaction": 7.256854587467387e-05
+    },
+    "word_emotions": [
+      {
+        "word": " And",
+        "start": 13.2,
+        "end": 13.28,
+        "emotion": "happy_excited",
+        "confidence": 0.5623472929000854,
+        "all_probs": {
+          "happy_excited": 0.5623472929000854,
+          "sadness": 0.06864247471094131,
+          "neutral": 0.1553959846496582,
+          "anger": 0.08041669428348541,
+          "frustration": 0.13319756090641022
+        },
+        "fusion_gates": {
+          "text": 2.580591171863489e-05,
+          "audio": 0.9997941851615906
+        }
+      },
+      {
+        "word": " I",
+        "start": 13.28,
+        "end": 13.38,
+        "emotion": "happy_excited",
+        "confidence": 0.5623472929000854,
+        "all_probs": {
+          "happy_excited": 0.5623472929000854,
+          "sadness": 0.06864247471094131,
+          "neutral": 0.1553959846496582,
+          "anger": 0.08041669428348541,
+          "frustration": 0.13319756090641022
+        },
+        "fusion_gates": {
+          "text": 2.580591171863489e-05,
+          "audio": 0.9997941851615906
+        }
+      },
+      {
+        "word": " think",
+        "start": 13.38,
+        "end": 13.52,
+        "emotion": "happy_excited",
+        "confidence": 0.5623472929000854,
+        "all_probs": {
+          "happy_excited": 0.5623472929000854,
+          "sadness": 0.06864247471094131,
+          "neutral": 0.1553959846496582,
+          "anger": 0.08041669428348541,
+          "frustration": 0.13319756090641022
+        },
+        "fusion_gates": {
+          "text": 2.580591171863489e-05,
+          "audio": 0.9997941851615906
+        }
+      },
+      {
+        "word": " that's",
+        "start": 13.52,
+        "end": 13.76,
+        "emotion": "neutral",
+        "confidence": 0.35212063789367676,
+        "all_probs": {
+          "happy_excited": 0.26990628242492676,
+          "sadness": 0.05912007391452789,
+          "neutral": 0.35212063789367676,
+          "anger": 0.0874493420124054,
+          "frustration": 0.23140361905097961
+        },
+        "fusion_gates": {
+          "text": 1.5555975551251322e-05,
+          "audio": 0.9999392032623291
+        }
+      },
+      {
+        "word": " where",
+        "start": 13.76,
+        "end": 13.84,
+        "emotion": "neutral",
+        "confidence": 0.35212063789367676,
+        "all_probs": {
+          "happy_excited": 0.26990628242492676,
+          "sadness": 0.05912007391452789,
+          "neutral": 0.35212063789367676,
+          "anger": 0.0874493420124054,
+          "frustration": 0.23140361905097961
+        },
+        "fusion_gates": {
+          "text": 1.5555975551251322e-05,
+          "audio": 0.9999392032623291
+        }
+      },
+      {
+        "word": " most",
+        "start": 13.84,
+        "end": 14.06,
+        "emotion": "anger",
+        "confidence": 0.526767909526825,
+        "all_probs": {
+          "happy_excited": 0.05913160368800163,
+          "sadness": 0.04458016902208328,
+          "neutral": 0.06290121376514435,
+          "anger": 0.526767909526825,
+          "frustration": 0.3066190779209137
+        },
+        "fusion_gates": {
+          "text": 6.068884204069036e-07,
+          "audio": 0.9999842643737793
+        }
+      },
+      {
+        "word": " people",
+        "start": 14.06,
+        "end": 14.28,
+        "emotion": "anger",
+        "confidence": 0.526767909526825,
+        "all_probs": {
+          "happy_excited": 0.05913160368800163,
+          "sadness": 0.04458016902208328,
+          "neutral": 0.06290121376514435,
+          "anger": 0.526767909526825,
+          "frustration": 0.3066190779209137
+        },
+        "fusion_gates": {
+          "text": 6.068884204069036e-07,
+          "audio": 0.9999842643737793
+        }
+      },
+      {
+        "word": " get",
+        "start": 14.28,
+        "end": 14.44,
+        "emotion": "frustration",
+        "confidence": 0.39143380522727966,
+        "all_probs": {
+          "happy_excited": 0.08718444406986237,
+          "sadness": 0.04462340846657753,
+          "neutral": 0.2216879427433014,
+          "anger": 0.25507044792175293,
+          "frustration": 0.39143380522727966
+        },
+        "fusion_gates": {
+          "text": 2.003284407692263e-06,
+          "audio": 0.999984860420227
+        }
+      },
+      {
+        "word": " it",
+        "start": 14.44,
+        "end": 14.54,
+        "emotion": "frustration",
+        "confidence": 0.39143380522727966,
+        "all_probs": {
+          "happy_excited": 0.08718444406986237,
+          "sadness": 0.04462340846657753,
+          "neutral": 0.2216879427433014,
+          "anger": 0.25507044792175293,
+          "frustration": 0.39143380522727966
+        },
+        "fusion_gates": {
+          "text": 2.003284407692263e-06,
+          "audio": 0.999984860420227
+        }
+      },
+      {
+        "word": " wrong.",
+        "start": 14.54,
+        "end": 14.78,
+        "emotion": "frustration",
+        "confidence": 0.39143380522727966,
+        "all_probs": {
+          "happy_excited": 0.08718444406986237,
+          "sadness": 0.04462340846657753,
+          "neutral": 0.2216879427433014,
+          "anger": 0.25507044792175293,
+          "frustration": 0.39143380522727966
+        },
+        "fusion_gates": {
+          "text": 2.003284407692263e-06,
+          "audio": 0.999984860420227
+        }
+      }
+    ]
+  },
+  {
+    "text": "They're talking to you here.",
+    "start": 15.16,
+    "end": 16.68,
+    "words": [
+      {
+        "word": " They're",
+        "start": 15.16,
+        "end": 15.24,
+        "probability": 0.9774802923202515
+      },
+      {
+        "word": " talking",
+        "start": 15.24,
+        "end": 15.46,
+        "probability": 0.9949211478233337
+      },
+      {
+        "word": " to",
+        "start": 15.46,
+        "end": 15.62,
+        "probability": 0.9988046884536743
+      },
+      {
+        "word": " you",
+        "start": 15.62,
+        "end": 15.8,
+        "probability": 0.9969574213027954
+      },
+      {
+        "word": " here.",
+        "start": 15.8,
+        "end": 16.68,
+        "probability": 0.6052322387695312
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.4100690186023712,
+    "all_probs": {
+      "happy_excited": 0.14366285502910614,
+      "sadness": 0.05736839398741722,
+      "neutral": 0.4100690186023712,
+      "anger": 0.10076463222503662,
+      "frustration": 0.2881350815296173
+    },
+    "vad": [
+      -0.1304907500743866,
+      -0.16335813701152802,
+      -0.14796625077724457
+    ],
+    "fusion_gates": {
+      "text": 1.1287197594356257e-05,
+      "audio": 0.9999585151672363,
+      "interaction": 3.017265407834202e-05
+    },
+    "word_emotions": [
+      {
+        "word": " They're",
+        "start": 15.16,
+        "end": 15.24,
+        "emotion": "neutral",
+        "confidence": 0.38432809710502625,
+        "all_probs": {
+          "happy_excited": 0.07294072210788727,
+          "sadness": 0.05352599546313286,
+          "neutral": 0.38432809710502625,
+          "anger": 0.13521422445774078,
+          "frustration": 0.35399091243743896
+        },
+        "fusion_gates": {
+          "text": 4.954028554493561e-06,
+          "audio": 0.9999845027923584
+        }
+      },
+      {
+        "word": " talking",
+        "start": 15.24,
+        "end": 15.46,
+        "emotion": "neutral",
+        "confidence": 0.38432809710502625,
+        "all_probs": {
+          "happy_excited": 0.07294072210788727,
+          "sadness": 0.05352599546313286,
+          "neutral": 0.38432809710502625,
+          "anger": 0.13521422445774078,
+          "frustration": 0.35399091243743896
+        },
+        "fusion_gates": {
+          "text": 4.954028554493561e-06,
+          "audio": 0.9999845027923584
+        }
+      },
+      {
+        "word": " to",
+        "start": 15.46,
+        "end": 15.62,
+        "emotion": "neutral",
+        "confidence": 0.3768741190433502,
+        "all_probs": {
+          "happy_excited": 0.1878361850976944,
+          "sadness": 0.07566492259502411,
+          "neutral": 0.3768741190433502,
+          "anger": 0.07383662462234497,
+          "frustration": 0.2857881784439087
+        },
+        "fusion_gates": {
+          "text": 6.688562280032784e-05,
+          "audio": 0.9998984336853027
+        }
+      },
+      {
+        "word": " you",
+        "start": 15.62,
+        "end": 15.8,
+        "emotion": "neutral",
+        "confidence": 0.3768741190433502,
+        "all_probs": {
+          "happy_excited": 0.1878361850976944,
+          "sadness": 0.07566492259502411,
+          "neutral": 0.3768741190433502,
+          "anger": 0.07383662462234497,
+          "frustration": 0.2857881784439087
+        },
+        "fusion_gates": {
+          "text": 6.688562280032784e-05,
+          "audio": 0.9998984336853027
+        }
+      },
+      {
+        "word": " here.",
+        "start": 15.8,
+        "end": 16.68,
+        "emotion": "neutral",
+        "confidence": 0.4588279724121094,
+        "all_probs": {
+          "happy_excited": 0.17094427347183228,
+          "sadness": 0.0757029801607132,
+          "neutral": 0.4588279724121094,
+          "anger": 0.06952004879713058,
+          "frustration": 0.22500471770763397
+        },
+        "fusion_gates": {
+          "text": 3.648266283562407e-05,
+          "audio": 0.9999135732650757
+        }
+      }
+    ]
+  },
+  {
+    "text": "Instead of talking to you, random person scrolling Facebook.",
+    "start": 17.36,
+    "end": 21.72,
+    "words": [
+      {
+        "word": " Instead",
+        "start": 17.36,
+        "end": 17.64,
+        "probability": 0.9697719812393188
+      },
+      {
+        "word": " of",
+        "start": 17.64,
+        "end": 17.74,
+        "probability": 0.9928681254386902
+      },
+      {
+        "word": " talking",
+        "start": 17.74,
+        "end": 17.98,
+        "probability": 0.9935535192489624
+      },
+      {
+        "word": " to",
+        "start": 17.98,
+        "end": 18.12,
+        "probability": 0.9964724779129028
+      },
+      {
+        "word": " you,",
+        "start": 18.12,
+        "end": 18.4,
+        "probability": 0.9979438185691833
+      },
+      {
+        "word": " random",
+        "start": 18.92,
+        "end": 19.2,
+        "probability": 0.8389627933502197
+      },
+      {
+        "word": " person",
+        "start": 19.2,
+        "end": 19.88,
+        "probability": 0.9527267813682556
+      },
+      {
+        "word": " scrolling",
+        "start": 19.88,
+        "end": 20.88,
+        "probability": 0.8054021596908569
+      },
+      {
+        "word": " Facebook.",
+        "start": 20.88,
+        "end": 21.72,
+        "probability": 0.9242008328437805
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.4663962721824646,
+    "all_probs": {
+      "happy_excited": 0.12130914628505707,
+      "sadness": 0.06514555960893631,
+      "neutral": 0.4663962721824646,
+      "anger": 0.08809769153594971,
+      "frustration": 0.2590513229370117
+    },
+    "vad": [
+      -0.11492989957332611,
+      -0.2688581645488739,
+      -0.17676682770252228
+    ],
+    "fusion_gates": {
+      "text": 1.4259190720622428e-05,
+      "audio": 0.9999511241912842,
+      "interaction": 3.457959974184632e-05
+    },
+    "word_emotions": [
+      {
+        "word": " Instead",
+        "start": 17.36,
+        "end": 17.64,
+        "emotion": "neutral",
+        "confidence": 0.43553662300109863,
+        "all_probs": {
+          "happy_excited": 0.09004847705364227,
+          "sadness": 0.059752751141786575,
+          "neutral": 0.43553662300109863,
+          "anger": 0.11519381403923035,
+          "frustration": 0.2994683086872101
+        },
+        "fusion_gates": {
+          "text": 5.278015578369377e-06,
+          "audio": 0.9999828338623047
+        }
+      },
+      {
+        "word": " of",
+        "start": 17.64,
+        "end": 17.74,
+        "emotion": "neutral",
+        "confidence": 0.43553662300109863,
+        "all_probs": {
+          "happy_excited": 0.09004847705364227,
+          "sadness": 0.059752751141786575,
+          "neutral": 0.43553662300109863,
+          "anger": 0.11519381403923035,
+          "frustration": 0.2994683086872101
+        },
+        "fusion_gates": {
+          "text": 5.278015578369377e-06,
+          "audio": 0.9999828338623047
+        }
+      },
+      {
+        "word": " talking",
+        "start": 17.74,
+        "end": 17.98,
+        "emotion": "neutral",
+        "confidence": 0.37221330404281616,
+        "all_probs": {
+          "happy_excited": 0.08624737709760666,
+          "sadness": 0.05121683329343796,
+          "neutral": 0.37221330404281616,
+          "anger": 0.16290594637393951,
+          "frustration": 0.32741647958755493
+        },
+        "fusion_gates": {
+          "text": 2.8789377211069223e-06,
+          "audio": 0.999984622001648
+        }
+      },
+      {
+        "word": " to",
+        "start": 17.98,
+        "end": 18.12,
+        "emotion": "neutral",
+        "confidence": 0.37221330404281616,
+        "all_probs": {
+          "happy_excited": 0.08624737709760666,
+          "sadness": 0.05121683329343796,
+          "neutral": 0.37221330404281616,
+          "anger": 0.16290594637393951,
+          "frustration": 0.32741647958755493
+        },
+        "fusion_gates": {
+          "text": 2.8789377211069223e-06,
+          "audio": 0.999984622001648
+        }
+      },
+      {
+        "word": " you,",
+        "start": 18.12,
+        "end": 18.4,
+        "emotion": "neutral",
+        "confidence": 0.3969976603984833,
+        "all_probs": {
+          "happy_excited": 0.2816256284713745,
+          "sadness": 0.08321170508861542,
+          "neutral": 0.3969976603984833,
+          "anger": 0.05821700766682625,
+          "frustration": 0.17994800209999084
+        },
+        "fusion_gates": {
+          "text": 0.00010123211541213095,
+          "audio": 0.999772846698761
+        }
+      },
+      {
+        "word": " random",
+        "start": 18.92,
+        "end": 19.2,
+        "emotion": "neutral",
+        "confidence": 0.3969976603984833,
+        "all_probs": {
+          "happy_excited": 0.2816256284713745,
+          "sadness": 0.08321170508861542,
+          "neutral": 0.3969976603984833,
+          "anger": 0.05821700766682625,
+          "frustration": 0.17994800209999084
+        },
+        "fusion_gates": {
+          "text": 0.00010123211541213095,
+          "audio": 0.999772846698761
+        }
+      },
+      {
+        "word": " person",
+        "start": 19.2,
+        "end": 19.88,
+        "emotion": "neutral",
+        "confidence": 0.5028595328330994,
+        "all_probs": {
+          "happy_excited": 0.13416273891925812,
+          "sadness": 0.13531376421451569,
+          "neutral": 0.5028595328330994,
+          "anger": 0.05724028870463371,
+          "frustration": 0.1704237461090088
+        },
+        "fusion_gates": {
+          "text": 2.914887409133371e-05,
+          "audio": 0.9999198913574219
+        }
+      },
+      {
+        "word": " scrolling",
+        "start": 19.88,
+        "end": 20.88,
+        "emotion": "neutral",
+        "confidence": 0.45994633436203003,
+        "all_probs": {
+          "happy_excited": 0.18806171417236328,
+          "sadness": 0.12257997691631317,
+          "neutral": 0.45994633436203003,
+          "anger": 0.054226070642471313,
+          "frustration": 0.17518585920333862
+        },
+        "fusion_gates": {
+          "text": 5.598173083853908e-05,
+          "audio": 0.9998724460601807
+        }
+      },
+      {
+        "word": " Facebook.",
+        "start": 20.88,
+        "end": 21.72,
+        "emotion": "neutral",
+        "confidence": 0.42280685901641846,
+        "all_probs": {
+          "happy_excited": 0.24255229532718658,
+          "sadness": 0.11921939998865128,
+          "neutral": 0.42280685901641846,
+          "anger": 0.05221352353692055,
+          "frustration": 0.16320794820785522
+        },
+        "fusion_gates": {
+          "text": 7.477948383893818e-05,
+          "audio": 0.9998359680175781
+        }
+      }
+    ]
+  },
+  {
+    "text": "Thanks for the click.",
+    "start": 22.9,
+    "end": 23.7,
+    "words": [
+      {
+        "word": " Thanks",
+        "start": 22.9,
+        "end": 23.3,
+        "probability": 0.9893941283226013
+      },
+      {
+        "word": " for",
+        "start": 23.3,
+        "end": 23.44,
+        "probability": 0.9992683529853821
+      },
+      {
+        "word": " the",
+        "start": 23.44,
+        "end": 23.54,
+        "probability": 0.9983267188072205
+      },
+      {
+        "word": " click.",
+        "start": 23.54,
+        "end": 23.7,
+        "probability": 0.9856899380683899
+      }
+    ],
+    "emotion": "happy_excited",
+    "confidence": 0.3819802403450012,
+    "all_probs": {
+      "happy_excited": 0.3819802403450012,
+      "sadness": 0.09578052908182144,
+      "neutral": 0.31256476044654846,
+      "anger": 0.05559079721570015,
+      "frustration": 0.15408362448215485
+    },
+    "vad": [
+      0.1852855235338211,
+      0.09510696679353714,
+      0.0412801131606102
+    ],
+    "fusion_gates": {
+      "text": 0.0001446813257643953,
+      "audio": 0.9996821880340576,
+      "interaction": 0.00017314369324594736
+    },
+    "word_emotions": [
+      {
+        "word": " Thanks",
+        "start": 22.9,
+        "end": 23.3,
+        "emotion": "neutral",
+        "confidence": 0.49171292781829834,
+        "all_probs": {
+          "happy_excited": 0.14261475205421448,
+          "sadness": 0.08183262497186661,
+          "neutral": 0.49171292781829834,
+          "anger": 0.07237394154071808,
+          "frustration": 0.2114657163619995
+        },
+        "fusion_gates": {
+          "text": 2.415058588667307e-05,
+          "audio": 0.9999301433563232
+        }
+      },
+      {
+        "word": " for",
+        "start": 23.3,
+        "end": 23.44,
+        "emotion": "neutral",
+        "confidence": 0.48340922594070435,
+        "all_probs": {
+          "happy_excited": 0.1186632439494133,
+          "sadness": 0.08096709847450256,
+          "neutral": 0.48340922594070435,
+          "anger": 0.07230211794376373,
+          "frustration": 0.244658425450325
+        },
+        "fusion_gates": {
+          "text": 3.9622918848181143e-05,
+          "audio": 0.9999102354049683
+        }
+      },
+      {
+        "word": " the",
+        "start": 23.44,
+        "end": 23.54,
+        "emotion": "neutral",
+        "confidence": 0.48340922594070435,
+        "all_probs": {
+          "happy_excited": 0.1186632439494133,
+          "sadness": 0.08096709847450256,
+          "neutral": 0.48340922594070435,
+          "anger": 0.07230211794376373,
+          "frustration": 0.244658425450325
+        },
+        "fusion_gates": {
+          "text": 3.9622918848181143e-05,
+          "audio": 0.9999102354049683
+        }
+      },
+      {
+        "word": " click.",
+        "start": 23.54,
+        "end": 23.7,
+        "emotion": "neutral",
+        "confidence": 0.48340922594070435,
+        "all_probs": {
+          "happy_excited": 0.1186632439494133,
+          "sadness": 0.08096709847450256,
+          "neutral": 0.48340922594070435,
+          "anger": 0.07230211794376373,
+          "frustration": 0.244658425450325
+        },
+        "fusion_gates": {
+          "text": 3.9622918848181143e-05,
+          "audio": 0.9999102354049683
+        }
+      }
+    ]
+  },
+  {
+    "text": "You see, back in 2009, we all had these weird little things",
+    "start": 24.64,
+    "end": 28.22,
+    "words": [
+      {
+        "word": " You",
+        "start": 24.64,
+        "end": 25.04,
+        "probability": 0.9714638590812683
+      },
+      {
+        "word": " see,",
+        "start": 25.04,
+        "end": 25.22,
+        "probability": 0.9943793416023254
+      },
+      {
+        "word": " back",
+        "start": 25.36,
+        "end": 25.5,
+        "probability": 0.9952386617660522
+      },
+      {
+        "word": " in",
+        "start": 25.5,
+        "end": 25.7,
+        "probability": 0.9990501999855042
+      },
+      {
+        "word": " 2009,",
+        "start": 25.7,
+        "end": 26.42,
+        "probability": 0.9914731979370117
+      },
+      {
+        "word": " we",
+        "start": 26.68,
+        "end": 26.72,
+        "probability": 0.9959520101547241
+      },
+      {
+        "word": " all",
+        "start": 26.72,
+        "end": 26.9,
+        "probability": 0.9970338344573975
+      },
+      {
+        "word": " had",
+        "start": 26.9,
+        "end": 27.06,
+        "probability": 0.6279977560043335
+      },
+      {
+        "word": " these",
+        "start": 27.06,
+        "end": 27.26,
+        "probability": 0.9879911541938782
+      },
+      {
+        "word": " weird",
+        "start": 27.26,
+        "end": 27.62,
+        "probability": 0.9985772371292114
+      },
+      {
+        "word": " little",
+        "start": 27.62,
+        "end": 27.88,
+        "probability": 0.9381232261657715
+      },
+      {
+        "word": " things",
+        "start": 27.88,
+        "end": 28.22,
+        "probability": 0.9971420168876648
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.5006098747253418,
+    "all_probs": {
+      "happy_excited": 0.1519719958305359,
+      "sadness": 0.14249570667743683,
+      "neutral": 0.5006098747253418,
+      "anger": 0.05379686504602432,
+      "frustration": 0.15112552046775818
+    },
+    "vad": [
+      -0.055405858904123306,
+      -0.3681436777114868,
+      -0.19253341853618622
+    ],
+    "fusion_gates": {
+      "text": 3.0215953302104026e-05,
+      "audio": 0.9999144077301025,
+      "interaction": 5.5412536312360317e-05
+    },
+    "word_emotions": [
+      {
+        "word": " You",
+        "start": 24.64,
+        "end": 25.04,
+        "emotion": "frustration",
+        "confidence": 0.3430244028568268,
+        "all_probs": {
+          "happy_excited": 0.16868476569652557,
+          "sadness": 0.04818735644221306,
+          "neutral": 0.22753581404685974,
+          "anger": 0.21256770193576813,
+          "frustration": 0.3430244028568268
+        },
+        "fusion_gates": {
+          "text": 2.983309059345629e-06,
+          "audio": 0.999976634979248
+        }
+      },
+      {
+        "word": " see,",
+        "start": 25.04,
+        "end": 25.22,
+        "emotion": "frustration",
+        "confidence": 0.36663034558296204,
+        "all_probs": {
+          "happy_excited": 0.13779842853546143,
+          "sadness": 0.04541167616844177,
+          "neutral": 0.1652233898639679,
+          "anger": 0.28493618965148926,
+          "frustration": 0.36663034558296204
+        },
+        "fusion_gates": {
+          "text": 2.1961791389912833e-06,
+          "audio": 0.9999780654907227
+        }
+      },
+      {
+        "word": " back",
+        "start": 25.36,
+        "end": 25.5,
+        "emotion": "frustration",
+        "confidence": 0.36663034558296204,
+        "all_probs": {
+          "happy_excited": 0.13779842853546143,
+          "sadness": 0.04541167616844177,
+          "neutral": 0.1652233898639679,
+          "anger": 0.28493618965148926,
+          "frustration": 0.36663034558296204
+        },
+        "fusion_gates": {
+          "text": 2.1961791389912833e-06,
+          "audio": 0.9999780654907227
+        }
+      },
+      {
+        "word": " in",
+        "start": 25.5,
+        "end": 25.7,
+        "emotion": "neutral",
+        "confidence": 0.5009447932243347,
+        "all_probs": {
+          "happy_excited": 0.15749108791351318,
+          "sadness": 0.12464327365159988,
+          "neutral": 0.5009447932243347,
+          "anger": 0.05640435963869095,
+          "frustration": 0.16051647067070007
+        },
+        "fusion_gates": {
+          "text": 3.633640517364256e-05,
+          "audio": 0.9999028444290161
+        }
+      },
+      {
+        "word": " 2009,",
+        "start": 25.7,
+        "end": 26.42,
+        "emotion": "neutral",
+        "confidence": 0.5009447932243347,
+        "all_probs": {
+          "happy_excited": 0.15749108791351318,
+          "sadness": 0.12464327365159988,
+          "neutral": 0.5009447932243347,
+          "anger": 0.05640435963869095,
+          "frustration": 0.16051647067070007
+        },
+        "fusion_gates": {
+          "text": 3.633640517364256e-05,
+          "audio": 0.9999028444290161
+        }
+      },
+      {
+        "word": " we",
+        "start": 26.68,
+        "end": 26.72,
+        "emotion": "neutral",
+        "confidence": 0.42992809414863586,
+        "all_probs": {
+          "happy_excited": 0.07319995760917664,
+          "sadness": 0.05803202837705612,
+          "neutral": 0.42992809414863586,
+          "anger": 0.13869094848632812,
+          "frustration": 0.30014899373054504
+        },
+        "fusion_gates": {
+          "text": 5.593876267084852e-06,
+          "audio": 0.999972939491272
+        }
+      },
+      {
+        "word": " all",
+        "start": 26.72,
+        "end": 26.9,
+        "emotion": "neutral",
+        "confidence": 0.42992809414863586,
+        "all_probs": {
+          "happy_excited": 0.07319995760917664,
+          "sadness": 0.05803202837705612,
+          "neutral": 0.42992809414863586,
+          "anger": 0.13869094848632812,
+          "frustration": 0.30014899373054504
+        },
+        "fusion_gates": {
+          "text": 5.593876267084852e-06,
+          "audio": 0.999972939491272
+        }
+      },
+      {
+        "word": " had",
+        "start": 26.9,
+        "end": 27.06,
+        "emotion": "neutral",
+        "confidence": 0.42992809414863586,
+        "all_probs": {
+          "happy_excited": 0.07319995760917664,
+          "sadness": 0.05803202837705612,
+          "neutral": 0.42992809414863586,
+          "anger": 0.13869094848632812,
+          "frustration": 0.30014899373054504
+        },
+        "fusion_gates": {
+          "text": 5.593876267084852e-06,
+          "audio": 0.999972939491272
+        }
+      },
+      {
+        "word": " these",
+        "start": 27.06,
+        "end": 27.26,
+        "emotion": "neutral",
+        "confidence": 0.48644834756851196,
+        "all_probs": {
+          "happy_excited": 0.13072867691516876,
+          "sadness": 0.07612019777297974,
+          "neutral": 0.48644834756851196,
+          "anger": 0.07617505639791489,
+          "frustration": 0.23052772879600525
+        },
+        "fusion_gates": {
+          "text": 2.2388348952517845e-05,
+          "audio": 0.9999392032623291
+        }
+      },
+      {
+        "word": " weird",
+        "start": 27.26,
+        "end": 27.62,
+        "emotion": "neutral",
+        "confidence": 0.48644834756851196,
+        "all_probs": {
+          "happy_excited": 0.13072867691516876,
+          "sadness": 0.07612019777297974,
+          "neutral": 0.48644834756851196,
+          "anger": 0.07617505639791489,
+          "frustration": 0.23052772879600525
+        },
+        "fusion_gates": {
+          "text": 2.2388348952517845e-05,
+          "audio": 0.9999392032623291
+        }
+      },
+      {
+        "word": " little",
+        "start": 27.62,
+        "end": 27.88,
+        "emotion": "neutral",
+        "confidence": 0.45554500818252563,
+        "all_probs": {
+          "happy_excited": 0.20535677671432495,
+          "sadness": 0.1389310657978058,
+          "neutral": 0.45554500818252563,
+          "anger": 0.050751693546772,
+          "frustration": 0.1494154930114746
+        },
+        "fusion_gates": {
+          "text": 4.792362597072497e-05,
+          "audio": 0.9998835325241089
+        }
+      },
+      {
+        "word": " things",
+        "start": 27.88,
+        "end": 28.22,
+        "emotion": "neutral",
+        "confidence": 0.45554500818252563,
+        "all_probs": {
+          "happy_excited": 0.20535677671432495,
+          "sadness": 0.1389310657978058,
+          "neutral": 0.45554500818252563,
+          "anger": 0.050751693546772,
+          "frustration": 0.1494154930114746
+        },
+        "fusion_gates": {
+          "text": 4.792362597072497e-05,
+          "audio": 0.9998835325241089
+        }
+      }
+    ]
+  },
+  {
+    "text": "called attention spans.",
+    "start": 28.22,
+    "end": 29.92,
+    "words": [
+      {
+        "word": " called",
+        "start": 28.22,
+        "end": 28.6,
+        "probability": 0.06300470978021622
+      },
+      {
+        "word": " attention",
+        "start": 28.6,
+        "end": 29.48,
+        "probability": 0.6274356842041016
+      },
+      {
+        "word": " spans.",
+        "start": 29.48,
+        "end": 29.92,
+        "probability": 0.9577768445014954
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.5206589698791504,
+    "all_probs": {
+      "happy_excited": 0.13292308151721954,
+      "sadness": 0.12273728847503662,
+      "neutral": 0.5206589698791504,
+      "anger": 0.0597878023982048,
+      "frustration": 0.16389288008213043
+    },
+    "vad": [
+      -0.057621318846940994,
+      -0.4112483561038971,
+      -0.21079662442207336
+    ],
+    "fusion_gates": {
+      "text": 2.8657930670306087e-05,
+      "audio": 0.9999148845672607,
+      "interaction": 5.647477155434899e-05
+    },
+    "word_emotions": [
+      {
+        "word": " called",
+        "start": 28.22,
+        "end": 28.6,
+        "emotion": "neutral",
+        "confidence": 0.4555600881576538,
+        "all_probs": {
+          "happy_excited": 0.17053546011447906,
+          "sadness": 0.06907904148101807,
+          "neutral": 0.4555600881576538,
+          "anger": 0.07661595940589905,
+          "frustration": 0.22820940613746643
+        },
+        "fusion_gates": {
+          "text": 2.0173518350929953e-05,
+          "audio": 0.9999372959136963
+        }
+      },
+      {
+        "word": " attention",
+        "start": 28.6,
+        "end": 29.48,
+        "emotion": "neutral",
+        "confidence": 0.45285284519195557,
+        "all_probs": {
+          "happy_excited": 0.08534332364797592,
+          "sadness": 0.0624932125210762,
+          "neutral": 0.45285284519195557,
+          "anger": 0.10541561990976334,
+          "frustration": 0.29389500617980957
+        },
+        "fusion_gates": {
+          "text": 6.559248504345305e-06,
+          "audio": 0.999982476234436
+        }
+      },
+      {
+        "word": " spans.",
+        "start": 29.48,
+        "end": 29.92,
+        "emotion": "neutral",
+        "confidence": 0.4733913838863373,
+        "all_probs": {
+          "happy_excited": 0.17250613868236542,
+          "sadness": 0.09096846729516983,
+          "neutral": 0.4733913838863373,
+          "anger": 0.06324489414691925,
+          "frustration": 0.19988912343978882
+        },
+        "fusion_gates": {
+          "text": 4.7624165745219216e-05,
+          "audio": 0.9998914003372192
+        }
+      }
+    ]
+  },
+  {
+    "text": "Yeah, they're gone.",
+    "start": 30.8,
+    "end": 31.84,
+    "words": [
+      {
+        "word": " Yeah,",
+        "start": 30.8,
+        "end": 31.28,
+        "probability": 0.7633314728736877
+      },
+      {
+        "word": " they're",
+        "start": 31.56,
+        "end": 31.64,
+        "probability": 0.9801601767539978
+      },
+      {
+        "word": " gone.",
+        "start": 31.64,
+        "end": 31.84,
+        "probability": 0.9941474199295044
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.40200334787368774,
+    "all_probs": {
+      "happy_excited": 0.27439677715301514,
+      "sadness": 0.08297798037528992,
+      "neutral": 0.40200334787368774,
+      "anger": 0.05863988772034645,
+      "frustration": 0.18198205530643463
+    },
+    "vad": [
+      -0.0161226075142622,
+      -0.1222224235534668,
+      -0.07818938791751862
+    ],
+    "fusion_gates": {
+      "text": 9.28208464756608e-05,
+      "audio": 0.9997877478599548,
+      "interaction": 0.00011947943130508065
+    },
+    "word_emotions": [
+      {
+        "word": " Yeah,",
+        "start": 30.8,
+        "end": 31.28,
+        "emotion": "happy_excited",
+        "confidence": 0.3401687443256378,
+        "all_probs": {
+          "happy_excited": 0.3401687443256378,
+          "sadness": 0.06672500818967819,
+          "neutral": 0.33587855100631714,
+          "anger": 0.06967544555664062,
+          "frustration": 0.18755222856998444
+        },
+        "fusion_gates": {
+          "text": 3.7369343772297725e-05,
+          "audio": 0.9998725652694702
+        }
+      },
+      {
+        "word": " they're",
+        "start": 31.56,
+        "end": 31.64,
+        "emotion": "anger",
+        "confidence": 0.43136292695999146,
+        "all_probs": {
+          "happy_excited": 0.07700232416391373,
+          "sadness": 0.04114818200469017,
+          "neutral": 0.09264735132455826,
+          "anger": 0.43136292695999146,
+          "frustration": 0.3578392267227173
+        },
+        "fusion_gates": {
+          "text": 1.0050329137811786e-06,
+          "audio": 0.9999840259552002
+        }
+      },
+      {
+        "word": " gone.",
+        "start": 31.64,
+        "end": 31.84,
+        "emotion": "anger",
+        "confidence": 0.43136292695999146,
+        "all_probs": {
+          "happy_excited": 0.07700232416391373,
+          "sadness": 0.04114818200469017,
+          "neutral": 0.09264735132455826,
+          "anger": 0.43136292695999146,
+          "frustration": 0.3578392267227173
+        },
+        "fusion_gates": {
+          "text": 1.0050329137811786e-06,
+          "audio": 0.9999840259552002
+        }
+      }
+    ]
+  },
+  {
+    "text": "They're gone.",
+    "start": 32.04,
+    "end": 32.26,
+    "words": [
+      {
+        "word": " They're",
+        "start": 32.04,
+        "end": 32.14,
+        "probability": 0.8272810578346252
+      },
+      {
+        "word": " gone.",
+        "start": 32.14,
+        "end": 32.26,
+        "probability": 0.9962693452835083
+      }
+    ],
+    "emotion": "anger",
+    "confidence": 0.5415415167808533,
+    "all_probs": {
+      "happy_excited": 0.06637854874134064,
+      "sadness": 0.04559160768985748,
+      "neutral": 0.05470263212919235,
+      "anger": 0.5415415167808533,
+      "frustration": 0.29178571701049805
+    },
+    "vad": [
+      -0.5846123695373535,
+      0.6938768625259399,
+      0.16755495965480804
+    ],
+    "fusion_gates": {
+      "text": 6.163873536024767e-07,
+      "audio": 0.9999880790710449,
+      "interaction": 1.1352314686519094e-05
+    },
+    "word_emotions": [
+      {
+        "word": " They're",
+        "start": 32.04,
+        "end": 32.14,
+        "emotion": "anger",
+        "confidence": 0.5415415167808533,
+        "all_probs": {
+          "happy_excited": 0.06637854874134064,
+          "sadness": 0.04559160768985748,
+          "neutral": 0.05470263212919235,
+          "anger": 0.5415415167808533,
+          "frustration": 0.29178571701049805
+        },
+        "fusion_gates": {
+          "text": 6.163873536024767e-07,
+          "audio": 0.9999880790710449
+        }
+      },
+      {
+        "word": " gone.",
+        "start": 32.14,
+        "end": 32.26,
+        "emotion": "anger",
+        "confidence": 0.5415415167808533,
+        "all_probs": {
+          "happy_excited": 0.06637854874134064,
+          "sadness": 0.04559160768985748,
+          "neutral": 0.05470263212919235,
+          "anger": 0.5415415167808533,
+          "frustration": 0.29178571701049805
+        },
+        "fusion_gates": {
+          "text": 6.163873536024767e-07,
+          "audio": 0.9999880790710449
+        }
+      }
+    ]
+  },
+  {
+    "text": "We killed them.",
+    "start": 32.38,
+    "end": 32.82,
+    "words": [
+      {
+        "word": " We",
+        "start": 32.38,
+        "end": 32.44,
+        "probability": 0.9927666187286377
+      },
+      {
+        "word": " killed",
+        "start": 32.44,
+        "end": 32.64,
+        "probability": 0.9197613596916199
+      },
+      {
+        "word": " them.",
+        "start": 32.64,
+        "end": 32.82,
+        "probability": 0.8471654057502747
+      }
+    ],
+    "emotion": "frustration",
+    "confidence": 0.3798530399799347,
+    "all_probs": {
+      "happy_excited": 0.08355928957462311,
+      "sadness": 0.055835869163274765,
+      "neutral": 0.29000380635261536,
+      "anger": 0.1907479166984558,
+      "frustration": 0.3798530399799347
+    },
+    "vad": [
+      -0.23176254332065582,
+      0.07093041390180588,
+      -0.14421382546424866
+    ],
+    "fusion_gates": {
+      "text": 5.104556748847244e-06,
+      "audio": 0.9999792575836182,
+      "interaction": 1.5679852367611602e-05
+    },
+    "word_emotions": [
+      {
+        "word": " We",
+        "start": 32.38,
+        "end": 32.44,
+        "emotion": "frustration",
+        "confidence": 0.3798530399799347,
+        "all_probs": {
+          "happy_excited": 0.08355928957462311,
+          "sadness": 0.055835869163274765,
+          "neutral": 0.29000380635261536,
+          "anger": 0.1907479166984558,
+          "frustration": 0.3798530399799347
+        },
+        "fusion_gates": {
+          "text": 5.104556748847244e-06,
+          "audio": 0.9999792575836182
+        }
+      },
+      {
+        "word": " killed",
+        "start": 32.44,
+        "end": 32.64,
+        "emotion": "frustration",
+        "confidence": 0.3798530399799347,
+        "all_probs": {
+          "happy_excited": 0.08355928957462311,
+          "sadness": 0.055835869163274765,
+          "neutral": 0.29000380635261536,
+          "anger": 0.1907479166984558,
+          "frustration": 0.3798530399799347
+        },
+        "fusion_gates": {
+          "text": 5.104556748847244e-06,
+          "audio": 0.9999792575836182
+        }
+      },
+      {
+        "word": " them.",
+        "start": 32.64,
+        "end": 32.82,
+        "emotion": "frustration",
+        "confidence": 0.3798530399799347,
+        "all_probs": {
+          "happy_excited": 0.08355928957462311,
+          "sadness": 0.055835869163274765,
+          "neutral": 0.29000380635261536,
+          "anger": 0.1907479166984558,
+          "frustration": 0.3798530399799347
+        },
+        "fusion_gates": {
+          "text": 5.104556748847244e-06,
+          "audio": 0.9999792575836182
+        }
+      }
+    ]
+  },
+  {
+    "text": "They're dead.",
+    "start": 33.24,
+    "end": 33.88,
+    "words": [
+      {
+        "word": " They're",
+        "start": 33.24,
+        "end": 33.7,
+        "probability": 0.9815163314342499
+      },
+      {
+        "word": " dead.",
+        "start": 33.7,
+        "end": 33.88,
+        "probability": 0.9955713152885437
+      }
+    ],
+    "emotion": "happy_excited",
+    "confidence": 0.4016740620136261,
+    "all_probs": {
+      "happy_excited": 0.4016740620136261,
+      "sadness": 0.07166408002376556,
+      "neutral": 0.2827101945877075,
+      "anger": 0.06460650265216827,
+      "frustration": 0.17934517562389374
+    },
+    "vad": [
+      0.20766058564186096,
+      0.1820722222328186,
+      0.058381836861371994
+    ],
+    "fusion_gates": {
+      "text": 0.00018383021233603358,
+      "audio": 0.9995571970939636,
+      "interaction": 0.0002589688519947231
+    },
+    "word_emotions": [
+      {
+        "word": " They're",
+        "start": 33.24,
+        "end": 33.7,
+        "emotion": "happy_excited",
+        "confidence": 0.33355891704559326,
+        "all_probs": {
+          "happy_excited": 0.33355891704559326,
+          "sadness": 0.0702776089310646,
+          "neutral": 0.3136860430240631,
+          "anger": 0.06624367088079453,
+          "frustration": 0.21623380482196808
+        },
+        "fusion_gates": {
+          "text": 0.00019810280355159193,
+          "audio": 0.9996160268783569
+        }
+      },
+      {
+        "word": " dead.",
+        "start": 33.7,
+        "end": 33.88,
+        "emotion": "happy_excited",
+        "confidence": 0.5032139420509338,
+        "all_probs": {
+          "happy_excited": 0.5032139420509338,
+          "sadness": 0.05394909530878067,
+          "neutral": 0.14216290414333344,
+          "anger": 0.13675718009471893,
+          "frustration": 0.16391685605049133
+        },
+        "fusion_gates": {
+          "text": 3.642660431069089e-06,
+          "audio": 0.9999374151229858
+        }
+      }
+    ]
+  },
+  {
+    "text": "I'm trying to think of the last time I watched an 18-minute",
+    "start": 34.9,
+    "end": 37.84,
+    "words": [
+      {
+        "word": " I'm",
+        "start": 34.9,
+        "end": 35.2,
+        "probability": 0.9956822693347931
+      },
+      {
+        "word": " trying",
+        "start": 35.2,
+        "end": 35.34,
+        "probability": 0.9951215386390686
+      },
+      {
+        "word": " to",
+        "start": 35.34,
+        "end": 35.44,
+        "probability": 0.9988340735435486
+      },
+      {
+        "word": " think",
+        "start": 35.44,
+        "end": 35.6,
+        "probability": 0.998777449131012
+      },
+      {
+        "word": " of",
+        "start": 35.6,
+        "end": 35.72,
+        "probability": 0.9962270259857178
+      },
+      {
+        "word": " the",
+        "start": 35.72,
+        "end": 35.84,
+        "probability": 0.9953328967094421
+      },
+      {
+        "word": " last",
+        "start": 35.84,
+        "end": 36.06,
+        "probability": 0.9986518025398254
+      },
+      {
+        "word": " time",
+        "start": 36.06,
+        "end": 36.32,
+        "probability": 0.9981622099876404
+      },
+      {
+        "word": " I",
+        "start": 36.32,
+        "end": 36.6,
+        "probability": 0.9919028878211975
+      },
+      {
+        "word": " watched",
+        "start": 36.6,
+        "end": 37.0,
+        "probability": 0.9196712970733643
+      },
+      {
+        "word": " an",
+        "start": 37.0,
+        "end": 37.18,
+        "probability": 0.9866291284561157
+      },
+      {
+        "word": " 18",
+        "start": 37.18,
+        "end": 37.56,
+        "probability": 0.9570204615592957
+      },
+      {
+        "word": "-minute",
+        "start": 37.56,
+        "end": 37.84,
+        "probability": 0.8172910809516907
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.3578748404979706,
+    "all_probs": {
+      "happy_excited": 0.15232151746749878,
+      "sadness": 0.06347794085741043,
+      "neutral": 0.3578748404979706,
+      "anger": 0.07029252499341965,
+      "frustration": 0.35603317618370056
+    },
+    "vad": [
+      -0.17598094046115875,
+      -0.032276660203933716,
+      -0.17006826400756836
+    ],
+    "fusion_gates": {
+      "text": 0.0004374062700662762,
+      "audio": 0.9993184804916382,
+      "interaction": 0.0002440924581605941
+    },
+    "word_emotions": [
+      {
+        "word": " I'm",
+        "start": 34.9,
+        "end": 35.2,
+        "emotion": "neutral",
+        "confidence": 0.3475169539451599,
+        "all_probs": {
+          "happy_excited": 0.12296286970376968,
+          "sadness": 0.04943615570664406,
+          "neutral": 0.3475169539451599,
+          "anger": 0.15968802571296692,
+          "frustration": 0.32039597630500793
+        },
+        "fusion_gates": {
+          "text": 3.6536205243464792e-06,
+          "audio": 0.9999758005142212
+        }
+      },
+      {
+        "word": " trying",
+        "start": 35.2,
+        "end": 35.34,
+        "emotion": "neutral",
+        "confidence": 0.4008447527885437,
+        "all_probs": {
+          "happy_excited": 0.09255821257829666,
+          "sadness": 0.05554807931184769,
+          "neutral": 0.4008447527885437,
+          "anger": 0.1357479989528656,
+          "frustration": 0.3153008818626404
+        },
+        "fusion_gates": {
+          "text": 3.7550260003627045e-06,
+          "audio": 0.9999839067459106
+        }
+      },
+      {
+        "word": " to",
+        "start": 35.34,
+        "end": 35.44,
+        "emotion": "neutral",
+        "confidence": 0.4008447527885437,
+        "all_probs": {
+          "happy_excited": 0.09255821257829666,
+          "sadness": 0.05554807931184769,
+          "neutral": 0.4008447527885437,
+          "anger": 0.1357479989528656,
+          "frustration": 0.3153008818626404
+        },
+        "fusion_gates": {
+          "text": 3.7550260003627045e-06,
+          "audio": 0.9999839067459106
+        }
+      },
+      {
+        "word": " think",
+        "start": 35.44,
+        "end": 35.6,
+        "emotion": "neutral",
+        "confidence": 0.4008447527885437,
+        "all_probs": {
+          "happy_excited": 0.09255821257829666,
+          "sadness": 0.05554807931184769,
+          "neutral": 0.4008447527885437,
+          "anger": 0.1357479989528656,
+          "frustration": 0.3153008818626404
+        },
+        "fusion_gates": {
+          "text": 3.7550260003627045e-06,
+          "audio": 0.9999839067459106
+        }
+      },
+      {
+        "word": " of",
+        "start": 35.6,
+        "end": 35.72,
+        "emotion": "neutral",
+        "confidence": 0.41855624318122864,
+        "all_probs": {
+          "happy_excited": 0.24335679411888123,
+          "sadness": 0.07554338127374649,
+          "neutral": 0.41855624318122864,
+          "anger": 0.06402227282524109,
+          "frustration": 0.19852137565612793
+        },
+        "fusion_gates": {
+          "text": 5.192065873416141e-05,
+          "audio": 0.9998735189437866
+        }
+      },
+      {
+        "word": " the",
+        "start": 35.72,
+        "end": 35.84,
+        "emotion": "neutral",
+        "confidence": 0.41855624318122864,
+        "all_probs": {
+          "happy_excited": 0.24335679411888123,
+          "sadness": 0.07554338127374649,
+          "neutral": 0.41855624318122864,
+          "anger": 0.06402227282524109,
+          "frustration": 0.19852137565612793
+        },
+        "fusion_gates": {
+          "text": 5.192065873416141e-05,
+          "audio": 0.9998735189437866
+        }
+      },
+      {
+        "word": " last",
+        "start": 35.84,
+        "end": 36.06,
+        "emotion": "neutral",
+        "confidence": 0.41855624318122864,
+        "all_probs": {
+          "happy_excited": 0.24335679411888123,
+          "sadness": 0.07554338127374649,
+          "neutral": 0.41855624318122864,
+          "anger": 0.06402227282524109,
+          "frustration": 0.19852137565612793
+        },
+        "fusion_gates": {
+          "text": 5.192065873416141e-05,
+          "audio": 0.9998735189437866
+        }
+      },
+      {
+        "word": " time",
+        "start": 36.06,
+        "end": 36.32,
+        "emotion": "neutral",
+        "confidence": 0.5017904043197632,
+        "all_probs": {
+          "happy_excited": 0.11673717945814133,
+          "sadness": 0.08784758299589157,
+          "neutral": 0.5017904043197632,
+          "anger": 0.0732957199215889,
+          "frustration": 0.22032907605171204
+        },
+        "fusion_gates": {
+          "text": 2.4210870833485387e-05,
+          "audio": 0.9999399185180664
+        }
+      },
+      {
+        "word": " I",
+        "start": 36.32,
+        "end": 36.6,
+        "emotion": "neutral",
+        "confidence": 0.5017904043197632,
+        "all_probs": {
+          "happy_excited": 0.11673717945814133,
+          "sadness": 0.08784758299589157,
+          "neutral": 0.5017904043197632,
+          "anger": 0.0732957199215889,
+          "frustration": 0.22032907605171204
+        },
+        "fusion_gates": {
+          "text": 2.4210870833485387e-05,
+          "audio": 0.9999399185180664
+        }
+      },
+      {
+        "word": " watched",
+        "start": 36.6,
+        "end": 37.0,
+        "emotion": "neutral",
+        "confidence": 0.39304593205451965,
+        "all_probs": {
+          "happy_excited": 0.08180201798677444,
+          "sadness": 0.053594209253787994,
+          "neutral": 0.39304593205451965,
+          "anger": 0.15745821595191956,
+          "frustration": 0.31409958004951477
+        },
+        "fusion_gates": {
+          "text": 3.4310010050830897e-06,
+          "audio": 0.999981164932251
+        }
+      },
+      {
+        "word": " an",
+        "start": 37.0,
+        "end": 37.18,
+        "emotion": "neutral",
+        "confidence": 0.4626934826374054,
+        "all_probs": {
+          "happy_excited": 0.11752404272556305,
+          "sadness": 0.067128024995327,
+          "neutral": 0.4626934826374054,
+          "anger": 0.09067185968160629,
+          "frustration": 0.26198261976242065
+        },
+        "fusion_gates": {
+          "text": 9.771854820428416e-06,
+          "audio": 0.9999721050262451
+        }
+      },
+      {
+        "word": " 18",
+        "start": 37.18,
+        "end": 37.56,
+        "emotion": "neutral",
+        "confidence": 0.4626934826374054,
+        "all_probs": {
+          "happy_excited": 0.11752404272556305,
+          "sadness": 0.067128024995327,
+          "neutral": 0.4626934826374054,
+          "anger": 0.09067185968160629,
+          "frustration": 0.26198261976242065
+        },
+        "fusion_gates": {
+          "text": 9.771854820428416e-06,
+          "audio": 0.9999721050262451
+        }
+      },
+      {
+        "word": "-minute",
+        "start": 37.56,
+        "end": 37.84,
+        "emotion": "neutral",
+        "confidence": 0.5167964100837708,
+        "all_probs": {
+          "happy_excited": 0.12941697239875793,
+          "sadness": 0.11976578831672668,
+          "neutral": 0.5167964100837708,
+          "anger": 0.06083206087350845,
+          "frustration": 0.17318876087665558
+        },
+        "fusion_gates": {
+          "text": 2.9261273084557615e-05,
+          "audio": 0.9999146461486816
+        }
+      }
+    ]
+  },
+  {
+    "text": "TED talk.",
+    "start": 37.84,
+    "end": 38.36,
+    "words": [
+      {
+        "word": " TED",
+        "start": 37.84,
+        "end": 38.12,
+        "probability": 0.7137286067008972
+      },
+      {
+        "word": " talk.",
+        "start": 38.12,
+        "end": 38.36,
+        "probability": 0.5639337301254272
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.49104073643684387,
+    "all_probs": {
+      "happy_excited": 0.10607035458087921,
+      "sadness": 0.07998505979776382,
+      "neutral": 0.49104073643684387,
+      "anger": 0.08118028193712234,
+      "frustration": 0.24172361195087433
+    },
+    "vad": [
+      -0.09526688605546951,
+      -0.31458500027656555,
+      -0.19408778846263885
+    ],
+    "fusion_gates": {
+      "text": 1.3406364814727567e-05,
+      "audio": 0.9999666213989258,
+      "interaction": 1.9943885490647517e-05
+    },
+    "word_emotions": [
+      {
+        "word": " TED",
+        "start": 37.84,
+        "end": 38.12,
+        "emotion": "neutral",
+        "confidence": 0.49104073643684387,
+        "all_probs": {
+          "happy_excited": 0.10607035458087921,
+          "sadness": 0.07998505979776382,
+          "neutral": 0.49104073643684387,
+          "anger": 0.08118028193712234,
+          "frustration": 0.24172361195087433
+        },
+        "fusion_gates": {
+          "text": 1.3406364814727567e-05,
+          "audio": 0.9999666213989258
+        }
+      },
+      {
+        "word": " talk.",
+        "start": 38.12,
+        "end": 38.36,
+        "emotion": "neutral",
+        "confidence": 0.49104073643684387,
+        "all_probs": {
+          "happy_excited": 0.10607035458087921,
+          "sadness": 0.07998505979776382,
+          "neutral": 0.49104073643684387,
+          "anger": 0.08118028193712234,
+          "frustration": 0.24172361195087433
+        },
+        "fusion_gates": {
+          "text": 1.3406364814727567e-05,
+          "audio": 0.9999666213989258
+        }
+      }
+    ]
+  },
+  {
+    "text": "It's been years, literally years.",
+    "start": 38.86,
+    "end": 40.78,
+    "words": [
+      {
+        "word": " It's",
+        "start": 38.86,
+        "end": 39.02,
+        "probability": 0.9871589839458466
+      },
+      {
+        "word": " been",
+        "start": 39.02,
+        "end": 39.12,
+        "probability": 0.9997510313987732
+      },
+      {
+        "word": " years,",
+        "start": 39.12,
+        "end": 39.4,
+        "probability": 0.9984351992607117
+      },
+      {
+        "word": " literally",
+        "start": 39.74,
+        "end": 40.14,
+        "probability": 0.9986191987991333
+      },
+      {
+        "word": " years.",
+        "start": 40.14,
+        "end": 40.78,
+        "probability": 0.9525815844535828
+      }
+    ],
+    "emotion": "happy_excited",
+    "confidence": 0.4581795632839203,
+    "all_probs": {
+      "happy_excited": 0.4581795632839203,
+      "sadness": 0.057326655834913254,
+      "neutral": 0.18075335025787354,
+      "anger": 0.09552671760320663,
+      "frustration": 0.2082137167453766
+    },
+    "vad": [
+      0.3093305826187134,
+      0.38703489303588867,
+      0.13631059229373932
+    ],
+    "fusion_gates": {
+      "text": 8.839465590426698e-05,
+      "audio": 0.9994938373565674,
+      "interaction": 0.0004176927322987467
+    },
+    "word_emotions": [
+      {
+        "word": " It's",
+        "start": 38.86,
+        "end": 39.02,
+        "emotion": "frustration",
+        "confidence": 0.4354937672615051,
+        "all_probs": {
+          "happy_excited": 0.17893099784851074,
+          "sadness": 0.055616594851017,
+          "neutral": 0.10306254029273987,
+          "anger": 0.22689607739448547,
+          "frustration": 0.4354937672615051
+        },
+        "fusion_gates": {
+          "text": 0.00022358240676112473,
+          "audio": 0.9991132616996765
+        }
+      },
+      {
+        "word": " been",
+        "start": 39.02,
+        "end": 39.12,
+        "emotion": "frustration",
+        "confidence": 0.4354937672615051,
+        "all_probs": {
+          "happy_excited": 0.17893099784851074,
+          "sadness": 0.055616594851017,
+          "neutral": 0.10306254029273987,
+          "anger": 0.22689607739448547,
+          "frustration": 0.4354937672615051
+        },
+        "fusion_gates": {
+          "text": 0.00022358240676112473,
+          "audio": 0.9991132616996765
+        }
+      },
+      {
+        "word": " years,",
+        "start": 39.12,
+        "end": 39.4,
+        "emotion": "frustration",
+        "confidence": 0.4354937672615051,
+        "all_probs": {
+          "happy_excited": 0.17893099784851074,
+          "sadness": 0.055616594851017,
+          "neutral": 0.10306254029273987,
+          "anger": 0.22689607739448547,
+          "frustration": 0.4354937672615051
+        },
+        "fusion_gates": {
+          "text": 0.00022358240676112473,
+          "audio": 0.9991132616996765
+        }
+      },
+      {
+        "word": " literally",
+        "start": 39.74,
+        "end": 40.14,
+        "emotion": "frustration",
+        "confidence": 0.3773079514503479,
+        "all_probs": {
+          "happy_excited": 0.07792621105909348,
+          "sadness": 0.04466281458735466,
+          "neutral": 0.2610943913459778,
+          "anger": 0.2390086054801941,
+          "frustration": 0.3773079514503479
+        },
+        "fusion_gates": {
+          "text": 1.8906498553405982e-06,
+          "audio": 0.9999865293502808
+        }
+      },
+      {
+        "word": " years.",
+        "start": 40.14,
+        "end": 40.78,
+        "emotion": "neutral",
+        "confidence": 0.4125724136829376,
+        "all_probs": {
+          "happy_excited": 0.24583877623081207,
+          "sadness": 0.15049226582050323,
+          "neutral": 0.4125724136829376,
+          "anger": 0.048267316073179245,
+          "frustration": 0.14282923936843872
+        },
+        "fusion_gates": {
+          "text": 5.900520773138851e-05,
+          "audio": 0.9998613595962524
+        }
+      }
+    ]
+  },
+  {
+    "text": "So if you're given a TED talk, keep it quick.",
+    "start": 41.52,
+    "end": 44.04,
+    "words": [
+      {
+        "word": " So",
+        "start": 41.52,
+        "end": 41.76,
+        "probability": 0.9586671590805054
+      },
+      {
+        "word": " if",
+        "start": 41.76,
+        "end": 41.86,
+        "probability": 0.8715291023254395
+      },
+      {
+        "word": " you're",
+        "start": 41.86,
+        "end": 41.92,
+        "probability": 0.9930713772773743
+      },
+      {
+        "word": " given",
+        "start": 41.92,
+        "end": 42.12,
+        "probability": 0.7744019031524658
+      },
+      {
+        "word": " a",
+        "start": 42.12,
+        "end": 42.3,
+        "probability": 0.9921137094497681
+      },
+      {
+        "word": " TED",
+        "start": 42.3,
+        "end": 42.46,
+        "probability": 0.9965894222259521
+      },
+      {
+        "word": " talk,",
+        "start": 42.46,
+        "end": 42.84,
+        "probability": 0.9300045967102051
+      },
+      {
+        "word": " keep",
+        "start": 43.26,
+        "end": 43.52,
+        "probability": 0.9954919219017029
+      },
+      {
+        "word": " it",
+        "start": 43.52,
+        "end": 43.66,
+        "probability": 0.9994977712631226
+      },
+      {
+        "word": " quick.",
+        "start": 43.66,
+        "end": 44.04,
+        "probability": 0.9982998967170715
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.5181439518928528,
+    "all_probs": {
+      "happy_excited": 0.11148864775896072,
+      "sadness": 0.09210041165351868,
+      "neutral": 0.5181439518928528,
+      "anger": 0.07433167845010757,
+      "frustration": 0.20393531024456024
+    },
+    "vad": [
+      -0.0771874263882637,
+      -0.3972955644130707,
+      -0.2139371633529663
+    ],
+    "fusion_gates": {
+      "text": 2.2166379494592547e-05,
+      "audio": 0.9999297857284546,
+      "interaction": 4.804972923011519e-05
+    },
+    "word_emotions": [
+      {
+        "word": " So",
+        "start": 41.52,
+        "end": 41.76,
+        "emotion": "neutral",
+        "confidence": 0.365474671125412,
+        "all_probs": {
+          "happy_excited": 0.3148322105407715,
+          "sadness": 0.07005658745765686,
+          "neutral": 0.365474671125412,
+          "anger": 0.0652478039264679,
+          "frustration": 0.18438878655433655
+        },
+        "fusion_gates": {
+          "text": 4.896378595731221e-05,
+          "audio": 0.9998524188995361
+        }
+      },
+      {
+        "word": " if",
+        "start": 41.76,
+        "end": 41.86,
+        "emotion": "neutral",
+        "confidence": 0.365474671125412,
+        "all_probs": {
+          "happy_excited": 0.3148322105407715,
+          "sadness": 0.07005658745765686,
+          "neutral": 0.365474671125412,
+          "anger": 0.0652478039264679,
+          "frustration": 0.18438878655433655
+        },
+        "fusion_gates": {
+          "text": 4.896378595731221e-05,
+          "audio": 0.9998524188995361
+        }
+      },
+      {
+        "word": " you're",
+        "start": 41.86,
+        "end": 41.92,
+        "emotion": "neutral",
+        "confidence": 0.475066214799881,
+        "all_probs": {
+          "happy_excited": 0.11406291276216507,
+          "sadness": 0.07090003043413162,
+          "neutral": 0.475066214799881,
+          "anger": 0.08934871852397919,
+          "frustration": 0.25062212347984314
+        },
+        "fusion_gates": {
+          "text": 1.0050196578959003e-05,
+          "audio": 0.9999704360961914
+        }
+      },
+      {
+        "word": " given",
+        "start": 41.92,
+        "end": 42.12,
+        "emotion": "neutral",
+        "confidence": 0.475066214799881,
+        "all_probs": {
+          "happy_excited": 0.11406291276216507,
+          "sadness": 0.07090003043413162,
+          "neutral": 0.475066214799881,
+          "anger": 0.08934871852397919,
+          "frustration": 0.25062212347984314
+        },
+        "fusion_gates": {
+          "text": 1.0050196578959003e-05,
+          "audio": 0.9999704360961914
+        }
+      },
+      {
+        "word": " a",
+        "start": 42.12,
+        "end": 42.3,
+        "emotion": "neutral",
+        "confidence": 0.475066214799881,
+        "all_probs": {
+          "happy_excited": 0.11406291276216507,
+          "sadness": 0.07090003043413162,
+          "neutral": 0.475066214799881,
+          "anger": 0.08934871852397919,
+          "frustration": 0.25062212347984314
+        },
+        "fusion_gates": {
+          "text": 1.0050196578959003e-05,
+          "audio": 0.9999704360961914
+        }
+      },
+      {
+        "word": " TED",
+        "start": 42.3,
+        "end": 42.46,
+        "emotion": "neutral",
+        "confidence": 0.4494835436344147,
+        "all_probs": {
+          "happy_excited": 0.2073850780725479,
+          "sadness": 0.08762842416763306,
+          "neutral": 0.4494835436344147,
+          "anger": 0.060733962804079056,
+          "frustration": 0.1947689801454544
+        },
+        "fusion_gates": {
+          "text": 6.683416722808033e-05,
+          "audio": 0.9998506307601929
+        }
+      },
+      {
+        "word": " talk,",
+        "start": 42.46,
+        "end": 42.84,
+        "emotion": "neutral",
+        "confidence": 0.4494835436344147,
+        "all_probs": {
+          "happy_excited": 0.2073850780725479,
+          "sadness": 0.08762842416763306,
+          "neutral": 0.4494835436344147,
+          "anger": 0.060733962804079056,
+          "frustration": 0.1947689801454544
+        },
+        "fusion_gates": {
+          "text": 6.683416722808033e-05,
+          "audio": 0.9998506307601929
+        }
+      },
+      {
+        "word": " keep",
+        "start": 43.26,
+        "end": 43.52,
+        "emotion": "frustration",
+        "confidence": 0.3581836223602295,
+        "all_probs": {
+          "happy_excited": 0.1174083724617958,
+          "sadness": 0.044865887612104416,
+          "neutral": 0.22451013326644897,
+          "anger": 0.255031943321228,
+          "frustration": 0.3581836223602295
+        },
+        "fusion_gates": {
+          "text": 1.6413079038102296e-06,
+          "audio": 0.9999845027923584
+        }
+      },
+      {
+        "word": " it",
+        "start": 43.52,
+        "end": 43.66,
+        "emotion": "frustration",
+        "confidence": 0.3581836223602295,
+        "all_probs": {
+          "happy_excited": 0.1174083724617958,
+          "sadness": 0.044865887612104416,
+          "neutral": 0.22451013326644897,
+          "anger": 0.255031943321228,
+          "frustration": 0.3581836223602295
+        },
+        "fusion_gates": {
+          "text": 1.6413079038102296e-06,
+          "audio": 0.9999845027923584
+        }
+      },
+      {
+        "word": " quick.",
+        "start": 43.66,
+        "end": 44.04,
+        "emotion": "neutral",
+        "confidence": 0.47046956419944763,
+        "all_probs": {
+          "happy_excited": 0.1761808842420578,
+          "sadness": 0.0823623538017273,
+          "neutral": 0.47046956419944763,
+          "anger": 0.06646636128425598,
+          "frustration": 0.20452085137367249
+        },
+        "fusion_gates": {
+          "text": 3.7128833355382085e-05,
+          "audio": 0.9999064207077026
+        }
+      }
+    ]
+  },
+  {
+    "text": "I'm doing mine in under a minute.",
+    "start": 44.38,
+    "end": 45.7,
+    "words": [
+      {
+        "word": " I'm",
+        "start": 44.38,
+        "end": 44.64,
+        "probability": 0.9982880055904388
+      },
+      {
+        "word": " doing",
+        "start": 44.64,
+        "end": 44.76,
+        "probability": 0.9872224926948547
+      },
+      {
+        "word": " mine",
+        "start": 44.76,
+        "end": 44.98,
+        "probability": 0.9884804487228394
+      },
+      {
+        "word": " in",
+        "start": 44.98,
+        "end": 45.14,
+        "probability": 0.9250398278236389
+      },
+      {
+        "word": " under",
+        "start": 45.14,
+        "end": 45.36,
+        "probability": 0.9941413998603821
+      },
+      {
+        "word": " a",
+        "start": 45.36,
+        "end": 45.48,
+        "probability": 0.9953147172927856
+      },
+      {
+        "word": " minute.",
+        "start": 45.48,
+        "end": 45.7,
+        "probability": 0.9992102384567261
+      }
+    ],
+    "emotion": "frustration",
+    "confidence": 0.310364305973053,
+    "all_probs": {
+      "happy_excited": 0.1886889934539795,
+      "sadness": 0.04644670709967613,
+      "neutral": 0.2772377133369446,
+      "anger": 0.17726223170757294,
+      "frustration": 0.310364305973053
+    },
+    "vad": [
+      -0.140469029545784,
+      0.06961468607187271,
+      -0.08410387486219406
+    ],
+    "fusion_gates": {
+      "text": 5.144507213117322e-06,
+      "audio": 0.9999512434005737,
+      "interaction": 4.35683032264933e-05
+    },
+    "word_emotions": [
+      {
+        "word": " I'm",
+        "start": 44.38,
+        "end": 44.64,
+        "emotion": "frustration",
+        "confidence": 0.41468262672424316,
+        "all_probs": {
+          "happy_excited": 0.08359096199274063,
+          "sadness": 0.04621228575706482,
+          "neutral": 0.19177313148975372,
+          "anger": 0.26374101638793945,
+          "frustration": 0.41468262672424316
+        },
+        "fusion_gates": {
+          "text": 2.916927087426302e-06,
+          "audio": 0.9999828338623047
+        }
+      },
+      {
+        "word": " doing",
+        "start": 44.64,
+        "end": 44.76,
+        "emotion": "frustration",
+        "confidence": 0.41468262672424316,
+        "all_probs": {
+          "happy_excited": 0.08359096199274063,
+          "sadness": 0.04621228575706482,
+          "neutral": 0.19177313148975372,
+          "anger": 0.26374101638793945,
+          "frustration": 0.41468262672424316
+        },
+        "fusion_gates": {
+          "text": 2.916927087426302e-06,
+          "audio": 0.9999828338623047
+        }
+      },
+      {
+        "word": " mine",
+        "start": 44.76,
+        "end": 44.98,
+        "emotion": "neutral",
+        "confidence": 0.4882047772407532,
+        "all_probs": {
+          "happy_excited": 0.16162686049938202,
+          "sadness": 0.09275731444358826,
+          "neutral": 0.4882047772407532,
+          "anger": 0.06410977989435196,
+          "frustration": 0.1933012455701828
+        },
+        "fusion_gates": {
+          "text": 4.0584698581369594e-05,
+          "audio": 0.99989914894104
+        }
+      },
+      {
+        "word": " in",
+        "start": 44.98,
+        "end": 45.14,
+        "emotion": "neutral",
+        "confidence": 0.4882047772407532,
+        "all_probs": {
+          "happy_excited": 0.16162686049938202,
+          "sadness": 0.09275731444358826,
+          "neutral": 0.4882047772407532,
+          "anger": 0.06410977989435196,
+          "frustration": 0.1933012455701828
+        },
+        "fusion_gates": {
+          "text": 4.0584698581369594e-05,
+          "audio": 0.99989914894104
+        }
+      },
+      {
+        "word": " under",
+        "start": 45.14,
+        "end": 45.36,
+        "emotion": "neutral",
+        "confidence": 0.5175746083259583,
+        "all_probs": {
+          "happy_excited": 0.11604038625955582,
+          "sadness": 0.09251756221055984,
+          "neutral": 0.5175746083259583,
+          "anger": 0.07221350818872452,
+          "frustration": 0.20165389776229858
+        },
+        "fusion_gates": {
+          "text": 2.7022168069379404e-05,
+          "audio": 0.9999209642410278
+        }
+      },
+      {
+        "word": " a",
+        "start": 45.36,
+        "end": 45.48,
+        "emotion": "neutral",
+        "confidence": 0.5175746083259583,
+        "all_probs": {
+          "happy_excited": 0.11604038625955582,
+          "sadness": 0.09251756221055984,
+          "neutral": 0.5175746083259583,
+          "anger": 0.07221350818872452,
+          "frustration": 0.20165389776229858
+        },
+        "fusion_gates": {
+          "text": 2.7022168069379404e-05,
+          "audio": 0.9999209642410278
+        }
+      },
+      {
+        "word": " minute.",
+        "start": 45.48,
+        "end": 45.7,
+        "emotion": "neutral",
+        "confidence": 0.35782167315483093,
+        "all_probs": {
+          "happy_excited": 0.15321360528469086,
+          "sadness": 0.05257955193519592,
+          "neutral": 0.35782167315483093,
+          "anger": 0.1427694410085678,
+          "frustration": 0.2936157286167145
+        },
+        "fusion_gates": {
+          "text": 3.8858938751218375e-06,
+          "audio": 0.9999762773513794
+        }
+      }
+    ]
+  },
+  {
+    "text": "I'm at 44 seconds right now.",
+    "start": 46.32,
+    "end": 47.82,
+    "words": [
+      {
+        "word": " I'm",
+        "start": 46.32,
+        "end": 46.48,
+        "probability": 0.9929250180721283
+      },
+      {
+        "word": " at",
+        "start": 46.48,
+        "end": 46.54,
+        "probability": 0.9336572885513306
+      },
+      {
+        "word": " 44",
+        "start": 46.54,
+        "end": 46.94,
+        "probability": 0.9084937572479248
+      },
+      {
+        "word": " seconds",
+        "start": 46.94,
+        "end": 47.34,
+        "probability": 0.9838135242462158
+      },
+      {
+        "word": " right",
+        "start": 47.34,
+        "end": 47.58,
+        "probability": 0.9904714822769165
+      },
+      {
+        "word": " now.",
+        "start": 47.58,
+        "end": 47.82,
+        "probability": 0.9996789693832397
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.39003318548202515,
+    "all_probs": {
+      "happy_excited": 0.09495941549539566,
+      "sadness": 0.04988827183842659,
+      "neutral": 0.39003318548202515,
+      "anger": 0.09847038984298706,
+      "frustration": 0.36664876341819763
+    },
+    "vad": [
+      -0.18675215542316437,
+      -0.11437413096427917,
+      -0.1908755600452423
+    ],
+    "fusion_gates": {
+      "text": 7.183853449532762e-05,
+      "audio": 0.9998106360435486,
+      "interaction": 0.00011750395788112655
+    },
+    "word_emotions": [
+      {
+        "word": " I'm",
+        "start": 46.32,
+        "end": 46.48,
+        "emotion": "neutral",
+        "confidence": 0.38085466623306274,
+        "all_probs": {
+          "happy_excited": 0.08174712210893631,
+          "sadness": 0.053960517048835754,
+          "neutral": 0.38085466623306274,
+          "anger": 0.12951505184173584,
+          "frustration": 0.35392266511917114
+        },
+        "fusion_gates": {
+          "text": 6.01347574047395e-06,
+          "audio": 0.999982476234436
+        }
+      },
+      {
+        "word": " at",
+        "start": 46.48,
+        "end": 46.54,
+        "emotion": "neutral",
+        "confidence": 0.38085466623306274,
+        "all_probs": {
+          "happy_excited": 0.08174712210893631,
+          "sadness": 0.053960517048835754,
+          "neutral": 0.38085466623306274,
+          "anger": 0.12951505184173584,
+          "frustration": 0.35392266511917114
+        },
+        "fusion_gates": {
+          "text": 6.01347574047395e-06,
+          "audio": 0.999982476234436
+        }
+      },
+      {
+        "word": " 44",
+        "start": 46.54,
+        "end": 46.94,
+        "emotion": "neutral",
+        "confidence": 0.38085466623306274,
+        "all_probs": {
+          "happy_excited": 0.08174712210893631,
+          "sadness": 0.053960517048835754,
+          "neutral": 0.38085466623306274,
+          "anger": 0.12951505184173584,
+          "frustration": 0.35392266511917114
+        },
+        "fusion_gates": {
+          "text": 6.01347574047395e-06,
+          "audio": 0.999982476234436
+        }
+      },
+      {
+        "word": " seconds",
+        "start": 46.94,
+        "end": 47.34,
+        "emotion": "neutral",
+        "confidence": 0.4439100921154022,
+        "all_probs": {
+          "happy_excited": 0.12320030480623245,
+          "sadness": 0.06151749938726425,
+          "neutral": 0.4439100921154022,
+          "anger": 0.08605630695819855,
+          "frustration": 0.28531572222709656
+        },
+        "fusion_gates": {
+          "text": 1.989513293665368e-05,
+          "audio": 0.9999538660049438
+        }
+      },
+      {
+        "word": " right",
+        "start": 47.34,
+        "end": 47.58,
+        "emotion": "neutral",
+        "confidence": 0.43264448642730713,
+        "all_probs": {
+          "happy_excited": 0.22914119064807892,
+          "sadness": 0.10174357891082764,
+          "neutral": 0.43264448642730713,
+          "anger": 0.05611065402626991,
+          "frustration": 0.1803601235151291
+        },
+        "fusion_gates": {
+          "text": 7.539715443272144e-05,
+          "audio": 0.9998375177383423
+        }
+      },
+      {
+        "word": " now.",
+        "start": 47.58,
+        "end": 47.82,
+        "emotion": "neutral",
+        "confidence": 0.43264448642730713,
+        "all_probs": {
+          "happy_excited": 0.22914119064807892,
+          "sadness": 0.10174357891082764,
+          "neutral": 0.43264448642730713,
+          "anger": 0.05611065402626991,
+          "frustration": 0.1803601235151291
+        },
+        "fusion_gates": {
+          "text": 7.539715443272144e-05,
+          "audio": 0.9998375177383423
+        }
+      }
+    ]
+  },
+  {
+    "text": "That means we've got time for one final joke.",
+    "start": 47.88,
+    "end": 49.54,
+    "words": [
+      {
+        "word": " That",
+        "start": 47.88,
+        "end": 47.98,
+        "probability": 0.97571861743927
+      },
+      {
+        "word": " means",
+        "start": 47.98,
+        "end": 48.08,
+        "probability": 0.9975368976593018
+      },
+      {
+        "word": " we've",
+        "start": 48.08,
+        "end": 48.3,
+        "probability": 0.708759993314743
+      },
+      {
+        "word": " got",
+        "start": 48.3,
+        "end": 48.34,
+        "probability": 0.9951034784317017
+      },
+      {
+        "word": " time",
+        "start": 48.34,
+        "end": 48.62,
+        "probability": 0.9986562728881836
+      },
+      {
+        "word": " for",
+        "start": 48.62,
+        "end": 48.78,
+        "probability": 0.9988577365875244
+      },
+      {
+        "word": " one",
+        "start": 48.78,
+        "end": 48.96,
+        "probability": 0.9869253635406494
+      },
+      {
+        "word": " final",
+        "start": 48.96,
+        "end": 49.28,
+        "probability": 0.9964351654052734
+      },
+      {
+        "word": " joke.",
+        "start": 49.28,
+        "end": 49.54,
+        "probability": 0.9974372386932373
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.4321483075618744,
+    "all_probs": {
+      "happy_excited": 0.19025079905986786,
+      "sadness": 0.0687042623758316,
+      "neutral": 0.4321483075618744,
+      "anger": 0.06870373338460922,
+      "frustration": 0.24019287526607513
+    },
+    "vad": [
+      -0.11024945229291916,
+      -0.17763298749923706,
+      -0.14164936542510986
+    ],
+    "fusion_gates": {
+      "text": 6.502684846054763e-05,
+      "audio": 0.999854564666748,
+      "interaction": 8.0329533375334e-05
+    },
+    "word_emotions": [
+      {
+        "word": " That",
+        "start": 47.88,
+        "end": 47.98,
+        "emotion": "neutral",
+        "confidence": 0.39107978343963623,
+        "all_probs": {
+          "happy_excited": 0.08034797012805939,
+          "sadness": 0.054359160363674164,
+          "neutral": 0.39107978343963623,
+          "anger": 0.14634649455547333,
+          "frustration": 0.32786670327186584
+        },
+        "fusion_gates": {
+          "text": 3.558413027349161e-06,
+          "audio": 0.9999858140945435
+        }
+      },
+      {
+        "word": " means",
+        "start": 47.98,
+        "end": 48.08,
+        "emotion": "neutral",
+        "confidence": 0.39107978343963623,
+        "all_probs": {
+          "happy_excited": 0.08034797012805939,
+          "sadness": 0.054359160363674164,
+          "neutral": 0.39107978343963623,
+          "anger": 0.14634649455547333,
+          "frustration": 0.32786670327186584
+        },
+        "fusion_gates": {
+          "text": 3.558413027349161e-06,
+          "audio": 0.9999858140945435
+        }
+      },
+      {
+        "word": " we've",
+        "start": 48.08,
+        "end": 48.3,
+        "emotion": "neutral",
+        "confidence": 0.39107978343963623,
+        "all_probs": {
+          "happy_excited": 0.08034797012805939,
+          "sadness": 0.054359160363674164,
+          "neutral": 0.39107978343963623,
+          "anger": 0.14634649455547333,
+          "frustration": 0.32786670327186584
+        },
+        "fusion_gates": {
+          "text": 3.558413027349161e-06,
+          "audio": 0.9999858140945435
+        }
+      },
+      {
+        "word": " got",
+        "start": 48.3,
+        "end": 48.34,
+        "emotion": "neutral",
+        "confidence": 0.45363909006118774,
+        "all_probs": {
+          "happy_excited": 0.07903066277503967,
+          "sadness": 0.06169792264699936,
+          "neutral": 0.45363909006118774,
+          "anger": 0.1101815402507782,
+          "frustration": 0.2954508066177368
+        },
+        "fusion_gates": {
+          "text": 6.415801635739626e-06,
+          "audio": 0.9999812841415405
+        }
+      },
+      {
+        "word": " time",
+        "start": 48.34,
+        "end": 48.62,
+        "emotion": "neutral",
+        "confidence": 0.45363909006118774,
+        "all_probs": {
+          "happy_excited": 0.07903066277503967,
+          "sadness": 0.06169792264699936,
+          "neutral": 0.45363909006118774,
+          "anger": 0.1101815402507782,
+          "frustration": 0.2954508066177368
+        },
+        "fusion_gates": {
+          "text": 6.415801635739626e-06,
+          "audio": 0.9999812841415405
+        }
+      },
+      {
+        "word": " for",
+        "start": 48.62,
+        "end": 48.78,
+        "emotion": "neutral",
+        "confidence": 0.5019152760505676,
+        "all_probs": {
+          "happy_excited": 0.12092854082584381,
+          "sadness": 0.08468291163444519,
+          "neutral": 0.5019152760505676,
+          "anger": 0.0753033459186554,
+          "frustration": 0.21716994047164917
+        },
+        "fusion_gates": {
+          "text": 2.043702443188522e-05,
+          "audio": 0.9999428987503052
+        }
+      },
+      {
+        "word": " one",
+        "start": 48.78,
+        "end": 48.96,
+        "emotion": "neutral",
+        "confidence": 0.5019152760505676,
+        "all_probs": {
+          "happy_excited": 0.12092854082584381,
+          "sadness": 0.08468291163444519,
+          "neutral": 0.5019152760505676,
+          "anger": 0.0753033459186554,
+          "frustration": 0.21716994047164917
+        },
+        "fusion_gates": {
+          "text": 2.043702443188522e-05,
+          "audio": 0.9999428987503052
+        }
+      },
+      {
+        "word": " final",
+        "start": 48.96,
+        "end": 49.28,
+        "emotion": "neutral",
+        "confidence": 0.4830308258533478,
+        "all_probs": {
+          "happy_excited": 0.09527961909770966,
+          "sadness": 0.07057598978281021,
+          "neutral": 0.4830308258533478,
+          "anger": 0.08886770904064178,
+          "frustration": 0.26224586367607117
+        },
+        "fusion_gates": {
+          "text": 1.1735171028703917e-05,
+          "audio": 0.9999707937240601
+        }
+      },
+      {
+        "word": " joke.",
+        "start": 49.28,
+        "end": 49.54,
+        "emotion": "neutral",
+        "confidence": 0.29665639996528625,
+        "all_probs": {
+          "happy_excited": 0.22877606749534607,
+          "sadness": 0.05230337008833885,
+          "neutral": 0.29665639996528625,
+          "anger": 0.13851214945316315,
+          "frustration": 0.28375205397605896
+        },
+        "fusion_gates": {
+          "text": 5.540142865356756e-06,
+          "audio": 0.9999643564224243
+        }
+      }
+    ]
+  },
+  {
+    "text": "Why are balloons so expensive?",
+    "start": 50.14,
+    "end": 52.58,
+    "words": [
+      {
+        "word": " Why",
+        "start": 50.14,
+        "end": 50.48,
+        "probability": 0.9438695907592773
+      },
+      {
+        "word": " are",
+        "start": 50.48,
+        "end": 51.0,
+        "probability": 0.9849731922149658
+      },
+      {
+        "word": " balloons",
+        "start": 51.0,
+        "end": 51.36,
+        "probability": 0.9158856868743896
+      },
+      {
+        "word": " so",
+        "start": 51.36,
+        "end": 52.04,
+        "probability": 0.9991464614868164
+      },
+      {
+        "word": " expensive?",
+        "start": 52.04,
+        "end": 52.58,
+        "probability": 0.9981820583343506
+      }
+    ],
+    "emotion": "anger",
+    "confidence": 0.5873731374740601,
+    "all_probs": {
+      "happy_excited": 0.09299184381961823,
+      "sadness": 0.05025479570031166,
+      "neutral": 0.04629017412662506,
+      "anger": 0.5873731374740601,
+      "frustration": 0.22309011220932007
+    },
+    "vad": [
+      -0.628423810005188,
+      0.7267649173736572,
+      0.24860508739948273
+    ],
+    "fusion_gates": {
+      "text": 5.862640932718932e-07,
+      "audio": 0.9999879598617554,
+      "interaction": 1.145744499808643e-05
+    },
+    "word_emotions": [
+      {
+        "word": " Why",
+        "start": 50.14,
+        "end": 50.48,
+        "emotion": "anger",
+        "confidence": 0.5773959159851074,
+        "all_probs": {
+          "happy_excited": 0.07592613250017166,
+          "sadness": 0.047914665192365646,
+          "neutral": 0.050858449190855026,
+          "anger": 0.5773959159851074,
+          "frustration": 0.24790476262569427
+        },
+        "fusion_gates": {
+          "text": 4.777722324433853e-07,
+          "audio": 0.9999873638153076
+        }
+      },
+      {
+        "word": " are",
+        "start": 50.48,
+        "end": 51.0,
+        "emotion": "frustration",
+        "confidence": 0.34578749537467957,
+        "all_probs": {
+          "happy_excited": 0.09045866876840591,
+          "sadness": 0.04764863848686218,
+          "neutral": 0.33546167612075806,
+          "anger": 0.18064351379871368,
+          "frustration": 0.34578749537467957
+        },
+        "fusion_gates": {
+          "text": 2.5610127067920985e-06,
+          "audio": 0.9999847412109375
+        }
+      },
+      {
+        "word": " balloons",
+        "start": 51.0,
+        "end": 51.36,
+        "emotion": "neutral",
+        "confidence": 0.46076473593711853,
+        "all_probs": {
+          "happy_excited": 0.1841072142124176,
+          "sadness": 0.0753331407904625,
+          "neutral": 0.46076473593711853,
+          "anger": 0.06832373887300491,
+          "frustration": 0.21147117018699646
+        },
+        "fusion_gates": {
+          "text": 3.669743819045834e-05,
+          "audio": 0.9999029636383057
+        }
+      },
+      {
+        "word": " so",
+        "start": 51.36,
+        "end": 52.04,
+        "emotion": "neutral",
+        "confidence": 0.4657061696052551,
+        "all_probs": {
+          "happy_excited": 0.20142313838005066,
+          "sadness": 0.08637513220310211,
+          "neutral": 0.4657061696052551,
+          "anger": 0.06166975200176239,
+          "frustration": 0.18482576310634613
+        },
+        "fusion_gates": {
+          "text": 5.310783308232203e-05,
+          "audio": 0.9998619556427002
+        }
+      },
+      {
+        "word": " expensive?",
+        "start": 52.04,
+        "end": 52.58,
+        "emotion": "frustration",
+        "confidence": 0.36451777815818787,
+        "all_probs": {
+          "happy_excited": 0.08771556615829468,
+          "sadness": 0.03973572701215744,
+          "neutral": 0.17458485066890717,
+          "anger": 0.33344608545303345,
+          "frustration": 0.36451777815818787
+        },
+        "fusion_gates": {
+          "text": 1.2148075256845914e-06,
+          "audio": 0.9999837875366211
+        }
+      }
+    ]
+  },
+  {
+    "text": "Inflation.",
+    "start": 54.54,
+    "end": 55.02,
+    "words": [
+      {
+        "word": " Inflation.",
+        "start": 54.54,
+        "end": 55.02,
+        "probability": 0.9631291031837463
+      }
+    ],
+    "emotion": "frustration",
+    "confidence": 0.35127031803131104,
+    "all_probs": {
+      "happy_excited": 0.14619068801403046,
+      "sadness": 0.05110714212059975,
+      "neutral": 0.24619434773921967,
+      "anger": 0.20523740351200104,
+      "frustration": 0.35127031803131104
+    },
+    "vad": [
+      -0.1928459256887436,
+      0.13932809233665466,
+      -0.09201176464557648
+    ],
+    "fusion_gates": {
+      "text": 2.298890422025579e-06,
+      "audio": 0.9999854564666748,
+      "interaction": 1.2265269106137566e-05
+    },
+    "word_emotions": [
+      {
+        "word": " Inflation.",
+        "start": 54.54,
+        "end": 55.02,
+        "emotion": "frustration",
+        "confidence": 0.35127031803131104,
+        "all_probs": {
+          "happy_excited": 0.14619068801403046,
+          "sadness": 0.05110714212059975,
+          "neutral": 0.24619434773921967,
+          "anger": 0.20523740351200104,
+          "frustration": 0.35127031803131104
+        },
+        "fusion_gates": {
+          "text": 2.298890422025579e-06,
+          "audio": 0.9999854564666748
+        }
+      }
+    ]
+  }
+]

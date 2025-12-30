@@ -1,0 +1,1442 @@
+[
+  {
+    "text": "Wow, what an audience.",
+    "start": 0.0,
+    "end": 2.5,
+    "words": [
+      {
+        "word": " Wow,",
+        "start": 0.0,
+        "end": 0.76,
+        "probability": 0.7272652983665466
+      },
+      {
+        "word": " what",
+        "start": 1.18,
+        "end": 1.96,
+        "probability": 0.9870266318321228
+      },
+      {
+        "word": " an",
+        "start": 1.96,
+        "end": 2.08,
+        "probability": 0.9955739974975586
+      },
+      {
+        "word": " audience.",
+        "start": 2.08,
+        "end": 2.5,
+        "probability": 0.9964032173156738
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.5951633453369141,
+    "all_probs": {
+      "happy_excited": 0.15478892624378204,
+      "sadness": 0.028286239132285118,
+      "neutral": 0.5951633453369141,
+      "anger": 0.0688944160938263,
+      "frustration": 0.1528671234846115
+    },
+    "vad": [
+      -0.0017877742648124695,
+      0.0019283088622614741,
+      0.004115211311727762
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "But if I'm being honest, I don't care what you think of my talk.",
+    "start": 3.2,
+    "end": 5.68,
+    "words": [
+      {
+        "word": " But",
+        "start": 3.2,
+        "end": 3.36,
+        "probability": 0.9780662059783936
+      },
+      {
+        "word": " if",
+        "start": 3.36,
+        "end": 3.46,
+        "probability": 0.970902144908905
+      },
+      {
+        "word": " I'm",
+        "start": 3.46,
+        "end": 3.52,
+        "probability": 0.9872789978981018
+      },
+      {
+        "word": " being",
+        "start": 3.52,
+        "end": 3.68,
+        "probability": 0.9888420104980469
+      },
+      {
+        "word": " honest,",
+        "start": 3.68,
+        "end": 3.98,
+        "probability": 0.9995620846748352
+      },
+      {
+        "word": " I",
+        "start": 4.36,
+        "end": 4.68,
+        "probability": 0.9974272847175598
+      },
+      {
+        "word": " don't",
+        "start": 4.68,
+        "end": 4.76,
+        "probability": 0.9990425705909729
+      },
+      {
+        "word": " care",
+        "start": 4.76,
+        "end": 4.94,
+        "probability": 0.9987742304801941
+      },
+      {
+        "word": " what",
+        "start": 4.94,
+        "end": 5.06,
+        "probability": 0.9946610331535339
+      },
+      {
+        "word": " you",
+        "start": 5.06,
+        "end": 5.14,
+        "probability": 0.9980688691139221
+      },
+      {
+        "word": " think",
+        "start": 5.14,
+        "end": 5.28,
+        "probability": 0.9968067407608032
+      },
+      {
+        "word": " of",
+        "start": 5.28,
+        "end": 5.36,
+        "probability": 0.9888429641723633
+      },
+      {
+        "word": " my",
+        "start": 5.36,
+        "end": 5.46,
+        "probability": 0.996532678604126
+      },
+      {
+        "word": " talk.",
+        "start": 5.46,
+        "end": 5.68,
+        "probability": 0.9957477450370789
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.5185545086860657,
+    "all_probs": {
+      "happy_excited": 0.07436731457710266,
+      "sadness": 0.030222414061427116,
+      "neutral": 0.5185545086860657,
+      "anger": 0.11476016789674759,
+      "frustration": 0.26209554076194763
+    },
+    "vad": [
+      -0.00018328195437788963,
+      0.0013506297254934907,
+      -0.002907350892201066
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "I don't.",
+    "start": 6.8,
+    "end": 7.28,
+    "words": [
+      {
+        "word": " I",
+        "start": 6.8,
+        "end": 7.0,
+        "probability": 0.9783409237861633
+      },
+      {
+        "word": " don't.",
+        "start": 7.0,
+        "end": 7.28,
+        "probability": 0.9586291611194611
+      }
+    ],
+    "emotion": "happy_excited",
+    "confidence": 0.5984026193618774,
+    "all_probs": {
+      "happy_excited": 0.5984026193618774,
+      "sadness": 0.024299051612615585,
+      "neutral": 0.15479373931884766,
+      "anger": 0.09427087008953094,
+      "frustration": 0.12823370099067688
+    },
+    "vad": [
+      -0.001622736919671297,
+      0.0015156569425016642,
+      0.0034535841550678015
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "I care what the internet thinks of my talk.",
+    "start": 7.64,
+    "end": 9.14,
+    "words": [
+      {
+        "word": " I",
+        "start": 7.64,
+        "end": 7.86,
+        "probability": 0.9950891137123108
+      },
+      {
+        "word": " care",
+        "start": 7.86,
+        "end": 7.98,
+        "probability": 0.9552236795425415
+      },
+      {
+        "word": " what",
+        "start": 7.98,
+        "end": 8.08,
+        "probability": 0.9582569599151611
+      },
+      {
+        "word": " the",
+        "start": 8.08,
+        "end": 8.18,
+        "probability": 0.9964118599891663
+      },
+      {
+        "word": " internet",
+        "start": 8.18,
+        "end": 8.34,
+        "probability": 0.7875331044197083
+      },
+      {
+        "word": " thinks",
+        "start": 8.34,
+        "end": 8.64,
+        "probability": 0.9963816404342651
+      },
+      {
+        "word": " of",
+        "start": 8.64,
+        "end": 8.78,
+        "probability": 0.9879520535469055
+      },
+      {
+        "word": " my",
+        "start": 8.78,
+        "end": 8.88,
+        "probability": 0.9986829161643982
+      },
+      {
+        "word": " talk.",
+        "start": 8.88,
+        "end": 9.14,
+        "probability": 0.9968575239181519
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.611992597579956,
+    "all_probs": {
+      "happy_excited": 0.15460163354873657,
+      "sadness": 0.031005918979644775,
+      "neutral": 0.611992597579956,
+      "anger": 0.05346223711967468,
+      "frustration": 0.14893759787082672
+    },
+    "vad": [
+      -0.0015504885232076049,
+      0.0008199948933906853,
+      0.0026520572137087584
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "Because they're the ones who get it seen and get it shared.",
+    "start": 10.28,
+    "end": 12.62,
+    "words": [
+      {
+        "word": " Because",
+        "start": 10.28,
+        "end": 10.68,
+        "probability": 0.376453161239624
+      },
+      {
+        "word": " they're",
+        "start": 10.68,
+        "end": 10.82,
+        "probability": 0.9167429804801941
+      },
+      {
+        "word": " the",
+        "start": 10.82,
+        "end": 10.94,
+        "probability": 0.9934913516044617
+      },
+      {
+        "word": " ones",
+        "start": 10.94,
+        "end": 11.12,
+        "probability": 0.9970477223396301
+      },
+      {
+        "word": " who",
+        "start": 11.12,
+        "end": 11.3,
+        "probability": 0.8248884081840515
+      },
+      {
+        "word": " get",
+        "start": 11.3,
+        "end": 11.4,
+        "probability": 0.9363470673561096
+      },
+      {
+        "word": " it",
+        "start": 11.4,
+        "end": 11.48,
+        "probability": 0.9515745043754578
+      },
+      {
+        "word": " seen",
+        "start": 11.48,
+        "end": 11.7,
+        "probability": 0.9112650156021118
+      },
+      {
+        "word": " and",
+        "start": 11.7,
+        "end": 12.16,
+        "probability": 0.8598722219467163
+      },
+      {
+        "word": " get",
+        "start": 12.16,
+        "end": 12.28,
+        "probability": 0.9895986318588257
+      },
+      {
+        "word": " it",
+        "start": 12.28,
+        "end": 12.38,
+        "probability": 0.9965716600418091
+      },
+      {
+        "word": " shared.",
+        "start": 12.38,
+        "end": 12.62,
+        "probability": 0.9959861636161804
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.423817902803421,
+    "all_probs": {
+      "happy_excited": 0.4028264284133911,
+      "sadness": 0.03377053886651993,
+      "neutral": 0.423817902803421,
+      "anger": 0.04413061589002609,
+      "frustration": 0.09545445442199707
+    },
+    "vad": [
+      -0.0020049524027854204,
+      -0.003914098720997572,
+      0.005860914010554552
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "And I think that's where most people get it wrong.",
+    "start": 13.2,
+    "end": 14.78,
+    "words": [
+      {
+        "word": " And",
+        "start": 13.2,
+        "end": 13.28,
+        "probability": 0.9580352902412415
+      },
+      {
+        "word": " I",
+        "start": 13.28,
+        "end": 13.38,
+        "probability": 0.9925317168235779
+      },
+      {
+        "word": " think",
+        "start": 13.38,
+        "end": 13.52,
+        "probability": 0.999160885810852
+      },
+      {
+        "word": " that's",
+        "start": 13.52,
+        "end": 13.76,
+        "probability": 0.9603121876716614
+      },
+      {
+        "word": " where",
+        "start": 13.76,
+        "end": 13.84,
+        "probability": 0.9769019484519958
+      },
+      {
+        "word": " most",
+        "start": 13.84,
+        "end": 14.06,
+        "probability": 0.996712327003479
+      },
+      {
+        "word": " people",
+        "start": 14.06,
+        "end": 14.28,
+        "probability": 0.999433696269989
+      },
+      {
+        "word": " get",
+        "start": 14.28,
+        "end": 14.44,
+        "probability": 0.9965381622314453
+      },
+      {
+        "word": " it",
+        "start": 14.44,
+        "end": 14.54,
+        "probability": 0.9886273741722107
+      },
+      {
+        "word": " wrong.",
+        "start": 14.54,
+        "end": 14.78,
+        "probability": 0.9993078708648682
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.6232708692550659,
+    "all_probs": {
+      "happy_excited": 0.11259062588214874,
+      "sadness": 0.03185112774372101,
+      "neutral": 0.6232708692550659,
+      "anger": 0.06750913709402084,
+      "frustration": 0.16477817296981812
+    },
+    "vad": [
+      -0.0005441801040433347,
+      0.0008144521270878613,
+      -0.0004827824595849961
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "They're talking to you here.",
+    "start": 15.16,
+    "end": 16.68,
+    "words": [
+      {
+        "word": " They're",
+        "start": 15.16,
+        "end": 15.24,
+        "probability": 0.9774802923202515
+      },
+      {
+        "word": " talking",
+        "start": 15.24,
+        "end": 15.46,
+        "probability": 0.9949211478233337
+      },
+      {
+        "word": " to",
+        "start": 15.46,
+        "end": 15.62,
+        "probability": 0.9988046884536743
+      },
+      {
+        "word": " you",
+        "start": 15.62,
+        "end": 15.8,
+        "probability": 0.9969574213027954
+      },
+      {
+        "word": " here.",
+        "start": 15.8,
+        "end": 16.68,
+        "probability": 0.6052322387695312
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.44619110226631165,
+    "all_probs": {
+      "happy_excited": 0.09020505100488663,
+      "sadness": 0.040912795811891556,
+      "neutral": 0.44619110226631165,
+      "anger": 0.1333654671907425,
+      "frustration": 0.2893255054950714
+    },
+    "vad": [
+      0.001368467346765101,
+      0.0011633968679234385,
+      -0.0034587644040584564
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "Instead of talking to you, random person scrolling Facebook.",
+    "start": 17.36,
+    "end": 21.72,
+    "words": [
+      {
+        "word": " Instead",
+        "start": 17.36,
+        "end": 17.64,
+        "probability": 0.9697719812393188
+      },
+      {
+        "word": " of",
+        "start": 17.64,
+        "end": 17.74,
+        "probability": 0.9928681254386902
+      },
+      {
+        "word": " talking",
+        "start": 17.74,
+        "end": 17.98,
+        "probability": 0.9935535192489624
+      },
+      {
+        "word": " to",
+        "start": 17.98,
+        "end": 18.12,
+        "probability": 0.9964724779129028
+      },
+      {
+        "word": " you,",
+        "start": 18.12,
+        "end": 18.4,
+        "probability": 0.9979438185691833
+      },
+      {
+        "word": " random",
+        "start": 18.92,
+        "end": 19.2,
+        "probability": 0.8389627933502197
+      },
+      {
+        "word": " person",
+        "start": 19.2,
+        "end": 19.88,
+        "probability": 0.9527267813682556
+      },
+      {
+        "word": " scrolling",
+        "start": 19.88,
+        "end": 20.88,
+        "probability": 0.8054021596908569
+      },
+      {
+        "word": " Facebook.",
+        "start": 20.88,
+        "end": 21.72,
+        "probability": 0.9242008328437805
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.6315436363220215,
+    "all_probs": {
+      "happy_excited": 0.05891121178865433,
+      "sadness": 0.03063146024942398,
+      "neutral": 0.6315436363220215,
+      "anger": 0.08209164440631866,
+      "frustration": 0.19682203233242035
+    },
+    "vad": [
+      -0.001086211297661066,
+      -0.0003151022829115391,
+      -0.0024562731850892305
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "Thanks for the click.",
+    "start": 22.9,
+    "end": 23.7,
+    "words": [
+      {
+        "word": " Thanks",
+        "start": 22.9,
+        "end": 23.3,
+        "probability": 0.9893941283226013
+      },
+      {
+        "word": " for",
+        "start": 23.3,
+        "end": 23.44,
+        "probability": 0.9992683529853821
+      },
+      {
+        "word": " the",
+        "start": 23.44,
+        "end": 23.54,
+        "probability": 0.9983267188072205
+      },
+      {
+        "word": " click.",
+        "start": 23.54,
+        "end": 23.7,
+        "probability": 0.9856899380683899
+      }
+    ],
+    "emotion": "happy_excited",
+    "confidence": 0.5111408829689026,
+    "all_probs": {
+      "happy_excited": 0.5111408829689026,
+      "sadness": 0.031151602044701576,
+      "neutral": 0.3116115629673004,
+      "anger": 0.04921118915081024,
+      "frustration": 0.09688475728034973
+    },
+    "vad": [
+      -0.0031697410158813,
+      -0.002558924723416567,
+      0.005313321948051453
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "You see, back in 2009, we all had these weird little things",
+    "start": 24.64,
+    "end": 28.22,
+    "words": [
+      {
+        "word": " You",
+        "start": 24.64,
+        "end": 25.04,
+        "probability": 0.9714638590812683
+      },
+      {
+        "word": " see,",
+        "start": 25.04,
+        "end": 25.22,
+        "probability": 0.9943793416023254
+      },
+      {
+        "word": " back",
+        "start": 25.36,
+        "end": 25.5,
+        "probability": 0.9952386617660522
+      },
+      {
+        "word": " in",
+        "start": 25.5,
+        "end": 25.7,
+        "probability": 0.9990501999855042
+      },
+      {
+        "word": " 2009,",
+        "start": 25.7,
+        "end": 26.42,
+        "probability": 0.9914731979370117
+      },
+      {
+        "word": " we",
+        "start": 26.68,
+        "end": 26.72,
+        "probability": 0.9959520101547241
+      },
+      {
+        "word": " all",
+        "start": 26.72,
+        "end": 26.9,
+        "probability": 0.9970338344573975
+      },
+      {
+        "word": " had",
+        "start": 26.9,
+        "end": 27.06,
+        "probability": 0.6279977560043335
+      },
+      {
+        "word": " these",
+        "start": 27.06,
+        "end": 27.26,
+        "probability": 0.9879911541938782
+      },
+      {
+        "word": " weird",
+        "start": 27.26,
+        "end": 27.62,
+        "probability": 0.9985772371292114
+      },
+      {
+        "word": " little",
+        "start": 27.62,
+        "end": 27.88,
+        "probability": 0.9381232261657715
+      },
+      {
+        "word": " things",
+        "start": 27.88,
+        "end": 28.22,
+        "probability": 0.9971420168876648
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.7869591116905212,
+    "all_probs": {
+      "happy_excited": 0.05561726912856102,
+      "sadness": 0.03417431190609932,
+      "neutral": 0.7869591116905212,
+      "anger": 0.03002288192510605,
+      "frustration": 0.09322646260261536
+    },
+    "vad": [
+      0.001329029561020434,
+      -0.005153936799615622,
+      0.0025168757420033216
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "called attention spans.",
+    "start": 28.22,
+    "end": 29.92,
+    "words": [
+      {
+        "word": " called",
+        "start": 28.22,
+        "end": 28.6,
+        "probability": 0.06300470978021622
+      },
+      {
+        "word": " attention",
+        "start": 28.6,
+        "end": 29.48,
+        "probability": 0.6274356842041016
+      },
+      {
+        "word": " spans.",
+        "start": 29.48,
+        "end": 29.92,
+        "probability": 0.9577768445014954
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.7918940186500549,
+    "all_probs": {
+      "happy_excited": 0.04768272861838341,
+      "sadness": 0.02745571732521057,
+      "neutral": 0.7918940186500549,
+      "anger": 0.032622288912534714,
+      "frustration": 0.10034523159265518
+    },
+    "vad": [
+      0.0012961241882294416,
+      -0.0027646501548588276,
+      0.003042572643607855
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "Yeah, they're gone.",
+    "start": 30.8,
+    "end": 31.84,
+    "words": [
+      {
+        "word": " Yeah,",
+        "start": 30.8,
+        "end": 31.28,
+        "probability": 0.7633314728736877
+      },
+      {
+        "word": " they're",
+        "start": 31.56,
+        "end": 31.64,
+        "probability": 0.9801601767539978
+      },
+      {
+        "word": " gone.",
+        "start": 31.64,
+        "end": 31.84,
+        "probability": 0.9941474199295044
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.6371585726737976,
+    "all_probs": {
+      "happy_excited": 0.1611918956041336,
+      "sadness": 0.035985179245471954,
+      "neutral": 0.6371585726737976,
+      "anger": 0.04644172638654709,
+      "frustration": 0.11922261118888855
+    },
+    "vad": [
+      -0.0015150432009249926,
+      -0.0015503986505791545,
+      0.0030928822234272957
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "They're gone.",
+    "start": 32.04,
+    "end": 32.26,
+    "words": [
+      {
+        "word": " They're",
+        "start": 32.04,
+        "end": 32.14,
+        "probability": 0.8272810578346252
+      },
+      {
+        "word": " gone.",
+        "start": 32.14,
+        "end": 32.26,
+        "probability": 0.9962693452835083
+      }
+    ],
+    "emotion": "anger",
+    "confidence": 0.6920392513275146,
+    "all_probs": {
+      "happy_excited": 0.01964034140110016,
+      "sadness": 0.019702034071087837,
+      "neutral": 0.019059859216213226,
+      "anger": 0.6920392513275146,
+      "frustration": 0.2495584487915039
+    },
+    "vad": [
+      -0.0015197016764432192,
+      -0.0011814030585810542,
+      -0.0017834322061389685
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "We killed them.",
+    "start": 32.38,
+    "end": 32.82,
+    "words": [
+      {
+        "word": " We",
+        "start": 32.38,
+        "end": 32.44,
+        "probability": 0.9927666187286377
+      },
+      {
+        "word": " killed",
+        "start": 32.44,
+        "end": 32.64,
+        "probability": 0.9197613596916199
+      },
+      {
+        "word": " them.",
+        "start": 32.64,
+        "end": 32.82,
+        "probability": 0.8471654057502747
+      }
+    ],
+    "emotion": "frustration",
+    "confidence": 0.39012712240219116,
+    "all_probs": {
+      "happy_excited": 0.07910337299108505,
+      "sadness": 0.0824466273188591,
+      "neutral": 0.24039506912231445,
+      "anger": 0.20792776346206665,
+      "frustration": 0.39012712240219116
+    },
+    "vad": [
+      0.0013119319919496775,
+      0.0009359709802083671,
+      -0.0018515328411012888
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "They're dead.",
+    "start": 33.24,
+    "end": 33.88,
+    "words": [
+      {
+        "word": " They're",
+        "start": 33.24,
+        "end": 33.7,
+        "probability": 0.9815163314342499
+      },
+      {
+        "word": " dead.",
+        "start": 33.7,
+        "end": 33.88,
+        "probability": 0.9955713152885437
+      }
+    ],
+    "emotion": "happy_excited",
+    "confidence": 0.5215343832969666,
+    "all_probs": {
+      "happy_excited": 0.5215343832969666,
+      "sadness": 0.030831875279545784,
+      "neutral": 0.28084951639175415,
+      "anger": 0.056391362100839615,
+      "frustration": 0.11039291322231293
+    },
+    "vad": [
+      -0.003777974983677268,
+      -0.0008857273496687412,
+      0.004641336854547262
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "I'm trying to think of the last time I watched an 18-minute",
+    "start": 34.9,
+    "end": 37.84,
+    "words": [
+      {
+        "word": " I'm",
+        "start": 34.9,
+        "end": 35.2,
+        "probability": 0.9956822693347931
+      },
+      {
+        "word": " trying",
+        "start": 35.2,
+        "end": 35.34,
+        "probability": 0.9951215386390686
+      },
+      {
+        "word": " to",
+        "start": 35.34,
+        "end": 35.44,
+        "probability": 0.9988340735435486
+      },
+      {
+        "word": " think",
+        "start": 35.44,
+        "end": 35.6,
+        "probability": 0.998777449131012
+      },
+      {
+        "word": " of",
+        "start": 35.6,
+        "end": 35.72,
+        "probability": 0.9962270259857178
+      },
+      {
+        "word": " the",
+        "start": 35.72,
+        "end": 35.84,
+        "probability": 0.9953328967094421
+      },
+      {
+        "word": " last",
+        "start": 35.84,
+        "end": 36.06,
+        "probability": 0.9986518025398254
+      },
+      {
+        "word": " time",
+        "start": 36.06,
+        "end": 36.32,
+        "probability": 0.9981622099876404
+      },
+      {
+        "word": " I",
+        "start": 36.32,
+        "end": 36.6,
+        "probability": 0.9919028878211975
+      },
+      {
+        "word": " watched",
+        "start": 36.6,
+        "end": 37.0,
+        "probability": 0.9196712970733643
+      },
+      {
+        "word": " an",
+        "start": 37.0,
+        "end": 37.18,
+        "probability": 0.9866291284561157
+      },
+      {
+        "word": " 18",
+        "start": 37.18,
+        "end": 37.56,
+        "probability": 0.9570204615592957
+      },
+      {
+        "word": "-minute",
+        "start": 37.56,
+        "end": 37.84,
+        "probability": 0.8172910809516907
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.624111533164978,
+    "all_probs": {
+      "happy_excited": 0.13033296167850494,
+      "sadness": 0.03431572765111923,
+      "neutral": 0.624111533164978,
+      "anger": 0.04690323397517204,
+      "frustration": 0.16433653235435486
+    },
+    "vad": [
+      -0.0004613382916431874,
+      0.0006668925052508712,
+      0.0011177388951182365
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "TED talk.",
+    "start": 37.84,
+    "end": 38.36,
+    "words": [
+      {
+        "word": " TED",
+        "start": 37.84,
+        "end": 38.12,
+        "probability": 0.7137286067008972
+      },
+      {
+        "word": " talk.",
+        "start": 38.12,
+        "end": 38.36,
+        "probability": 0.5639337301254272
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.5994908213615417,
+    "all_probs": {
+      "happy_excited": 0.09172306954860687,
+      "sadness": 0.051550716161727905,
+      "neutral": 0.5994908213615417,
+      "anger": 0.07538977265357971,
+      "frustration": 0.18184562027454376
+    },
+    "vad": [
+      0.0005044303252361715,
+      -0.001195876975543797,
+      -0.0028062169440090656
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "It's been years, literally years.",
+    "start": 38.86,
+    "end": 40.78,
+    "words": [
+      {
+        "word": " It's",
+        "start": 38.86,
+        "end": 39.02,
+        "probability": 0.9871589839458466
+      },
+      {
+        "word": " been",
+        "start": 39.02,
+        "end": 39.12,
+        "probability": 0.9997510313987732
+      },
+      {
+        "word": " years,",
+        "start": 39.12,
+        "end": 39.4,
+        "probability": 0.9984351992607117
+      },
+      {
+        "word": " literally",
+        "start": 39.74,
+        "end": 40.14,
+        "probability": 0.9986191987991333
+      },
+      {
+        "word": " years.",
+        "start": 40.14,
+        "end": 40.78,
+        "probability": 0.9525815844535828
+      }
+    ],
+    "emotion": "happy_excited",
+    "confidence": 0.5594886541366577,
+    "all_probs": {
+      "happy_excited": 0.5594886541366577,
+      "sadness": 0.025499336421489716,
+      "neutral": 0.1817593276500702,
+      "anger": 0.0920492634177208,
+      "frustration": 0.14120344817638397
+    },
+    "vad": [
+      -0.002649665577337146,
+      0.0015262688975781202,
+      0.0035445322282612324
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "So if you're given a TED talk, keep it quick.",
+    "start": 41.52,
+    "end": 44.04,
+    "words": [
+      {
+        "word": " So",
+        "start": 41.52,
+        "end": 41.76,
+        "probability": 0.9586671590805054
+      },
+      {
+        "word": " if",
+        "start": 41.76,
+        "end": 41.86,
+        "probability": 0.8715291023254395
+      },
+      {
+        "word": " you're",
+        "start": 41.86,
+        "end": 41.92,
+        "probability": 0.9930713772773743
+      },
+      {
+        "word": " given",
+        "start": 41.92,
+        "end": 42.12,
+        "probability": 0.7744019031524658
+      },
+      {
+        "word": " a",
+        "start": 42.12,
+        "end": 42.3,
+        "probability": 0.9921137094497681
+      },
+      {
+        "word": " TED",
+        "start": 42.3,
+        "end": 42.46,
+        "probability": 0.9965894222259521
+      },
+      {
+        "word": " talk,",
+        "start": 42.46,
+        "end": 42.84,
+        "probability": 0.9300045967102051
+      },
+      {
+        "word": " keep",
+        "start": 43.26,
+        "end": 43.52,
+        "probability": 0.9954919219017029
+      },
+      {
+        "word": " it",
+        "start": 43.52,
+        "end": 43.66,
+        "probability": 0.9994977712631226
+      },
+      {
+        "word": " quick.",
+        "start": 43.66,
+        "end": 44.04,
+        "probability": 0.9982998967170715
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.7071951031684875,
+    "all_probs": {
+      "happy_excited": 0.050214409828186035,
+      "sadness": 0.029356369748711586,
+      "neutral": 0.7071951031684875,
+      "anger": 0.05690374970436096,
+      "frustration": 0.15633046627044678
+    },
+    "vad": [
+      -0.002003094647079706,
+      -0.0016663864953443408,
+      -0.0013617431977763772
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "I'm doing mine in under a minute.",
+    "start": 44.38,
+    "end": 45.7,
+    "words": [
+      {
+        "word": " I'm",
+        "start": 44.38,
+        "end": 44.64,
+        "probability": 0.9982880055904388
+      },
+      {
+        "word": " doing",
+        "start": 44.64,
+        "end": 44.76,
+        "probability": 0.9872224926948547
+      },
+      {
+        "word": " mine",
+        "start": 44.76,
+        "end": 44.98,
+        "probability": 0.9884804487228394
+      },
+      {
+        "word": " in",
+        "start": 44.98,
+        "end": 45.14,
+        "probability": 0.9250398278236389
+      },
+      {
+        "word": " under",
+        "start": 45.14,
+        "end": 45.36,
+        "probability": 0.9941413998603821
+      },
+      {
+        "word": " a",
+        "start": 45.36,
+        "end": 45.48,
+        "probability": 0.9953147172927856
+      },
+      {
+        "word": " minute.",
+        "start": 45.48,
+        "end": 45.7,
+        "probability": 0.9992102384567261
+      }
+    ],
+    "emotion": "frustration",
+    "confidence": 0.4260087311267853,
+    "all_probs": {
+      "happy_excited": 0.04923871159553528,
+      "sadness": 0.026107605546712875,
+      "neutral": 0.12823936343193054,
+      "anger": 0.37040555477142334,
+      "frustration": 0.4260087311267853
+    },
+    "vad": [
+      -0.0015282866079360247,
+      0.0011617857962846756,
+      -0.002614688128232956
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "I'm at 44 seconds right now.",
+    "start": 46.32,
+    "end": 47.82,
+    "words": [
+      {
+        "word": " I'm",
+        "start": 46.32,
+        "end": 46.48,
+        "probability": 0.9929250180721283
+      },
+      {
+        "word": " at",
+        "start": 46.48,
+        "end": 46.54,
+        "probability": 0.9336572885513306
+      },
+      {
+        "word": " 44",
+        "start": 46.54,
+        "end": 46.94,
+        "probability": 0.9084937572479248
+      },
+      {
+        "word": " seconds",
+        "start": 46.94,
+        "end": 47.34,
+        "probability": 0.9838135242462158
+      },
+      {
+        "word": " right",
+        "start": 47.34,
+        "end": 47.58,
+        "probability": 0.9904714822769165
+      },
+      {
+        "word": " now.",
+        "start": 47.58,
+        "end": 47.82,
+        "probability": 0.9996789693832397
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.527219295501709,
+    "all_probs": {
+      "happy_excited": 0.04364058002829552,
+      "sadness": 0.026922527700662613,
+      "neutral": 0.527219295501709,
+      "anger": 0.10307972133159637,
+      "frustration": 0.29913783073425293
+    },
+    "vad": [
+      -0.001740243169479072,
+      0.0024308424908667803,
+      -0.000958049378823489
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "That means we've got time for one final joke.",
+    "start": 47.88,
+    "end": 49.54,
+    "words": [
+      {
+        "word": " That",
+        "start": 47.88,
+        "end": 47.98,
+        "probability": 0.97571861743927
+      },
+      {
+        "word": " means",
+        "start": 47.98,
+        "end": 48.08,
+        "probability": 0.9975368976593018
+      },
+      {
+        "word": " we've",
+        "start": 48.08,
+        "end": 48.3,
+        "probability": 0.708759993314743
+      },
+      {
+        "word": " got",
+        "start": 48.3,
+        "end": 48.34,
+        "probability": 0.9951034784317017
+      },
+      {
+        "word": " time",
+        "start": 48.34,
+        "end": 48.62,
+        "probability": 0.9986562728881836
+      },
+      {
+        "word": " for",
+        "start": 48.62,
+        "end": 48.78,
+        "probability": 0.9988577365875244
+      },
+      {
+        "word": " one",
+        "start": 48.78,
+        "end": 48.96,
+        "probability": 0.9869253635406494
+      },
+      {
+        "word": " final",
+        "start": 48.96,
+        "end": 49.28,
+        "probability": 0.9964351654052734
+      },
+      {
+        "word": " joke.",
+        "start": 49.28,
+        "end": 49.54,
+        "probability": 0.9974372386932373
+      }
+    ],
+    "emotion": "neutral",
+    "confidence": 0.6019307374954224,
+    "all_probs": {
+      "happy_excited": 0.08818367123603821,
+      "sadness": 0.036480020731687546,
+      "neutral": 0.6019307374954224,
+      "anger": 0.05662248656153679,
+      "frustration": 0.2167830467224121
+    },
+    "vad": [
+      0.00048177989083342254,
+      0.0014503010315820575,
+      -0.0020540175028145313
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "Why are balloons so expensive?",
+    "start": 50.14,
+    "end": 52.58,
+    "words": [
+      {
+        "word": " Why",
+        "start": 50.14,
+        "end": 50.48,
+        "probability": 0.9438695907592773
+      },
+      {
+        "word": " are",
+        "start": 50.48,
+        "end": 51.0,
+        "probability": 0.9849731922149658
+      },
+      {
+        "word": " balloons",
+        "start": 51.0,
+        "end": 51.36,
+        "probability": 0.9158856868743896
+      },
+      {
+        "word": " so",
+        "start": 51.36,
+        "end": 52.04,
+        "probability": 0.9991464614868164
+      },
+      {
+        "word": " expensive?",
+        "start": 52.04,
+        "end": 52.58,
+        "probability": 0.9981820583343506
+      }
+    ],
+    "emotion": "anger",
+    "confidence": 0.9143785834312439,
+    "all_probs": {
+      "happy_excited": 0.009588711895048618,
+      "sadness": 0.010749103501439095,
+      "neutral": 0.005881827790290117,
+      "anger": 0.9143785834312439,
+      "frustration": 0.059401802718639374
+    },
+    "vad": [
+      0.002393293660134077,
+      -0.0011069872416555882,
+      0.0038518402725458145
+    ],
+    "word_emotions": []
+  },
+  {
+    "text": "Inflation.",
+    "start": 54.54,
+    "end": 55.02,
+    "words": [
+      {
+        "word": " Inflation.",
+        "start": 54.54,
+        "end": 55.02,
+        "probability": 0.9631291031837463
+      }
+    ],
+    "emotion": "frustration",
+    "confidence": 0.4165742099285126,
+    "all_probs": {
+      "happy_excited": 0.09755410999059677,
+      "sadness": 0.04205220192670822,
+      "neutral": 0.1358620822429657,
+      "anger": 0.30795738101005554,
+      "frustration": 0.4165742099285126
+    },
+    "vad": [
+      0.0013471675338223577,
+      -0.0007167671574279666,
+      -0.0030983451288193464
+    ],
+    "word_emotions": []
+  }
+]

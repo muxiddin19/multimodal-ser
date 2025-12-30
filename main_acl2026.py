@@ -99,6 +99,7 @@ class Config:
 # Emotion configurations
 EMOTION_LABELS = {
     "iemocap_4": ["anger", "happiness", "neutral", "sadness"],
+    "iemocap_5": ["happy_excited", "sadness", "neutral", "anger", "frustration"],
     "iemocap_6": ["happiness", "sadness", "neutral", "anger", "excitement", "frustration"],
     "cremad_4": ["anger", "happiness", "neutral", "sadness"],
 }
@@ -109,6 +110,14 @@ VAD_CONFIGS = {
         1: [0.960, 0.648, 0.588],    # happiness
         2: [-0.062, -0.632, -0.286], # neutral
         3: [-0.896, -0.424, -0.672], # sadness
+    },
+    "iemocap_5": {
+        # happiness+excitement merged (average VAD)
+        0: [0.905, 0.699, 0.519],    # happy_excited (avg of happiness + excitement)
+        1: [-0.896, -0.424, -0.672], # sadness
+        2: [-0.062, -0.632, -0.286], # neutral
+        3: [-0.666, 0.730, 0.314],   # anger
+        4: [-0.500, 0.600, -0.200],  # frustration
     },
     "iemocap_6": {
         0: [0.960, 0.648, 0.588],    # happiness
