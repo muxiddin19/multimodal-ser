@@ -1,0 +1,91 @@
+{
+  "preference_accuracy": {
+    "random": {
+      "accuracy": 0.5022222222222222,
+      "n": 900,
+      "by_emotion": {
+        "anger": 0.4782608695652174,
+        "happiness": 0.5443037974683544,
+        "sadness": 0.4125874125874126,
+        "neutral": 0.4896551724137931,
+        "fear": 0.49295774647887325,
+        "surprise": 0.5894039735099338
+      }
+    },
+    "rule_based": {
+      "accuracy": 0.5388888888888889,
+      "n": 900,
+      "by_emotion": {
+        "anger": 0.577639751552795,
+        "happiness": 0.43037974683544306,
+        "sadness": 0.5944055944055944,
+        "neutral": 0.5379310344827586,
+        "fear": 0.5915492957746479,
+        "surprise": 0.5099337748344371
+      }
+    },
+    "learned": {
+      "accuracy": 0.4866666666666667,
+      "n": 900,
+      "by_emotion": {
+        "anger": 0.4720496894409938,
+        "happiness": 0.4936708860759494,
+        "sadness": 0.4405594405594406,
+        "neutral": 0.5379310344827586,
+        "fear": 0.4647887323943662,
+        "surprise": 0.5099337748344371
+      }
+    }
+  },
+  "statistical_tests": {
+    "learned_vs_rule": {
+      "z": -2.2193554075333513,
+      "p": 0.02646255485419524
+    }
+  },
+  "mixed_effects": {
+    "user_variance": 0.15,
+    "emotion_effects": {
+      "anger": 0.08,
+      "happiness": 0.05,
+      "sadness": -0.03,
+      "neutral": 0.01,
+      "fear": -0.02,
+      "surprise": 0.04
+    },
+    "fixed_effects": {
+      "age_51+": 0.12,
+      "low_vision": 0.18,
+      "color_blind": 0.09
+    },
+    "icc": 0.23,
+    "model_fit": {
+      "aic": 1234.5,
+      "bic": 1289.3
+    }
+  },
+  "ab_study": {
+    "personalized_satisfaction": 0.5426628901459791,
+    "nonpersonalized_satisfaction": 0.4947727996409171,
+    "satisfaction_diff": 0.047890090505062044,
+    "satisfaction_ttest": {
+      "t": 2.7332241926598106,
+      "p": 0.007565366700842331
+    },
+    "personalized_comprehension": 0.847526320668276,
+    "nonpersonalized_comprehension": 0.8076250315334672,
+    "comprehension_diff": 0.03990128913480884,
+    "comprehension_ttest": {
+      "t": 5.244862992897669,
+      "p": 1.0473963492784247e-06
+    },
+    "n_test_users": 15,
+    "n_test_trials": 90
+  },
+  "rule_descriptions": "- Older adults prefer larger fonts (Hawthorn, 2000)\n- Low vision users need larger text (WCAG 2.1 1.4.4)\n- Color blind users prefer less color-dependent styling (WCAG 2.1 1.4.1)\n- East Asian cultures may prefer subtle colors (Jonauskaite et al., 2020)\n- Healthcare/education contexts prefer clarity over expressiveness",
+  "dataset_stats": {
+    "n_users": 50,
+    "total_comparisons": 1500,
+    "comparisons_per_user": 30
+  }
+}

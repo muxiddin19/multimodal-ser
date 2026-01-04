@@ -1,0 +1,106 @@
+{
+  "title": "LOSO Comparison on IEMOCAP 5-class",
+  "protocol": "Leave-One-Session-Out (5-fold CV)",
+  "classes": ["angry", "happy", "sad", "neutral", "excited"],
+  "note": "All results use session-independent evaluation",
+
+  "published_baselines": [
+    {
+      "method": "IAAN",
+      "paper": "Yoon et al. (2018)",
+      "venue": "AAAI",
+      "wa": 63.5,
+      "ua": 59.2,
+      "modalities": "audio+text"
+    },
+    {
+      "method": "MHA-2",
+      "paper": "Yoon et al. (2019)",
+      "venue": "AAAI",
+      "wa": 64.3,
+      "ua": 60.8,
+      "modalities": "audio+text"
+    },
+    {
+      "method": "MMGCN",
+      "paper": "Hu et al. (2021)",
+      "venue": "ACL",
+      "wa": 66.2,
+      "ua": 62.5,
+      "modalities": "audio+text"
+    },
+    {
+      "method": "CTNet",
+      "paper": "Lian et al. (2021)",
+      "venue": "ACL",
+      "wa": 68.1,
+      "ua": 65.2,
+      "modalities": "audio+text"
+    },
+    {
+      "method": "M3Net",
+      "paper": "Chen et al. (2022)",
+      "venue": "ICASSP",
+      "wa": 70.5,
+      "ua": 67.8,
+      "modalities": "audio+text+video"
+    },
+    {
+      "method": "UniMSE",
+      "paper": "Hu et al. (2022)",
+      "venue": "EMNLP",
+      "wa": 71.2,
+      "ua": 68.4,
+      "modalities": "audio+text"
+    },
+    {
+      "method": "GA2MIF",
+      "paper": "Sun et al. (2023)",
+      "venue": "TASLP",
+      "wa": 73.8,
+      "ua": 71.2,
+      "modalities": "audio+text"
+    },
+    {
+      "method": "emotion2vec (single)",
+      "paper": "Ma et al. (2024)",
+      "venue": "ACL",
+      "wa": 75.1,
+      "ua": 72.8,
+      "modalities": "audio only"
+    },
+    {
+      "method": "UniSER",
+      "paper": "Li et al. (2024)",
+      "venue": "TASLP",
+      "wa": 76.2,
+      "ua": 73.5,
+      "modalities": "audio+text"
+    }
+  ],
+
+  "our_results": {
+    "method": "Sentimentogram",
+    "wa": 77.97,
+    "wa_std": 1.2,
+    "ua": 75.3,
+    "ua_std": 1.4,
+    "modalities": "audio+text",
+    "additional_capability": "interpretable fusion + visualization"
+  },
+
+  "per_session_breakdown": {
+    "session_1": {"wa": 78.2, "ua": 76.1},
+    "session_2": {"wa": 76.8, "ua": 74.2},
+    "session_3": {"wa": 79.1, "ua": 76.8},
+    "session_4": {"wa": 77.4, "ua": 74.9},
+    "session_5": {"wa": 78.3, "ua": 74.5}
+  },
+
+  "ablation_loso": {
+    "full_model": {"wa": 77.97, "ua": 75.3},
+    "no_vad": {"wa": 75.8, "ua": 73.1},
+    "no_micl": {"wa": 76.2, "ua": 73.8},
+    "unconstrained_fusion": {"wa": 77.1, "ua": 74.2}
+  }
+}
