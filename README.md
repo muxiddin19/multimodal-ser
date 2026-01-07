@@ -102,44 +102,47 @@ We present **Sentimentogram**, a human-centered framework that learns personaliz
 
 ## Sentimentogram Pipeline
 
+Our goal is to learn personalized emotion visualization preferences. This requires a pipeline where each component enables the next:
+
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                        SENTIMENTOGRAM PIPELINE                               │
+│                     HUMAN-CENTERED PIPELINE                                  │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
-│  ┌─────────┐    ┌─────────────┐    ┌─────────────────┐    ┌──────────────┐  │
-│  │  Input  │───▶│    ASR      │───▶│    Feature      │───▶│  VGA-Fusion  │  │
-│  │  Video  │    │  (Whisper)  │    │   Extraction    │    │    Model     │  │
-│  └─────────┘    └─────────────┘    └─────────────────┘    └──────┬───────┘  │
-│                       │                    │                      │          │
-│                       │                    │                      │          │
-│                       ▼                    ▼                      ▼          │
-│                 [Word-level        [BERT + emotion2vec]    [Emotion +       │
-│                  timestamps]        embeddings]             VAD scores]     │
-│                                                                   │          │
-│                                                                   ▼          │
-│                                          ┌────────────────────────────────┐  │
-│                                          │     VAD → Style Mapping        │  │
-│                                          │  ────────────────────────────  │  │
-│                                          │  Valence → Color Hue           │  │
-│                                          │  Arousal → Font Size/Weight    │  │
-│                                          │  Dominance → Font Style        │  │
-│                                          └────────────────┬───────────────┘  │
-│                                                           │                  │
-│                                                           ▼                  │
-│  ┌──────────────────────────────────────────────────────────────────────┐   │
-│  │                      EMOTION-AWARE SUBTITLES                          │   │
-│  │  ──────────────────────────────────────────────────────────────────  │   │
-│  │                                                                       │   │
-│  │   "I am"  →  [neutral, gray, 1.0x]                                   │   │
-│  │   "SO"    →  [anger, RED, 1.3x, BOLD]                                │   │
-│  │   "happy" →  [happiness, gold, 1.2x, italic]                         │   │
-│  │                                                                       │   │
-│  └──────────────────────────────────────────────────────────────────────┘   │
+│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────────────┐  │
+│  │  1. ACCURATE    │    │ 2. INTERPRETABLE│    │  3. EMOTION-AWARE       │  │
+│  │     SER         │───▶│    FUSION       │───▶│     VISUALIZATION       │  │
+│  │                 │    │                 │    │                         │  │
+│  │  Predictions    │    │  Users need to  │    │  Predictions rendered   │  │
+│  │  must be        │    │  understand WHY │    │  as utterance-level     │  │
+│  │  reliable       │    │  (76% audio,    │    │  dynamic typography     │  │
+│  │                 │    │   24% text)     │    │                         │  │
+│  └─────────────────┘    └─────────────────┘    └───────────┬─────────────┘  │
+│                                                             │                │
+│                                                             ▼                │
+│                              ┌───────────────────────────────────────────┐   │
+│                              │  4. PREFERENCE LEARNING (PRIMARY GOAL)    │   │
+│                              │  ─────────────────────────────────────    │   │
+│                              │                                           │   │
+│                              │  Learn from pairwise comparisons rather   │   │
+│                              │  than demographic rules                   │   │
+│                              │                                           │   │
+│                              │  • 10-12 comparisons → personalized style │   │
+│                              │  • Rule-based: 43.8% (below chance!)      │   │
+│                              │  • Learned: 61.2% (+17.4%, p<0.001)       │   │
+│                              │                                           │   │
+│                              └───────────────────────────────────────────┘   │
 │                                                                              │
-│  Optional: Preference-Learning Personalization (user-specific styling)      │
+│  Note: Typography is a controlled interface for studying preference          │
+│  learning, not proposed as a final visualization standard.                   │
 │                                                                              │
 └─────────────────────────────────────────────────────────────────────────────┘
+```
+
+**Technical Pipeline:**
+```
+Video → Whisper ASR → Utterance Segmentation → BERT + emotion2vec
+      → VGA-Fusion → Emotion + VAD → Typography Styling → Personalization
 ```
 
 ---
@@ -156,10 +159,12 @@ We present **Sentimentogram**, a human-centered framework that learns personaliz
 <td><img src="demo/capture/sentimentogram_think.jpg" width="400"/></td>
 </tr>
 <tr>
-<td align="center"><em>"BEING HONEST" (anger) + "you think of" (happiness)</em></td>
-<td align="center"><em>"I think" (happiness) + "MOST PEOPLE" (anger)</em></td>
+<td align="center"><em>Utterance styled as anger (bold, red, uppercase)</em></td>
+<td align="center"><em>Utterance styled as happiness (warm colors)</em></td>
 </tr>
 </table>
+
+*Note: The system uses **utterance-level** emotion prediction. The entire subtitle is styled based on the predicted emotion for that utterance.*
 
 ---
 
