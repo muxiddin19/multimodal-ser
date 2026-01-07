@@ -295,7 +295,7 @@ Despite 44% WER (typical for spontaneous speech), UA drops by only 0.96%. The mo
 
 ```bash
 # Clone the repository
-git clone [https://github.com/muxiddin19/multimodal-ser](https://anonymous.4open.science/r/multimodal-ser).git
+git clone [https://anonymous.4open.science/r/multimodal-ser.git
 cd multimodal-ser
 
 # Create conda environment
@@ -392,4 +392,5 @@ This work builds upon:
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
+
 
