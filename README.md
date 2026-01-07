@@ -216,7 +216,7 @@ $$\text{s.t. } \alpha_t + \alpha_a + \alpha_i = 1, \quad \alpha_i \geq 0$$
 | Resource | Description | Link |
 |----------|-------------|------|
 | **ACL 2026 Paper** | Full paper with appendix | [acl_latex.pdf](acl2026/acl_latex.pdf) |
-| **Demo Video** | Sentimentogram on TED Talks | [Video]([https://drive.google.com/file/d/1jCQJbIAbtNDGf2GunXnjgWqmZWq9kvY6/view](https://anonymous.4open.science/r/multimodal-ser/blob/main/demo/video/Sentimentogram V3 - Emotion Typography - Google Chrome 2025-12-23 19-15-46.mp4) |
+| **Demo Video** | Sentimentogram on TED Talks | [Video]([https://anonymous.4open.science/r/multimodal-ser/blob/main/demo/videos/sentimentogram_demo_v3.mp4] |
 
 ---
 
@@ -391,6 +391,7 @@ This work builds upon:
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
+
 
 
 
