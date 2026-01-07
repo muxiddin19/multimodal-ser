@@ -199,17 +199,17 @@ $$\text{s.t. } \alpha_t + \alpha_a + \alpha_i = 1, \quad \alpha_i \geq 0$$
 
 | Resource | Description | Link |
 |----------|-------------|------|
-| **Preference Learning Module** | Bradley-Terry pairwise ranking model | [preference_learning.py](https://github.com/muxiddin19/multimodal-ser/blob/main/models/preference_learning.py) |
-| **Experiment Runner** | Ablation study and evaluation scripts | [run_preference_learning.py](https://github.com/muxiddin19/multimodal-ser/blob/main/experiments/run_preference_learning.py) |
-| **Novel Components** | VGA, EAAF, MICL implementations | [novel_components.py](https://github.com/muxiddin19/multimodal-ser/blob/main/models/novel_components.py) |
+| **Preference Learning Module** | Bradley-Terry pairwise ranking model | [preference_learning.py](https://anonymous.4open.science/r/multimodal-ser/blob/main/models/preference_learning.py) |
+| **Experiment Runner** | Ablation study and evaluation scripts | [run_preference_learning.py](https://anonymous.4open.science/r/multimodal-ser/blob/main/experiments/run_preference_learning.py) |
+| **Novel Components** | VGA, EAAF, MICL implementations | [novel_components.py](https://anonymous.4open.science/r/multimodal-ser/blob/main/models/novel_components.py) |
 
 ### Preference Learning Data
 
 | Resource | Description | Link |
 |----------|-------------|------|
-| **Full Dataset** | 50 users × 30 comparisons (1,500 pairs) | [expanded_study/](https://github.com/muxiddin19/multimodal-ser/blob/main/experiments/user_study/data/expanded_study/) |
-| **Study Results** | Complete results with demographics & analysis | [final_results.json](https://github.com/muxiddin19/multimodal-ser/blob/main/experiments/user_study/data/expanded_study/final_results.json) |
-| **Collection Guide** | Instructions for collecting user preferences | [data_collection_guide.md](https://github.com/muxiddin19/multimodal-ser/blob/main/acl2026/data/data_collection_guide.md) |
+| **Full Dataset** | 50 users × 30 comparisons (1,500 pairs) | [expanded_study/](https://anonymous.4open.science/r/multimodal-ser/blob/main/experiments/user_study/data/expanded_study/) |
+| **Study Results** | Complete results with demographics & analysis | [final_results.json](https://anonymous.4open.science/r/multimodal-ser/blob/main/experiments/user_study/data/expanded_study/final_results.json) |
+| **Collection Guide** | Instructions for collecting user preferences | [data_collection_guide.md](https://anonymous.4open.science/r/multimodal-ser/blob/main/acl2026/data/data_collection_guide.md) |
 
 ### Paper & Documentation
 
@@ -392,5 +392,6 @@ This work builds upon:
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
+
 
 
