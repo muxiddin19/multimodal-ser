@@ -33,15 +33,13 @@ We present **Sentimentogram**, a human-centered framework that learns personaliz
 
 ---
 
-## Novel Contributions
+## Contributions
 
 | # | Contribution | Description |
 |---|--------------|-------------|
-| 1 | **Preference-Learning Personalization** | Learn styles from pairwise comparisons, not demographics (primary) |
-| 2 | **Constrained Adaptive Fusion** | Interpretable gates with simplex constraint (sum-to-one) |
-| 3 | **VAD-Guided Cross-Attention** | Psychological grounding via Valence-Arousal-Dominance affinity |
-| 4 | **Hard Negative Mining MICL** | Cross-modal contrastive learning with curriculum sampling |
-| 5 | **Emotion-Aware Typography** | Word-level emotion visualization for video subtitles |
+| 1 | **Preference-Learning Problem Formulation** | We formulate emotion visualization as a preference-learning problem and show that rule-based demographic personalization performs below chance (43.8% vs 50.1%, p=0.014) |
+| 2 | **Human-Centered Pipeline** | We propose Sentimentogram, connecting interpretable SER outputs to learnable, personalized emotion visualizations |
+| 3 | **Large-Scale Validation** | We validate with human studies (50 users, 1500 comparisons), demonstrating improvements in preference accuracy (61.2%), satisfaction (+8.7%), and comprehension (+5.8%) |
 
 ---
 
@@ -150,7 +148,7 @@ We present **Sentimentogram**, a human-centered framework that learns personaliz
 
 **Watch Sentimentogram in action on TED Talks:**
 
-[![Demo Video](https://img.shields.io/badge/Demo-Google%20Drive-blue)](https://drive.google.com/file/d/1jCQJbIAbtNDGf2GunXnjgWqmZWq9kvY6/view?usp=drive_link)
+[![Demo Video](https://img.shields.io/badge/Demo-Video-blue)](https://anonymous.4open.science/r/multimodal-ser/blob/main/demo/videos/sentimentogram_demo_v3.mp4)
 
 <table>
 <tr>
@@ -215,8 +213,8 @@ $$\text{s.t. } \alpha_t + \alpha_a + \alpha_i = 1, \quad \alpha_i \geq 0$$
 
 | Resource | Description | Link |
 |----------|-------------|------|
-| **ACL 2026 Paper** | Full paper with appendix | [acl_latex.pdf](acl2026/acl_latex.pdf) |
-| **Demo Video** | Sentimentogram on TED Talks | [Video]([https://anonymous.4open.science/r/multimodal-ser/blob/main/demo/videos/sentimentogram_demo_v3.mp4] |
+| **ACL 2026 Paper** | Full paper with appendix | [acl_latex20260106.pdf](acl2026/acl_latex20260106.pdf) |
+| **Demo Video** | Sentimentogram on TED Talks | [Video](https://anonymous.4open.science/r/multimodal-ser/blob/main/demo/videos/sentimentogram_demo_v3.mp4) |
 
 ---
 
