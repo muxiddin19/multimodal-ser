@@ -1,343 +1,207 @@
 # Sentimentogram: Learning Personalized Emotion Visualizations from User Preferences
 
 <p align="center">
-  <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="Python 3.10+"></a>
-  <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/pytorch-2.5+-red.svg" alt="PyTorch 2.5+"></a>
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
-  <a href="https://2026.aclweb.org/"><img src="https://img.shields.io/badge/ACL-2026-green.svg" alt="ACL 2026"></a>
+  <a href="https://openreview.net/forum?id=CivSckXgby"><img src="https://img.shields.io/badge/ACL%202026-Findings-blue" alt="ACL 2026 Findings"></a>
+  <a href="https://github.com/muxiddin19/multimodal-ser/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green" alt="MIT License"></a>
+  <img src="https://img.shields.io/badge/Python-3.10%2B-blue" alt="Python 3.10+">
+  <img src="https://img.shields.io/badge/PyTorch-2.5%2B-orange" alt="PyTorch 2.5+">
+  <a href="https://github.com/muxiddin19/multimodal-ser/stargazers"><img src="https://img.shields.io/github/stars/muxiddin19/multimodal-ser" alt="Stars"></a>
 </p>
 
 <p align="center">
-  <b>Learning user preferences for emotion visualization from pairwise comparisons</b><br>
-  Interpretable multimodal SER with VAD-guided attention and emotion-aware typography
+  <a href="https://openreview.net/forum?id=CivSckXgby">📄 Paper</a> •
+  <a href="https://drive.google.com/file/d/1jCsz9mba0D7AxjaY1RV1uYc8XR9xeqy7/view">🎥 Demo Video</a> •
+  <a href="#dataset--model-release">📦 Dataset & Models</a> •
+  <a href="#citation">📖 Citation</a>
 </p>
 
----
-
-## Abstract
-
-We present **Sentimentogram**, a human-centered framework that learns personalized emotion visualization preferences from pairwise comparisons rather than demographic heuristics. Our key finding: **rule-based personalization (mapping demographics→styles) performs significantly below chance** (43.8% vs 50.1%, p=0.014), while learning from just 10-12 pairwise comparisons achieves **61.2% accuracy** (p<0.001). A direct A/B study confirms personalized visualizations improve user satisfaction (+8.7%) and comprehension (+5.8%).
-
-**Key Results:**
-
-| Evaluation | Metric | Result |
-|------------|--------|--------|
-| SER (IEMOCAP 4-class val) | UA | 93.02% |
-| SER (IEMOCAP 5-class LOSO) | UA | 77.97% |
-| SER (CREMA-D) | UA | 92.90% |
-| ASR robustness (44% WER) | Δ UA | -0.96% |
-| Preference learning (N=50 real) | Accuracy | **61.2%** (p<0.001) |
-| Cold-start (new users) | Accuracy | 54.8% ± 2.1% |
-| A/B study satisfaction | Δ | +8.7% (p=0.001) |
-| Typography recognition boost | Δ Accuracy | +17.1% |
+> **Accepted at Findings of ACL 2026**
+> Mukhiddin Toshpulatov, Seungkyu Oh, Suan Lee, Jo'ra Kuvandikov, Wookey Lee
 
 ---
 
-## Contributions
+## Overview
 
-| # | Contribution | Description |
-|---|--------------|-------------|
-| 1 | **Preference-Learning Problem Formulation** | We formulate emotion visualization as a preference-learning problem and show that rule-based demographic personalization performs below chance (43.8% vs 50.1%, p=0.014) |
-| 2 | **Human-Centered Pipeline** | We propose Sentimentogram, connecting interpretable SER outputs to learnable, personalized emotion visualizations |
-| 3 | **Large-Scale Validation** | We validate with human studies (50 users, 1500 comparisons), demonstrating improvements in preference accuracy (61.2%), satisfaction (+8.7%), and comprehension (+5.8%) |
+Current speech emotion recognition (SER) systems produce predictions that users cannot interpret, visualize, or personalize — limiting real-world adoption. **Sentimentogram** is a human-centered framework that learns personalized emotion visualization preferences from pairwise comparisons rather than relying on demographic-based heuristics.
+
+**Key finding:** Rule-based demographic adaptation performs **significantly below chance** (43.8% vs 50.1%, *p*=0.014). Learning from just 10–12 pairwise comparisons (~3 minutes of user effort) achieves **61.2% accuracy** (+7.7% over the best baseline, *p*<0.001), with A/B study confirming improved satisfaction (+8.7%) and comprehension (+5.8%).
+
+---
+
+## Pipeline
+
+```
+Accurate SER  →  Interpretable Fusion  →  Emotion-Aware Visualization  →  Preference Learning
+  (77.97% UA)     (α_t + α_a + α_i = 1)    (dynamic typography)           (61.2% accuracy)
+```
+
+Given video input:
+1. **Whisper ASR** transcribes and segments audio into utterances
+2. **BERT** (text) + **emotion2vec** (audio) extract features
+3. **VGA-Fusion** predicts emotion with interpretable modality attribution
+4. **Sentimentogram renderer** applies personalized emotion-aware typography to subtitles
+
+---
+
+## Results
+
+### Speech Emotion Recognition
+
+| Dataset | Protocol | UA (%) |
+|---|---|---|
+| IEMOCAP 4-class | Validation | 93.02 ± 0.17 |
+| IEMOCAP 5-class | Validation | **77.97 ± 0.33** |
+| IEMOCAP 5-class | LOSO (5-fold CV) | 75.3 ± 1.1 |
+| IEMOCAP 6-class | Validation | 68.75 ± 0.58 |
+| CREMA-D | Validation | 92.90 ± 0.34 |
+| MELD | Validation | 63.66 ± 0.72 |
+
+### Preference Learning
+
+| Method | Accuracy | *p*-value |
+|---|---|---|
+| Random | 50.1 ± 2.2% | — |
+| Rule-based (demographic) | 43.8 ± 3.1% | 0.014 (below chance) |
+| Collaborative filtering | 53.5 ± 2.4% | 0.08 |
+| Hierarchical Bradley-Terry | 52.8 ± 2.5% | 0.12 |
+| **Learned (Ours)** | **61.2 ± 2.8%** | **<0.001** |
+
+### ASR Robustness
+At 44.3% WER (Whisper on spontaneous speech), UA drops by only **−0.96%** — multimodal fusion naturally shifts weight toward audio when transcription quality degrades.
 
 ---
 
 ## Model Architecture
 
+### VGA-Fusion
+
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         VGA-FUSION ARCHITECTURE                              │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│  ┌──────────────┐                              ┌──────────────┐             │
-│  │    BERT      │                              │  emotion2vec │             │
-│  │  (768-dim)   │                              │  (1024-dim)  │             │
-│  └──────┬───────┘                              └──────┬───────┘             │
-│         │                                             │                      │
-│         ▼                                             ▼                      │
-│  ┌──────────────┐                              ┌──────────────┐             │
-│  │  Linear+LN   │                              │  Linear+LN   │             │
-│  │  (384-dim)   │                              │  (384-dim)   │             │
-│  └──────┬───────┘                              └──────┬───────┘             │
-│         │                                             │                      │
-│         └─────────────────┬───────────────────────────┘                      │
-│                           │                                                  │
-│                           ▼                                                  │
-│         ┌─────────────────────────────────────┐                             │
-│         │   ★ VAD-GUIDED CROSS-ATTENTION      │                             │
-│         │   ─────────────────────────────     │                             │
-│         │   Q_t ←─── h_t    h_a ───→ K_a, V_a │                             │
-│         │                                     │                             │
-│         │   A = softmax(QK^T/√d + λ·M_VAD)   │ ←── VAD Affinity Matrix     │
-│         │                                     │     (Valence, Arousal,      │
-│         │   Bidirectional: t→a and a→t       │      Dominance)             │
-│         └─────────────────┬───────────────────┘                             │
-│                           │                                                  │
-│                           ▼                                                  │
-│         ┌─────────────────────────────────────┐                             │
-│         │   ★ CONSTRAINED ADAPTIVE FUSION     │                             │
-│         │   ─────────────────────────────     │                             │
-│         │   z = α_t·h_t + α_a·h_a + α_i·h_i  │                             │
-│         │                                     │                             │
-│         │   Constraint: α_t + α_a + α_i = 1  │ ←── Interpretable Gates     │
-│         │   (Simplex constraint)              │                             │
-│         └─────────────────┬───────────────────┘                             │
-│                           │                                                  │
-│         ┌─────────────────┴───────────────────┐                             │
-│         │                                     │                             │
-│         ▼                                     ▼                             │
-│  ┌──────────────┐                      ┌──────────────┐                     │
-│  │  MLP + Softmax│                      │ ★ MICL Loss  │                     │
-│  │  (Emotion)   │                      │ (Contrastive)│                     │
-│  └──────────────┘                      └──────────────┘                     │
-│                                                                              │
-│  Multi-Task Loss: L = L_focal + λ_v·L_VAD + λ_m·L_MICL                      │
-│                                                                              │
-└─────────────────────────────────────────────────────────────────────────────┘
-                              ★ = Novel Contribution
+Text: BERT-base (768d) ─→ Linear+LN (384d) ─┐
+                                              ├─→ VAD-Guided Cross-Attention ─→ Constrained Fusion ─→ Classifier
+Audio: emotion2vec (1024d) ─→ Linear+LN (384d)─┘        ↑                           ↑
+                                               VAD affinity bias         α_t + α_a + α_i = 1
+```
+
+**VAD-Guided Cross-Attention** incorporates a psychologically grounded Valence-Arousal-Dominance bias:
+
+```
+VGA(Q, K, V) = softmax( QKᵀ/√d + λ·M_VAD ) · V
+```
+
+where M_VAD(i,j) = −‖v_t^(i) − v_a^(j)‖₂ is the pairwise VAD affinity.
+
+**Constrained Adaptive Fusion** enforces interpretability:
+
+```
+[α_t, α_a, α_i] = softmax(W_g · [h_t; h_a; h_t⊙h_a])
+h_fused = α_t·h_t + α_a·h_a + α_i·(h_t⊙h_a)
+```
+
+If α_a = 0.76, audio contributes exactly 76% to the prediction — enabling per-sample explanations such as *"76% audio, 24% text"*.
+
+**Training objective:**
+
+```
+L = L_focal + λ_micl · L_MICL + λ_vad · L_VAD
 ```
 
 ---
 
-## Sentimentogram Pipeline
+## Emotion-Aware Typography
 
-Our goal is to learn personalized emotion visualization preferences. This requires a pipeline where each component enables the next:
+Sentimentogram renders emotion predictions as dynamic subtitle typography:
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                     HUMAN-CENTERED PIPELINE                                  │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────────────┐  │
-│  │  1. ACCURATE    │    │ 2. INTERPRETABLE│    │  3. EMOTION-AWARE       │  │
-│  │     SER         │───▶│    FUSION       │───▶│     VISUALIZATION       │  │
-│  │                 │    │                 │    │                         │  │
-│  │  Predictions    │    │  Users need to  │    │  Predictions rendered   │  │
-│  │  must be        │    │  understand WHY │    │  as utterance-level     │  │
-│  │  reliable       │    │  (76% audio,    │    │  dynamic typography     │  │
-│  │                 │    │   24% text)     │    │                         │  │
-│  └─────────────────┘    └─────────────────┘    └───────────┬─────────────┘  │
-│                                                             │                │
-│                                                             ▼                │
-│                              ┌───────────────────────────────────────────┐   │
-│                              │  4. PREFERENCE LEARNING (PRIMARY GOAL)    │   │
-│                              │  ─────────────────────────────────────    │   │
-│                              │                                           │   │
-│                              │  Learn from pairwise comparisons rather   │   │
-│                              │  than demographic rules                   │   │
-│                              │                                           │   │
-│                              │  • 10-12 comparisons → personalized style │   │
-│                              │  • Rule-based: 43.8% (below chance!)      │   │
-│                              │  • Learned: 61.2% (+17.4%, p<0.001)       │   │
-│                              │                                           │   │
-│                              └───────────────────────────────────────────┘   │
-│                                                                              │
-│  Note: Typography is a controlled interface for studying preference          │
-│  learning, not proposed as a final visualization standard.                   │
-│                                                                              │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+| Emotion | Font Style | Color | Size |
+|---|---|---|---|
+| Anger | **BOLD UPPERCASE** | Red | 1.3× |
+| Happy | *Bouncy* | Gold | 1.15× |
+| Sad | *Italic* | Blue | 0.92× |
+| Neutral | Regular | Gray | 1.0× |
 
-**Technical Pipeline:**
-```
-Video → Whisper ASR → Utterance Segmentation → BERT + emotion2vec
-      → VGA-Fusion → Emotion + VAD → Typography Styling → Personalization
-```
+VAD dimensions map systematically: Valence → color hue (cool to warm), Arousal → font size and weight, Dominance → font style (italic to upright). All colors meet WCAG 2.1 AA contrast standards.
 
 ---
 
-## Demo
+## Dataset & Model Release
 
-**Watch Sentimentogram in action on TED Talks:**
+### Preference Dataset
+**1,500 pairwise style comparisons** from 50 real users across 6 emotion categories.
 
-[![Demo Video](https://img.shields.io/badge/Demo-Video-blue)](https://anonymous.4open.science/r/multimodal-ser/blob/main/demo/videos/sentimentogram_demo_v3.mp4)
+> 📦 Download: [`data/preference_dataset/`](data/preference_dataset/) *(upload in progress — available before April 19, 2026)*
 
-<table>
-<tr>
-<td><img src="demo/capture/sentimentogram_honest.jpg" width="400"/></td>
-<td><img src="demo/capture/sentimentogram_think.jpg" width="400"/></td>
-</tr>
-<tr>
-<td align="center"><em>Utterance styled as anger (bold, red, uppercase)</em></td>
-<td align="center"><em>Utterance styled as happiness (warm colors)</em></td>
-</tr>
-</table>
+**Demographics:** Age groups (18–65+), accessibility needs (low vision, color blind, dyslexia, hearing impaired), cultural backgrounds (Western, East Asian, South Asian, Middle Eastern, African, Latin American), professions (student, healthcare, educator, tech, creative).
 
-*Note: The system uses **utterance-level** emotion prediction. The entire subtitle is styled based on the predicted emotion for that utterance.*
+Each comparison contains:
+- User profile vector (age group, accessibility needs, language region, device type)
+- Two 5-dimensional style vectors (font size, color intensity, emphasis, animation, contrast)
+- Binary preference label
 
----
+### Pre-trained Models
+> 📦 Models: *(upload in progress — available before April 19, 2026)*
 
-## Technical Details
-
-### VAD-Guided Cross-Attention
-
-Standard cross-attention:
-$$A = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)$$
-
-VAD-guided attention with psychological grounding:
-$$A_{\text{guided}} = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}} + \lambda \cdot M_{\text{VAD}}\right)$$
-
-where $M_{\text{VAD}}(i,j) = -\|v_i - v_j\|_2$ is the VAD affinity matrix based on Russell's circumplex model of affect.
-
-### Constrained Adaptive Fusion
-
-Interpretable modality weighting with simplex constraint:
-$$\mathbf{z} = \alpha_t \cdot \mathbf{h}_t + \alpha_a \cdot \mathbf{h}_a + \alpha_i \cdot (\mathbf{h}_t \odot \mathbf{h}_a)$$
-$$\text{s.t. } \alpha_t + \alpha_a + \alpha_i = 1, \quad \alpha_i \geq 0$$
-
-### VAD-to-Typography Mapping
-
-| VAD Dimension | Low Value | High Value | Visual Effect |
-|---------------|-----------|------------|---------------|
-| **Valence** | Cool colors (blue, gray) | Warm colors (yellow, gold) | Color hue |
-| **Arousal** | Small, light font | Large, bold font | Size & weight |
-| **Dominance** | Italic, thin | Upright, heavy | Font style |
-
----
-
-## Resources
-
-### Core Components
-
-| Resource | Description | Link |
-|----------|-------------|------|
-| **Preference Learning Module** | Bradley-Terry pairwise ranking model | [preference_learning.py](https://anonymous.4open.science/r/multimodal-ser/blob/main/models/preference_learning.py) |
-| **Experiment Runner** | Ablation study and evaluation scripts | [run_preference_learning.py](https://anonymous.4open.science/r/multimodal-ser/blob/main/experiments/run_preference_learning.py) |
-| **Novel Components** | VGA, EAAF, MICL implementations | [novel_components.py](https://anonymous.4open.science/r/multimodal-ser/blob/main/models/novel_components.py) |
-
-### Preference Learning Data
-
-| Resource | Description | Link |
-|----------|-------------|------|
-| **Full Dataset** | 50 users × 30 comparisons (1,500 pairs) | [expanded_study/](https://anonymous.4open.science/r/multimodal-ser/blob/main/experiments/user_study/data/expanded_study/) |
-| **Study Results** | Complete results with demographics & analysis | [final_results.json](https://anonymous.4open.science/r/multimodal-ser/blob/main/experiments/user_study/data/expanded_study/final_results.json) |
-| **Collection Guide** | Instructions for collecting user preferences | [data_collection_guide.md](https://anonymous.4open.science/r/multimodal-ser/blob/main/acl2026/data/data_collection_guide.md) |
-
-### Paper & Documentation
-
-| Resource | Description | Link |
-|----------|-------------|------|
-| **ACL 2026 Paper** | Full paper with appendix | [acl_latex20260106.pdf](acl2026/acl_latex20260106.pdf) |
-| **Demo Video** | Sentimentogram on TED Talks | [Video](https://anonymous.4open.science/r/multimodal-ser/blob/main/demo/videos/sentimentogram_demo_v3.mp4) |
-
----
-
-## Preference-Learning Personalization
-
-Instead of hard-coding subtitle styles based on cultural assumptions (which risk stereotyping), we learn user preferences from minimal pairwise feedback.
-
-**Problem Formulation (Bradley-Terry Model):**
-$$P(s_A \succ s_B | u, c) = \sigma(f(u, c, s_A) - f(u, c, s_B))$$
-
-where $u$ = user attributes, $c$ = emotional context, $s$ = subtitle style.
-
-**User Study (N=50 real users):**
-- **50 users** with balanced demographics (age, accessibility, culture)
-- **30 comparisons per user** = 1,500 total preference pairs
-- **Within-user evaluation:** Train on first 12, test on remaining 18
-- **Cold-start evaluation:** User-disjoint 80/20 splits
-
-**Results (including stronger baselines):**
-
-| Method | Accuracy | p-value |
-|--------|----------|---------|
-| Random | 50.1% ± 2.2% | - |
-| Rule-based (demographics) | 43.8% ± 3.1% | **0.014** (below chance!) |
-| Hierarchical Bradley-Terry | 52.8% ± 2.5% | 0.12 |
-| Collaborative Filtering | 53.5% ± 2.4% | 0.08 |
-| Contextual Logistic | 52.1% ± 2.6% | 0.21 |
-| **Learned (Ours)** | **61.2% ± 2.8%** | **<0.001** |
-
-**Key Finding:** Rule-based performs *significantly worse* than random (p=0.014)—demographic heuristics often contradict individual preferences. Our approach achieves +17.4% over rule-based and +7.7% over the best baseline (collaborative filtering).
-
-**Direct A/B Personalization Study (N=15 held-out users):**
-
-| Metric | Personalized | Non-personalized | Δ | p-value |
-|--------|--------------|------------------|---|---------|
-| Satisfaction | 72.1% | 63.4% | +8.7% | 0.001 |
-| Comprehension | 85.6% | 79.8% | +5.8% | <0.001 |
-| Cognitive load (SUS) | 72.4 | 65.8 | +6.6 | 0.005 |
-
----
-
-## Robustness Evaluation
-
-### ASR Robustness (Real Whisper Transcriptions)
-
-| Text Source | Avg WER | UA (%) | Δ UA |
-|-------------|---------|--------|------|
-| Gold transcripts | 0% | 76.26 | - |
-| Whisper-base | 44.3% | 75.30 | **-0.96** |
-
-Despite 44% WER (typical for spontaneous speech), UA drops by only 0.96%. The model relies on audio features when text is degraded.
-
-### LOSO Cross-Validation (5-class IEMOCAP)
-
-| Session | UA (%) | WA (%) |
-|---------|--------|--------|
-| Session 1 | 78.2 | 76.1 |
-| Session 2 | 76.8 | 74.2 |
-| Session 3 | 79.1 | 76.8 |
-| Session 4 | 77.4 | 74.9 |
-| Session 5 | 78.3 | 74.5 |
-| **Mean ± std** | **77.97 ± 1.2** | **75.3 ± 1.4** |
-
-**Comparison with Published Baselines:**
-
-| Method | Venue | UA (%) |
-|--------|-------|--------|
-| emotion2vec | ACL 2024 | 72.8 |
-| UniSER | TASLP 2024 | 73.5 |
-| GA2MIF | TASLP 2023 | 71.2 |
-| **Sentimentogram (Ours)** | - | **77.97** |
+| Model | Dataset | UA (%) | Download |
+|---|---|---|---|
+| VGA-Fusion | IEMOCAP 5-class | 77.97 | Coming soon |
+| VGA-Fusion | CREMA-D | 92.90 | Coming soon |
+| Preference model | 50-user study | 61.2 | Coming soon |
 
 ---
 
 ## Installation
 
 ```bash
-# Clone the repository
-git clone [https://anonymous.4open.science/r/multimodal-ser.git
+git clone https://github.com/muxiddin19/multimodal-ser.git
 cd multimodal-ser
 
-# Create conda environment
-conda create -n ser python=3.10
-conda activate ser
+conda create -n sentimentogram python=3.10
+conda activate sentimentogram
 
-# Install dependencies
 pip install -r requirements.txt
 ```
+
+### Requirements
+- Python 3.10+
+- PyTorch 2.5+
+- transformers (BERT-base-uncased)
+- emotion2vec-plus-large
+- openai-whisper
 
 ---
 
 ## Usage
 
-### Training VGA-Fusion Model
-
+### Train VGA-Fusion (SER)
 ```bash
 python main_acl2026.py \
-    --train features/IEMOCAP_BERT_emotion2vec_train.pkl \
-    --val features/IEMOCAP_BERT_emotion2vec_val.pkl \
-    --test features/IEMOCAP_BERT_emotion2vec_test.pkl \
-    --audio_dim 1024 --hidden_dim 384 \
-    --vad_lambda 0.1 --micl_weight 0.2 \
-    --num_runs 5 --output results_acl2026.json
+  --dataset iemocap \
+  --num_classes 5 \
+  --hidden_dim 384 \
+  --num_heads 8 \
+  --k_views 4 \
+  --vad_lambda 0.5 \
+  --micl_weight 0.3 \
+  --epochs 100 \
+  --lr 2e-5 \
+  --batch_size 16 \
+  --seed 42
 ```
 
-### Running Preference Learning Experiments
-
+### Run Preference Learning Experiments
 ```bash
-python experiments/run_preference_learning.py
+python experiments/preference_learning.py \
+  --data_path data/preference_dataset/ \
+  --eval_mode within_user \
+  --train_comparisons 12 \
+  --test_comparisons 18
 ```
 
-### Sentimentogram Demo
-
+### Run Sentimentogram Demo (Video Subtitling)
 ```bash
-python demo/sentimentogram_demo_v3.py \
-    --video demo/videos/tedx1.mp4 \
-    --output demo/output/result.html \
-    --culture western
+python demo/sentimentogram_demo.py \
+  --video_path your_video.mp4 \
+  --model_path models/vga_fusion_iemocap5.pt \
+  --user_profile data/user_profiles/example.json \
+  --output_path output_styled.mp4
 ```
 
 ---
@@ -346,37 +210,85 @@ python demo/sentimentogram_demo_v3.py \
 
 ```
 multimodal-ser/
-├── main_acl2026.py                    # VGA-Fusion training script
+├── main_acl2026.py          # VGA-Fusion training entry point
+├── requirements.txt
+├── run_all_experiments.sh   # Reproduce all paper results
+│
 ├── models/
-│   ├── novel_components.py            # VGA, EAAF, MICL implementations
-│   └── preference_learning.py         # Bradley-Terry preference model
+│   ├── vga_fusion.py        # VAD-Guided Cross-Attention + Constrained Fusion
+│   ├── micl.py              # Supervised Contrastive MICL
+│   └── preference_model.py  # Bradley-Terry preference learning
+│
 ├── experiments/
-│   ├── run_preference_learning.py     # Preference learning evaluation
-│   └── user_study/
-│       ├── expanded_preference_study.py  # 50-user study implementation
-│       └── data/expanded_study/
-│           └── final_results.json     # Complete study results (1500 pairs)
+│   ├── preference_learning.py
+│   ├── typography_eval.py
+│   └── ablation_study.py
+│
+├── feature_extract/
+│   ├── bert_extractor.py
+│   └── emotion2vec_extractor.py
+│
 ├── demo/
-│   ├── sentimentogram_demo_v3.py      # Visualization demo
-│   └── capture/                       # Demo screenshots
-├── acl2026/
-│   ├── acl_latex.tex                  # Paper source
-│   └── data/
-│       └── data_collection_guide.md   # Data collection instructions
-└── feature_extract/                   # Feature extraction scripts
+│   ├── sentimentogram_demo.py
+│   └── screenshots/
+│
+├── data/
+│   └── preference_dataset/  # 1,500 pairwise comparisons (50 users)
+│
+└── scripts/
+    └── preprocess_datasets.py
 ```
+
+---
+
+## Reproducing Paper Results
+
+All experiments reported in the paper can be reproduced with:
+
+```bash
+bash run_all_experiments.sh
+```
+
+Key hyperparameters (full table in paper Appendix A):
+
+| Parameter | Value |
+|---|---|
+| Hidden dimension | 384 |
+| Attention heads | 8 |
+| K views | 4 |
+| VAD guidance λ | 0.5 |
+| MICL weight | 0.3 |
+| VAD loss weight | 0.5 |
+| Learning rate | 2e-5 |
+| Batch size | 16 |
+| Early stopping patience | 15 |
+| Seeds | 5 runs (reported as mean ± std) |
+
+---
+
+## Demo
+
+📹 **[Watch Demo Video](https://drive.google.com/file/d/1jCsz9mba0D7AxjaY1RV1uYc8XR9xeqy7/view)** — TED Talk subtitles rendered with emotion-aware typography.
+
+Example renderings:
+- *"I'm fine"* (sarcastic, anger detected) → **BOLD RED UPPERCASE**
+- *"That's wonderful news!"* (happiness) → **Gold bouncy text, 1.15×**
+- *"I don't know..."* (sadness) → *italic blue, 0.92×*
 
 ---
 
 ## Citation
 
+If you use this work, please cite:
+
 ```bibtex
-@inproceedings{author2026sentimentogram,
-  title={Sentimentogram: Learning Personalized Emotion Visualizations from User Preferences},
-  author={Author, First and Author, Second},
-  booktitle={Proceedings of the 64th Annual Meeting of the Association
-             for Computational Linguistics (ACL 2026)},
-  year={2026}
+@inproceedings{toshpulatov2026sentimentogram,
+  title     = {Sentimentogram: Learning Personalized Emotion Visualizations from User Preferences},
+  author    = {Toshpulatov, Mukhiddin and Oh, Seungkyu and Lee, Suan and Kuvandikov, Jo'ra and Lee, Wookey},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2026},
+  year      = {2026},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://openreview.net/forum?id=CivSckXgby}
 }
 ```
 
@@ -384,18 +296,21 @@ multimodal-ser/
 
 ## Acknowledgments
 
-This work builds upon:
-- [emotion2vec](https://github.com/ddlBoJack/emotion2vec) for audio emotion features
-- [IEMOCAP](https://sail.usc.edu/iemocap/) dataset
-- Russell's circumplex model of affect for VAD grounding
+This work was supported by:
+- **IITP–ITRC** grant funded by the Korea government (Ministry of Science and ICT), XVoice (RS-2022-II220641)
+- **National Research Foundation of Korea (NRF)** (RS-2025-24534935)
+- **Inha University**
+
+We thank the IEMOCAP team (USC), CREMA-D contributors, and MELD dataset creators. Audio features use [emotion2vec](https://github.com/ddlBoJack/emotion2vec) (Ma et al., 2024). VAD grounding uses the [NRC-VAD lexicon](https://saifmohammad.com/WebPages/nrc-vad.html) (Mohammad, 2018).
 
 ---
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
 
+---
 
+## Ethics
 
-
-
+User studies conducted under IRB Protocol #2024-0847 with informed consent. Preference data released with no personally identifying information. We encourage deployment only in transparent, opt-in settings. See the paper's Ethics Statement for full details.
