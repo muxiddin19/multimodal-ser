@@ -82,6 +82,10 @@ Each stage enables the next: **accurate SER** -> **interpretable fusion** -> **m
 
 ### Architecture
 
+<p align="center">
+  <img src="assets/arch_figure.png" width="90%" alt="VGA-Fusion architecture: BERT + emotion2vec → VAD-Guided Cross-Attention → Constrained Fusion → Emotion Prediction"/>
+</p>
+
 ```
 Text:  BERT-base (768d)    --> Linear+LN (384d) --+
                                                   +--> VAD-Guided Cross-Attention --> Constrained Fusion --> Classifier
